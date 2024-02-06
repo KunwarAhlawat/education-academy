@@ -1,0 +1,38 @@
+//contact hero style
+.contact-hero-area{
+    background-color: $primary-color;
+    .contact-text{
+        color: $text-light;
+    }
+}
+
+//contact form area style
+.contact-form-area{
+    label{
+        color: $accent-color;
+    }
+}
+
+//contact info style
+.contact-info-area{
+    .contact-info-item{
+        padding: 20px;
+        box-shadow: $shadow-1;
+        color: $text-dark;
+        margin-bottom: 20px;
+        i{
+            font-size: 20px;
+            margin-right: 8px;
+            color: $accent-color;
+        }
+        span{
+            font-size: 1rem;
+            font-weight: $bold;
+        }
+        address{
+            margin-left: 30px;
+            font-size: 1rem;
+        
+        }
+    }
+}

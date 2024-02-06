@@ -1,0 +1,67 @@
+
+//helper classes
+.section-padding{
+    padding: 50px 0px;
+}
+
+
+
+// Media query for tablets (portrait and landscape)
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .section-padding{
+        padding: 80px 0px;
+    }
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 599px) {
+    .section-padding{
+        padding: 50px 0px;
+    }
+}
+
+.section-title{
+    text-align: center;
+    h2{
+        font-weight: 700;
+        margin:5px 0;
+        stroke : 2px black;
+    }
+    
+    
+    
+}
+
+.section-subtitle{
+    color:rgba(0, 0, 0, 0.685);
+    text-overflow: ellipsis;
+    font-weight: $med;
+    letter-spacing: 1px;
+    max-width: 70%;
+    text-align: center;
+    margin: auto;
+    @media #{$tab}{
+        max-width: 100%;
+      }
+
+}
+.section-subtitle1{
+    color:rgba(0, 0, 0, 0.685);
+    text-overflow: ellipsis;
+    font-weight: $med;
+    letter-spacing: 1px;
+    max-width: 70%;
+    text-align: left;
+  
+
+}
+.section-subtitle2{
+    color:rgba(0, 0, 0, 0.685);
+    text-overflow: ellipsis;
+    font-weight: $med;
+    letter-spacing: 1px;
+    max-width: 100%;
+    text-align: left;
+  
+
+}

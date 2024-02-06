@@ -1,0 +1,226 @@
+//course hero style 
+.course-view-hero-area{
+background-color: $primary-color;
+     .hero-text{
+color: $text-light;
+p{
+    margin: 20px 0px 0px 0px;
+    font-weight: $bold;
+}
+.hero-price-area{
+
+    span:nth-child(1){
+        font-size: 1.5rem;
+      
+    }
+    span:nth-child(2){
+        font-size: 1rem;
+        text-decoration: line-through;
+        margin: 0px 20px;
+    }
+    span:nth-child(3){
+        font-size: 1rem;
+        background-color: $accent-color;
+        color: $text-light;
+        padding: 5px 10px;
+        border-radius: 5px;
+       
+    }
+}
+}
+}
+
+//course view style
+.main{
+.course-view-content-area{
+    padding: 30px 0px;
+    h2{
+        font-weight: $bold;
+    }
+    .course-content{
+        margin-top: 10px;
+        ol{
+            color: $text-dark;
+      
+            li{
+                list-style-type: decimal;
+                list-style-position: outside;
+                margin-left: 20px;
+            }
+        }
+    }
+ }
+
+ //course include area style
+ .course-view-course-include-area{
+    padding: 30px 0px;
+    h4{
+        text-align: start;
+        font-weight: $bold;
+    }
+
+    .course-include-item{
+        box-shadow: $shadow-1;
+        border: $border2;
+        margin-top: 10px;
+        padding: 20px;
+        text-align: center;
+
+    
+        span{
+            font-size: 1rem;
+            font-weight: $bold;
+            color: $accent-color;
+        }
+        h6{
+            margin-top: 10px;
+            font-weight: $bold;
+            letter-spacing: 1px;
+
+        }
+    }
+}
+
+
+//course faculty area style
+.course-view-top-faculties-area{
+        padding: 30px 0px;
+    h4{
+        font-weight: $bold;
+       }
+    
+       .faculty-item{
+        margin: 10px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+       box-shadow: $shadow-1;
+    
+    .faculty-text{
+     h5{
+      font-weight: $bold;
+    }
+   span{
+        display: block;
+     font-size: 0.875rem;
+     color: $accent-color;
+     font-weight: $bold;
+   }
+   ul{
+    li{
+        font-size: 0.875rem;
+        font-weight: $bold;
+    }
+   }
+        }
+        .faculty-img{
+            height:70px;
+            width: 70px;
+            img{
+            height:100%;
+            width: 100%;
+            object-fit: cover;
+            }  
+        }
+    }
+}
+
+.course-view-faq-area{
+padding: 30px 0px 100px 0px;
+}
+
+.course-view-sidebar-area{
+  
+   margin-top: 30px;
+
+    .sidebar-cta-card{
+        // box-shadow: $shadow-3;
+        padding: 20px;
+        border-radius: 5px;
+            margin-right: 26px;
+        border-radius: 5px;
+     background :white;
+     @media #{$tab} {
+        position: fixed !important;
+        bottom: 10px;
+
+        z-index: 99;
+        width: 90%;
+        padding: 0 19px;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px!important;
+
+        h6{
+            margin: 0!important;
+            display: none;
+        }
+        img{
+            display: none;
+          
+        }
+        ul{
+            margin: 20px 0!important;
+            li:nth-child(2){
+                margin-left: 10px;
+            }
+            li:nth-child(3){
+                display: none;
+                
+            }
+        }
+        button{
+            margin: 0!important;
+        }
+      }
+        img{
+            border-radius: 5px;
+
+        }
+        h6{
+            text-align: center;
+            font-weight: $bold;
+            margin: 50px 0px 0px 0px;
+        }
+  ul{
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    li:nth-child(1){
+        font-size: 1.5rem;
+        font-weight: $bold;
+    }
+    li:nth-child(2){
+        font-size: 0.875rem;
+        font-weight: $bold;
+        text-decoration: line-through;
+    }
+    li:nth-child(3){
+        font-size: 1rem;
+        background-color: $accent-color;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: $text-light;
+      
+    }
+    
+    
+  }
+
+  button{
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    
+  }
+    }
+}
+}

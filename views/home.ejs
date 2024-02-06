@@ -1,0 +1,326 @@
+
+ <%- include('partials/header.ejs')%>
+<!-- banner area start -->
+ 
+<div class="owl-carousel owl-theme">
+    <% courseData.banner.forEach(image => { %>
+ 
+    <div class="item">
+        <img height="250" style="object-fit: cover;"  src="<%= image.imgSrc %>" class="d-block w-100 object-fit-cover" alt="...">
+
+    </div>
+    <% }) %>
+ 
+</div>
+ 
+<!-- banner area end -->
+    <!-- about-area-start -->
+    <section class="home-about-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="home-about-text">
+                        <h1><span>India's Biggests</span> and Most <span>Reliable</span> Learning Source</h1>
+                        <p class="section-subtitle1">Maximize your learning experience by choosing Education Academy
+                            committed to providing affordable and effective education.</p>
+
+                        <ul>
+                            <li><i class="bi bi-check-square-fill"></i>Free Library</li>
+                            <li><i class="bi bi-check-square-fill"></i>Hostel</li>
+                            <li><i class="bi bi-check-square-fill"></i>Wifi</li>
+                            <li><i class="bi bi-check-square-fill"></i>Cafeteria</li>
+                        </ul>
+                        <button class="primary-button " data-bs-toggle="modal" data-bs-target="#leadModal">Get
+                            Started</button>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-block mt-3 mt-md-0">
+                    <img src="../assets/img/2.home/2.about-section/about.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about-area-start -->
+
+    <!-- stat section start -->
+    <section class="home-stat-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 ">
+                    <div class="home-stat-item">
+                        <i class="bi bi-camera-video"></i>
+                        <div class="item-text">
+                            <h5>Daily Live</h5>
+                            <p class="section-subtitle2">Q&A Sessions</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <div class="home-stat-item">
+                        <i class="bi bi-book"></i>
+                        <div class="item-text">
+                            <h5>Resources</h5>
+                            <p class="section-subtitle2">Notes, Exercises</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <div class="home-stat-item">
+                        <i class="bi bi-award"></i>
+                        <div class="item-text">
+                            <h5>Online/Offline</h5>
+                            <p class="section-subtitle2">Interactive classes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <div class="home-stat-item">
+                        <i class="bi bi-question-lg"></i>
+                        <div class="item-text">
+                            <h5>24 * 7</h5>
+                            <p class="section-subtitle2">Guidance on Doubts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- stat section end -->
+
+    <!-- course area start(online) -->
+    <section class="home-course-area online section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section-title">
+                        <h2 class="mb-2">ONLINE COURSES</h2>
+                        <p class="section-subtitle">Education Academy is preparing students for their dream job. Scroll down to discover the specific preparation you need</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+
+                <% courseData.courseList.forEach(course=> { %>
+                    <div class="col-md-4">
+                        <div class="course-item">
+                            <div class="course-item-img">
+                                <img src="<%= course.courseListPage.imgSrc2 %>" alt="" class="img-fluid">
+                            </div>
+                            <div class="course-item-text">
+                                <h5>
+                                    <%= course.courseListPage.title2 %>
+                                </h5>
+                                <!-- <p>
+                                    <%= course.courseListPage.details2 %>
+                                </p> -->
+                                <div class="included-text mt-3 ">
+                                    <ul class="left-text">
+                                        <% course.courseListPage.includedText.left.forEach(item=> { %>
+
+                                            <li><i class="<%= item.icon %>"></i><span>
+                                                    <%= item.text %>
+                                                </span> </li>
+
+                                            <% }) %>
+                                    </ul>
+                                    <ul class="right-text">
+                                        <% course.courseListPage.includedText.right.forEach(item=> { %>
+
+                                            <li><i class="<%= item.icon %>"></i><span>
+                                                    <%= item.text %>
+                                                </span></li>
+
+                                            <% }) %>
+                                    </ul>
+
+
+                                </div>
+                            </div>
+                            <div class="course-item-price">
+                                <!-- <p>Course Price</p> -->
+                                <ul>
+                                    <li>
+                                        <%= course.courseListPage.price.regularPrice %>
+                                    </li>
+                                    <li class="badge text-bg-dark">
+                                        <%= course.courseListPage.price.discountedPrice %>
+                                    </li>
+                                    <li>
+                                        <%= course.courseListPage.price.discountPercentage %>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="course-item-button">
+                                <a href="/courseview/<%= course.id %>"> <button
+                                        class="exploreNow">Explore</button></a>
+                                <a href="<%= course.courseListPage.links.buyNow %>"> <button class="buyNow">Buy
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <% }) %>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- course area end -->
+
+    <!-- course area start(offlne)-->
+    <section class="home-course-area offlne section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section-title">
+                        <h2 class="mb-3">OFFLINE COURSES</h2>
+                        <p class="section-subtitle">Education Academy is preparing students for their dream job. Scroll down to discover the specific preparation you need</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+
+                <% courseData.courseList.forEach(course=> { %>
+                    <div class="col-md-4">
+                        <div class="course-item">
+                            <div class="course-item-img">
+                                <img src="<%= course.courseListPage.imgSrc2 %>" alt="" class="img-fluid">
+                            </div>
+                            <div class="course-item-text">
+                                <h5>
+                                    <%= course.courseListPage.title2 %>
+                                </h5>
+                                <!-- <p>
+                                    <%= course.courseListPage.details2 %>
+                                </p> -->
+                                <div class="included-text mt-3 ">
+                                    <ul class="left-text">
+                                        <% course.courseListPage.includedText.left.forEach(item=> { %>
+
+                                            <li><i class="<%= item.icon %>"></i><span>
+                                                    <%= item.text %>
+                                                </span> </li>
+
+                                            <% }) %>
+                                    </ul>
+                                    <ul class="right-text">
+                                        <% course.courseListPage.includedText.right.forEach(item=> { %>
+
+                                            <li><i class="<%= item.icon %>"></i><span>
+                                                    <%= item.text %>
+                                                </span></li>
+
+                                            <% }) %>
+                                    </ul>
+
+
+                                </div>
+                            </div>
+                            <div class="course-item-price">
+                                <!-- <p>Course Price</p> -->
+                                <ul>
+                                    <li>
+                                        <%= course.courseListPage.price.regularPrice %>
+                                    </li>
+                                    <li class="badge text-bg-dark">
+                                        <%= course.courseListPage.price.discountedPrice %>
+                                    </li>
+                                    <li>
+                                        <%= course.courseListPage.price.discountPercentage %>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="course-item-button">
+                                <a href="/courseview/<%= course.id %>"> <button
+                                        class="exploreNow">Explore</button></a>
+                                <a href="<%= course.courseListPage.links.buyNow %>"> <button class="buyNow">Buy
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <% }) %>
+
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- course area end -->
+
+
+
+    <!-- number stat area start -->
+    <section class="home-number-area section-padding mb-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section-title">
+                        <h2>Relied upon by Students Worldwide</h2>
+                        <p class="section-subtitle mt-3">Let the numbers speak for themselves! Be part of the thousands Happy Student</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="number-item">
+                        <h5>10,000 +</h5>
+                        <p class="section-subtitle">NEET STUDENTS</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <div class="number-item">
+                        <h5>15,000 +</h5>
+                        <p class="section-subtitle">IIT - JEE STUDENTS</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <div class="number-item">
+                        <h5>12,000 +</h5>
+                        <p class="section-subtitle">CAT STUDENTS</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <div class="number-item">
+                        <h5>10,000 +</h5>
+                        <p class="section-subtitle">GOV. STUDENTS</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- number stat area end -->
+
+    <!-- cta area start -->
+    <section class="cta-area section-padding mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="cta-text ">
+                        <h2>
+                            Join over 15,000 students on their learning journey today!</h2>
+                        <p class="section-subtitle"> We're setting new standards for learning experiences.</p>
+                    </div>
+                    <div class="cta">
+                        <button class="secondary-button" data-bs-toggle="modal" data-bs-target="#leadModal">Get
+                            Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cta area end -->
+
+    <%- include('partials/footer.ejs')%>
+        <%- include('partials/copyright.ejs')%>

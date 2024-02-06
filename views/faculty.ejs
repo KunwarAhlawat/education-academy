@@ -1,0 +1,73 @@
+<%- include('partials/header.ejs') %>
+ 
+
+
+<!-- faculty hero area start -->
+<section class="facultyView-hero-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section-title">
+                    <h2>Our faculty Details</h2>
+                    <p>We have world class faculties</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- faculty hero area end -->
+
+
+
+<!-- facultyView info area start -->
+<section class="facultyView-info-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="faculty-info-content">
+                <div class="faculty-info-img">
+                    <img src="<%= faculty.imageSrc%>" alt="">
+                </div>
+                <div class="faculty-info-text-area">
+                    <h2><%= faculty.name%></h2>
+                    <span><%= faculty.position%></span>
+                   <p>Experience</p>
+                    <ul>
+                        <% faculty.education.forEach(item =>{ %>
+                            <li><i class="bi bi-check2-square"></i>
+                                <%= item%>  </li>
+
+                            <% }) %>
+                     </ul>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col">
+                <div class="faculty-des">
+                <p><%= faculty.bio %> </p>
+                    <ul>
+                        <% faculty.education.forEach(item =>{ %>
+                         
+                                
+                                <li><i class="bi bi-check-square-fill"></i>
+                                    <%= item%> </li>
+
+                            <% }) %>
+                        <li><i class="bi bi-check-square-fill"></i>Research interests: Number Theory, Algebraic Geometry</li>
+                        <li><i class="bi bi-check-square-fill"></i>Office Hours: Monday and Wednesday, 2:00 PM - 4:00 PM</li>
+                        <li><i class="bi bi-check-square-fill"></i>Associate Professor, Department of Mathematics, University XYZ (2010-2018)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+<!-- facultyView info area end -->
+<%- include('partials/footer.ejs') %>
+<%- include('partials/copyright.ejs') %>

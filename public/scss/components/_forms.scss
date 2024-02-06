@@ -1,0 +1,73 @@
+.modal-content{
+  border: none;
+  border-radius: 0;
+}
+.formClose{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index:2;
+}
+.registerForm{
+    
+    background-color:var(--primary-color);
+    margin: auto;
+        padding: 49px 34px 9px;
+
+    position: relative;
+    // padding: 0px 10px;
+    // width: 400px;
+    
+    // border: 1px solid rgba(0, 0, 0, 0.199);
+    .logo{
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      overflow: hidden;
+      border: 3px solid white;
+      background : white;
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    form{
+      
+      input,textarea{
+        width: 100%;
+        border : $borderInput;
+        font-size: 1.4rem;
+        margin: 5px  0;
+        &::placeholder{
+          font-size: 12px;
+          color: #00000086;
+          padding-left: 5px;
+        }
+        &:focus{
+          outline: none;
+        }
+      }
+      label{
+        font-size: 14px;
+        font-weight: 500;
+      }
+      button{
+        background-color: var(--accent-color)!important;
+        font-size: 1.8rem;
+        color: rgb(255, 255, 255);
+        border-radius: 0;
+        font-weight: 600;
+        padding: 5px 40px;
+        display: flex;
+        justify-content: flex-end;
+        letter-spacing: 1px;
+        margin-top: 30px;
+      }
+    }
+  }
