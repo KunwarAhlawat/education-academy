@@ -2909,11 +2909,8 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     },
-    {
-      id: "ssc-cgl",
-      text: "CGL",
-    },
-    // ssc cgl
+
+     // ssc cgl
     {
       id: "ssc-cgl",
       text: "SSC-CGL",
@@ -2950,16 +2947,8 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     },
-    {
-      id: "TET",
-      text: "TET",
-      link: "courseView.html",
-      submenu2: [
-        {
-          id: "tet-online",
-        }
-      ]
-    },
+   
+
     //ctet
     {
       id: "ctet",
@@ -3017,16 +3006,8 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     },
-    {
-      id: "SUPER-TET",
-      text: "SUPER TET",
-      link: "courseView.html",
-      submenu2: [
-        {
-          id: "super-tet-online",
-        }
-      ]
-    },
+   
+    
     //nda
     {
       id: "nda",

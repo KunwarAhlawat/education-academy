@@ -93,60 +93,53 @@
                                 aria-controls="offcanvasExample"></i>
                         </div>
                         <div class="offcanvas offcanvas-custom offcanvas-start" tabindex="-1" id="offcanvasExample"
-                            aria-labelledby="offcanvasExampleLabel">
-                            <div class="offcanvas-header offcanvas-custom-header">
-                                <a href="index.html"><span class="offcanvas-title" id="offcanvasExampleLabel">Education
-                                        Academy</span></a>
-                                <i class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></i>
-                            </div>
-                            <div class="offcanvas-body">
-                                <div class="mobile-menu-items">
-                                    <% commonData.menuItems.forEach((item, index) => { %>
-                                        <div class="accordion" id="accordionExample<%= index %>">
-                                            <div class="accordion-item custom-accordion-item">
-                                                <h2 class="accordion-header custom-accordion-header" id="heading<%= index %>">
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
-                                                        <span><%= item.text %></span>
-                                                    </button>
-                                                </h2>
-                                                <div id="collapse<%= index %>" class="accordion-collapse collapse show" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample<%= index %>">
-                                                <div id="collapse<%= index %>" class="accordion-collapse collapse " aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample<%= index %>">
-                                                    <% if (item.submenu && item.submenu.length > 0) { %>
-                                                        <% item.submenu.forEach((subItem, subIndex) => { %>
-                                                            <div class="accordion-body custom-accordion-body">
-                                                                <div class="m-menu-item-1">
-
-                                                                   <% if(subItem.submenu2 && subItem.submenu2.length > 0){ %>
-                                                                    <span ><%= subItem.text %></span>
-                                                                    
-                                                                    <% subItem.submenu2.forEach((subItem2, subIndex2) => { %>
-                                                                        <div class="m-menu-item-2">
-                                                                            <a href="course-view.html"><%= subItem2.text %></a>
-                                                                        </div>
-                                                                    <% }); %>
-                                                                   <% } else{ %>
-                                                                    <a href="course-view.html"><%= subItem.text %></a>
-
-                                                                   <% } %>
-
-                                                                   
-                                                                   
-                                                              
-                                                                </div>
-                                                            </div>
-                                                        <% }); %>
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header offcanvas-custom-header">
+                            <a href="index.html"><span class="offcanvas-title" id="offcanvasExampleLabel">Education
+                                    Academy</span></a>
+                            <i class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="mobile-menu-items">
+                                <% commonData.menuItems.forEach((item, index) => { %>
+                                <div class="accordion" id="accordionExample<%= index %>">
+                                    <div class="accordion-item custom-accordion-item">
+                                        <h2 class="accordion-header custom-accordion-header" id="heading<%= index %>">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse<%= index %>" aria-expanded="true"
+                                                aria-controls="collapse<%= index %>">
+                                                <span><%= item.text %></span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse<%= index %>" class="accordion-collapse collapse"
+                                            aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample<%= index %>">
+                                            <% if (item.submenu && item.submenu.length > 0) { %>
+                                            <% item.submenu.forEach((subItem, subIndex) => { %>
+                                            <div class="accordion-body custom-accordion-body">
+                                                <div class="m-menu-item-1">
+                                                    <% if(subItem.submenu2 && subItem.submenu2.length > 0){ %>
+                                                    <span><%= subItem.text %></span>
+                                                    <% subItem.submenu2.forEach((subItem2, subIndex2) => { %>
+                                                    <div class="m-menu-item-2">
+                                                        <a href="course-view.html"><%= subItem2.text %></a>
+                                                    </div>
+                                                    <% }); %>
+                                                    <% } else{ %>
+                                                    <a href="course-view.html"><%= subItem.text %></a>
                                                     <% } %>
                                                 </div>
                                             </div>
+                                            <% }); %>
+                                            <% } %>
                                         </div>
-                                    <% }); %>
-                                    <button class="cta-button" data-bs-toggle="modal" data-bs-target="#leadModal">Join US</button>
+                                    </div>
                                 </div>
+                                <% }); %>
+                                <button class="cta-button" data-bs-toggle="modal" data-bs-target="#leadModal">Join US</button>
                             </div>
-                            
-
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
