@@ -100,7 +100,8 @@
                                 <i class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></i>
                             </div>
                             <div class="offcanvas-body">
-                                <div class="mobile-menu-items">
+                                <div class="
+                                ">
                                     <% commonData.menuItems.forEach((item, index) => { %>
                                         <div class="accordion" id="accordionExample<%= index %>">
                                             <div class="accordion-item custom-accordion-item">
@@ -109,7 +110,7 @@
                                                         <span><%= item.text %></span>
                                                     </button>
                                                 </h2>
-                                                <div id="collapse<%= index %>" class="accordion-collapse collapse show" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample<%= index %>">
+                                                <div id="collapse<%= index %>" class="accordion-collapse collapse " aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample<%= index %>">
                                                     <% if (item.submenu && item.submenu.length > 0) { %>
                                                         <% item.submenu.forEach((subItem, subIndex) => { %>
                                                             <div class="accordion-body custom-accordion-body">

@@ -274,7 +274,7 @@ display: flex;
       // Mobile menu items container styles
       .mobile-menu-items {
         padding: 20px 10px;
-    
+        margin-left: 10px;
         // Custom accordion item styles
         .custom-accordion-item {
           // Custom accordion header styles
@@ -300,6 +300,7 @@ display: flex;
             // Styles for the first level menu item
             .m-menu-item-1 {
              padding: 5px;
+             margin-left: 10px;
               a {
                 font-size: 1rem;
                 color: $text-dark;
@@ -309,8 +310,14 @@ display: flex;
               .m-menu-item-2 {
                 margin-left: 10px;
               }
+            
             }
+         
           }
+        }
+        .cta-button{
+          margin-top: 20px;
+          width: 100%;
         }
       }
     }

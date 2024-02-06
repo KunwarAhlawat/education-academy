@@ -145,6 +145,7 @@ const Data = {
     
   ],
   courseView: [
+    //NEET
     {
       courseId: "NEET-2024-Offline",
       title: " NEET 2024 Mastery Program(Offline)",
@@ -482,6 +483,8 @@ const Data = {
         },
       },
     },
+
+    //IIT JEE
     {
       courseId: "IIT-JEE-2024-Offline",
       title: "IIT JEE 2024 Mastery Program(Offline)",
@@ -811,6 +814,8 @@ const Data = {
         },
       },
     },
+
+    //CAT
     {
       courseId: "CAT-2024-Offline",
       title: "CAT 2024 Preparation Program(Offline)",
@@ -1138,6 +1143,8 @@ const Data = {
         },
       },
     },
+
+    // UP Police
     {
       courseId: "UP-Police-2024-Offline",
       title: " UP Police 2024 Mastery Program (Offline)",
@@ -2134,7 +2141,706 @@ const Data = {
         },
       },
     },
+
+    //CTET
+    {
+      courseId: "ctet-offline",
+      title: "CTET 2024 Mastery Program (Offline)",
+      discountText: "Special Discounted Price",
+      price: {
+        discountedPrice: "RS 2449",
+        regularPrice: "RS 2999",
+        discountPercentage: "(17% OFF)",
+      },
+      content: [
+        "Limited Seats - Enroll Now!",
+        "Embark on the journey to become a certified teacher with our CTET 2024 Mastery Program at Education Academy. Our carefully curated program is designed to provide aspiring teachers with the knowledge and skills needed to excel in the Central Teacher Eligibility Test (CTET).",
+        "Program Features:",
+        "Comprehensive Coverage: Dive into the CTET 2024 syllabus, covering Child Development and Pedagogy, Language I & II, Mathematics, Environmental Studies, and Social Studies.",
+        "Experienced Educators: Learn from experienced educators who specialize in their subjects, offering insights and guidance to enhance your teaching skills.",
+        "Interactive Learning: Engage in interactive sessions, discussions, and teaching methodologies to boost your understanding of child development and effective teaching techniques.",
+        "Mock Tests: Regular mock tests designed to simulate the CTET exam conditions, aiding in time management and evaluating your preparation level.",
+        "Comprehensive Study Material: Receive carefully crafted study material curated by our expert faculty, covering the latest teaching methodologies and educational trends.",
+        "Emphasis on Teaching Fundamentals: Focus on building a strong foundation in teaching fundamentals, preparing you for both Paper I and Paper II of the CTET exam."
+      ],
+      batchDetails: {
+        title: "Batch Details",
+        items: [
+          { count: "Morning Batch", description: "9:00AM to 12:00" },
+          { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+          { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+        ],
+      },
+      faculty: {
+        title: "Our Faculties",
+        items: [
+          {
+            name: "Ram Singh",
+            qualification: "MSC in Biochemistry",
+            experience: "13 Years",
+            imageSrc: "/assets/img/5.course-view/1.faculty.png",
+          },
+        ],
+      },
+      faq: {
+        title: "FAQ",
+        items: [
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingOne",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseOne",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseOne",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseOne",
+                class: "accordion-collapse collapse show",
+                ariaLabelledby: "panelsStayOpen-headingOne",
+              },
+            },
+            question: "Q.Who are the instructors for the SSC-GD 2024 offline course?",
+            answer:
+              "Our educators are experienced and qualified professionals dedicated to providing high-quality teacher training.",
+          },
+
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingTwo",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseTwo",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseTwo",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseTwo",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingTwo",
+              },
+            },
+            question: "Q.Is study material provided for the CTET 2024 offline course?",
+            answer:
+              "Yes, you will receive comprehensive study materials designed for easy understanding and covering all aspects of the CTET exam.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingThree",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseThree",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseThree",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseThree",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingThree",
+              },
+            },
+            question: "Q. What is the fee structure for the CTET 2024 Mastery Program?",
+            answer:
+              "Contact us for detailed fee information and exclusive offers available for a limited time.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFour",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFour",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFour",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFour",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFour",
+              },
+            },
+            question: "Q.How are the classes scheduled for the CTET 2024 course?",
+            answer:
+              "Choose from morning, afternoon, or evening batches to accommodate various schedules and make teacher training accessible.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFive",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFive",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFive",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFive",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFive",
+              },
+            },
+            question: "Q. What sets Education Academy apart in CTET preparation?",
+            answer:
+              "Our experienced educators, interactive learning approach, personalized attention, and a comprehensive curriculum make us the ideal choice for CTET preparation. Join us to excel in CTET 2024 and kickstart your teaching career!",
+          },
+        ],
+      },
+
+      buyCard: {
+        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        title: "Special Discount Price",
+        prices: {
+          discountedPrice: "RS 2449",
+          regularPrice: "RS 2999",
+          discountPercentage: "17% OFF",
+        },
+        button: {
+          link: "#",
+          buttonText: "Buy Now",
+        },
+      },
+    },
+    {
+      courseId: "ctet-online",
+      title: "CTET 2024 Mastery Program (online)",
+      discountText: "Special Discounted Price",
+      price: {
+        discountedPrice: "RS 2449",
+        regularPrice: "RS 2999",
+        discountPercentage: "(17% OFF)",
+      },
+      content: [
+        "Limited Online Seats - Enroll Now!",
+
+"Embark on the journey to become a certified teacher with our CTET 2024 Mastery Program offered online at Education Academy. Our meticulously crafted online program is designed to provide aspiring teachers with the knowledge and skills needed to excel in the Central Teacher Eligibility Test (CTET).",
+
+"Program Highlights:",
+
+"Comprehensive Online Coverage: Dive into the CTET 2024 syllabus online, covering Child Development and Pedagogy, Language I & II, Mathematics, Environmental Studies, and Social Studies.",
+
+"Expert Online Educators: Learn from experienced online educators who specialize in their subjects, offering insights and guidance through virtual learning platforms.",
+
+"Interactive Online Learning: Engage in live discussions, virtual teaching methodologies, and Q&A forums to enhance your understanding of child development and effective online teaching techniques.",
+
+"Online Mock Tests: Regular online mock tests designed to simulate the CTET exam conditions, aiding in time management and evaluating your preparation level.",
+
+"Personalized Online Attention: Enjoy small online class sizes for personalized attention and focused guidance during virtual teacher training.",
+
+"Online Study Material: Receive carefully crafted online study material curated by our expert faculty, covering the latest online teaching methodologies and educational trends.",
+
+"Emphasis on Online Teaching Fundamentals: Focus on building a strong foundation in online teaching fundamentals, preparing you for both Paper I and Paper II of the CTET exam.",
     
+],
+      batchDetails: {
+        title: "Batch Details",
+        items: [
+          { count: "Morning Batch", description: "9:00AM to 12:00" },
+          { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+          { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+        ],
+      },
+      faculty: {
+        title: "Our Faculties",
+        items: [
+          {
+            name: "Ram Singh",
+            qualification: "MSC in Biochemistry",
+            experience: "13 Years",
+            imageSrc: "/assets/img/5.course-view/1.faculty.png",
+          },
+        ],
+      },
+      faq: {
+        title: "FAQ",
+        items: [
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingOne",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseOne",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseOne",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseOne",
+                class: "accordion-collapse collapse show",
+                ariaLabelledby: "panelsStayOpen-headingOne",
+              },
+            },
+            question: "Q.Who are the instructors for the SSC-GD 2024 offline course?",
+            answer:
+              "Our educators are experienced and qualified professionals dedicated to providing high-quality teacher training.",
+          },
+
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingTwo",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseTwo",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseTwo",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseTwo",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingTwo",
+              },
+            },
+            question: "Q.Is study material provided for the CTET 2024 offline course?",
+            answer:
+              "Yes, you will receive comprehensive study materials designed for easy understanding and covering all aspects of the CTET exam.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingThree",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseThree",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseThree",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseThree",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingThree",
+              },
+            },
+            question: "Q. What is the fee structure for the CTET 2024 Mastery Program?",
+            answer:
+              "Contact us for detailed fee information and exclusive offers available for a limited time.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFour",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFour",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFour",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFour",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFour",
+              },
+            },
+            question: "Q.How are the online classes scheduled for the CTET 2024 course?",
+            answer:
+              "Choose from morning, afternoon, or evening online sessions to fit your schedule seamlessly and make teacher training accessible from the comfort of your home.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFive",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFive",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFive",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFive",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFive",
+              },
+            },
+            question: "Q. What sets Education Academy apart in CTET preparation?",
+            answer:
+              "Our experienced online educators, interactive learning approach, personalized online attention, and a comprehensive curriculum make us the ideal choice for CTET preparation. Join us online to excel in CTET 2024 and kickstart your teaching career!",
+          },
+        ],
+      },
+
+      buyCard: {
+        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        title: "Special Discount Price",
+        prices: {
+          discountedPrice: "RS 2449",
+          regularPrice: "RS 2999",
+          discountPercentage: "17% OFF",
+        },
+        button: {
+          link: "#",
+          buttonText: "Buy Now",
+        },
+      },
+    },
+    
+    //UPTET
+    {
+      courseId: "uptet-online",
+      title: "UPTET 2024 Mastery Program (Online)",
+      discountText: "Special Discounted Price",
+      price: {
+        discountedPrice: "RS 2449",
+        regularPrice: "RS 2999",
+        discountPercentage: "(17% OFF)",
+      },
+      content: [
+        
+"UPTET 2024 Mastery Program (Online)",
+
+"Limited Online Slots - Secure Your Enrollment!",
+
+"Embark on the journey to become a certified teacher with our UPTET 2024 Mastery Program online at Education Academy. Tailored to meet the specific requirements of the Uttar Pradesh Teacher Eligibility Test (UPTET), this program provides aspiring teachers with the knowledge and skills needed to excel.",
+
+"Program Highlights:",
+
+"Comprehensive Online Learning: Dive into the UPTET 2024 syllabus online, covering Child Development & Pedagogy, Language I & II, Mathematics, and Environmental Studies/Social Studies.",
+
+"Experienced Online Instructors: Learn from experienced educators who specialize in their subjects, delivering insightful guidance and strategies for effective teaching, all in the online learning environment.",
+
+"Interactive Online Sessions: Engage in live discussions, interactive sessions, and teaching methodologies online to enhance your understanding of child development and improve your teaching techniques.",
+
+"Online Mock Tests: Regular online mock tests simulate UPTET exam conditions, aiding in time management and evaluating your preparation level effectively.",
+
+"Personalized Online Support: Benefit from small online class sizes for personalized attention and focused guidance, ensuring effective online teacher training.",
+
+"Online Study Materials: Receive carefully crafted online study materials curated by our expert faculty, covering the latest teaching methodologies and educational trends specific to UPTET.",
+
+"Emphasis on Teaching Fundamentals: Focus on building a strong foundation in teaching fundamentals, preparing you for both Paper I and Paper II of the UPTET exam in the online format.",
+      ],
+      batchDetails: {
+        title: "Batch Details",
+        items: [
+          { count: "Morning Batch", description: "9:00AM to 12:00" },
+          { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+          { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+        ],
+      },
+      faculty: {
+        title: "Our Faculties",
+        items: [
+          {
+            name: "Ram Singh",
+            qualification: "MSC in Biochemistry",
+            experience: "13 Years",
+            imageSrc: "/assets/img/5.course-view/1.faculty.png",
+          },
+        ],
+      },
+      faq: {
+        title: "FAQ",
+        items: [
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingOne",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseOne",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseOne",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseOne",
+                class: "accordion-collapse collapse show",
+                ariaLabelledby: "panelsStayOpen-headingOne",
+              },
+            },
+            question: "Q.Who are the instructors for the UPTET 2024 online course?",
+            answer:
+              "Our experienced educators are qualified professionals dedicated to providing high-quality teacher training in the online format.",
+          },
+
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingTwo",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseTwo",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseTwo",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseTwo",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingTwo",
+              },
+            },
+            question: "Q.Is study material provided for the UPTET 2024 online course?",
+            answer:
+              "Yes, you'll receive comprehensive online study materials designed for easy understanding, covering all aspects of the UPTET exam.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingThree",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseThree",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseThree",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseThree",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingThree",
+              },
+            },
+            question: "Q. What is the fee structure for the UPTET 2024 Mastery Program online?",
+            answer:
+              "Connect with us for detailed online fee information and exclusive offers available for a limited time.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFour",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFour",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFour",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFour",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFour",
+              },
+            },
+            question: "Q.How are the online classes scheduled for the UPTET 2024 course?",
+            answer:
+              "Choose from morning, afternoon, or evening online sessions to fit your schedule seamlessly and make teacher training accessible from the comfort of your home.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFive",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFive",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFive",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFive",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFive",
+              },
+            },
+            question: "Q.What sets Education Academy apart in UPTET online preparation?",
+            answer:
+              "Our experienced online educators, interactive learning approach, personalized online attention, and a comprehensive curriculum make us the ideal choice for UPTET preparation. Join us online to excel in UPTET 2024 and kickstart your teaching career!",
+          },
+        ],
+      },
+
+      buyCard: {
+        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        title: "Special Discount Price",
+        prices: {
+          discountedPrice: "RS 2449",
+          regularPrice: "RS 2999",
+          discountPercentage: "17% OFF",
+        },
+        button: {
+          link: "#",
+          buttonText: "Buy Now",
+        },
+      },
+    },
+    {
+      courseId: "uptet-offline",
+      title: "UPTET 2024 Mastery Program (Offline)",
+      discountText: "Special Discounted Price",
+      price: {
+        discountedPrice: "RS 2449",
+        regularPrice: "RS 2999",
+        discountPercentage: "(17% OFF)",
+      },
+      content: [
+        "Limited Seats - Enroll Today!",
+
+        "Begin your journey towards becoming a certified teacher with our UPTET 2024 Mastery Program at Education Academy. Tailored to meet the specific requirements of the Uttar Pradesh Teacher Eligibility Test (UPTET), this program provides aspiring teachers with the knowledge and skills needed to excel.",
+        
+        "Program Highlights:",
+        
+        "Comprehensive Learning: Dive into the UPTET 2024 syllabus, covering Child Development & Pedagogy, Language I & II, Mathematics, and Environmental Studies/Social Studies.",
+        
+        "Experienced Instructors: Learn from experienced educators who specialize in their subjects, delivering insightful guidance and strategies for effective teaching.",
+        
+        "Interactive Sessions: Engage in live discussions, interactive sessions, and teaching methodologies to enhance your understanding of child development and improve your teaching techniques.",
+        
+        "Mock Tests: Regular mock tests simulate UPTET exam conditions, aiding in time management and evaluating your preparation level effectively.",
+        
+        "Personalized Support: Benefit from small class sizes for personalized attention and focused guidance, ensuring effective teacher training.",
+        
+        "Comprehensive Study Materials: Receive carefully crafted study materials curated by our expert faculty, covering the latest teaching methodologies and educational trends specific to UPTET.",
+        
+        "Emphasis on Teaching Fundamentals: Focus on building a strong foundation in teaching fundamentals, preparing you for both Paper I and Paper II of the UPTET exam.",   
+
+      ],
+      batchDetails: {
+        title: "Batch Details",
+        items: [
+          { count: "Morning Batch", description: "9:00AM to 12:00" },
+          { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+          { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+        ],
+      },
+      faculty: {
+        title: "Our Faculties",
+        items: [
+          {
+            name: "Ram Singh",
+            qualification: "MSC in Biochemistry",
+            experience: "13 Years",
+            imageSrc: "/assets/img/5.course-view/1.faculty.png",
+          },
+        ],
+      },
+      faq: {
+        title: "FAQ",
+        items: [
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingOne",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseOne",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseOne",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseOne",
+                class: "accordion-collapse collapse show",
+                ariaLabelledby: "panelsStayOpen-headingOne",
+              },
+            },
+            question: "Q.Who are the instructors for the UPTET 2024 offline course?",
+            answer:
+              "Our experienced educators are qualified professionals dedicated to providing high-quality teacher training.",
+          },
+
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingTwo",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseTwo",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseTwo",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseTwo",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingTwo",
+              },
+            },
+            question: "Q.Is study material provided for the UPTET 2024 offline course?",
+            answer:
+              "Yes, you'll receive comprehensive study materials designed for easy understanding, covering all aspects of the UPTET exam.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingThree",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseThree",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseThree",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseThree",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingThree",
+              },
+            },
+            question: "Q.What is the fee structure for the UPTET 2024 Mastery Program?",
+            answer:
+              "Connect with us for detailed fee information and exclusive offers available for a limited time.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFour",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFour",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFour",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFour",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFour",
+              },
+            },
+            question: "Q.How are the classes scheduled for the UPTET 2024 course?",
+            answer:
+              "Choose from morning, afternoon, or evening sessions to fit your schedule seamlessly and make teacher training accessible.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFive",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFive",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFive",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFive",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFive",
+              },
+            },
+            question: "Q.What sets Education Academy apart in UPTET Offline preparation?",
+            answer:
+              "Our experienced educators, interactive learning approach, personalized attention, and a comprehensive curriculum make us the ideal choice for UPTET preparation. Join us to excel in UPTET",
+          },
+        ],
+      },
+
+      buyCard: {
+        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        title: "Special Discount Price",
+        prices: {
+          discountedPrice: "RS 2449",
+          regularPrice: "RS 2999",
+          discountPercentage: "17% OFF",
+        },
+        button: {
+          link: "#",
+          buttonText: "Buy Now",
+        },
+      },
+    },
+
     
     
   ],
@@ -2180,6 +2886,7 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
   text: "COMPETITIVE EXAMS",
   link: "course-view.html",
   submenu: [
+    //up police
     {
       id: "up-police",
       text: "UP Police",
@@ -2197,9 +2904,11 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     },
+
+    // ssc cgl
     {
       id: "ssc-cgl",
-      text: "CGL",
+      text: "SSC-CGL",
       link: "courseView.html",
       submenu2: [
         {
@@ -2214,6 +2923,8 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     },
+
+    //ssc gd
     {
       id: "ssc-gd",
       text: "SSS GD",
@@ -2231,35 +2942,153 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     },
+
+    //ctet
     {
-      id: "TET",
-      text: "TET",
+      id: "ctet",
+      text: "CTET",
       link: "courseView.html",
       submenu2: [
         {
-          id: "tet-online",
+          id: "ctet-online",
+          text: "Online",
+          link: "ctet-online"
+        },
+        {
+          id: "ctet-offline",
+          text: "Offline",
+          link: "ctet-offline"
+        }
+      ]
+    },
+
+    //uptet
+    {
+      id: "uptet",
+      text: "UPTET",
+      link: "courseView.html",
+      submenu2: [
+        {
+          id: "uptet-online",
+          text: "Online",
+          link: "uptet-online"
+        },
+        {
+          id: "uptet-offline",
+          text: "Offline",
+          link: "uptet-offline"
+        }
+      ]
+    },
+
+    // supertet
+    {
+      id: "super-tet",
+      text: "SUPER TET",
+      link: "courseView.html",
+      submenu2: [
+        {
+          id: "supertet-online",
           text: "Online",
           link: "courseView.html"
         },
         {
-          id: "tet-offline",
+          id: "supertet-offline",
           text: "Offline",
           link: "courseView.html"
         }
       ]
     },
+
+    //nda
     {
-      id: "SUPER-TET",
-      text: "SUPER TET",
+      id: "nda",
+      text: "NDA",
       link: "courseView.html",
       submenu2: [
         {
-          id: "super-tet-online",
+          id: "nda-online",
           text: "Online",
           link: "courseView.html"
         },
         {
-          id: "super-tet-offline",
+          id: "nda-offline",
+          text: "Offline",
+          link: "courseView.html"
+        }
+      ]
+    },
+
+    // cds
+    {
+      id: "cds",
+      text: "CDS",
+      link: "courseView.html",
+      submenu2: [
+        {
+          id: "cds-online",
+          text: "Online",
+          link: "courseView.html"
+        },
+        {
+          id: "cds-offline",
+          text: "Offline",
+          link: "courseView.html"
+        }
+      ]
+    },
+
+    // si-police
+    {
+      id: "si-police",
+      text: "S.I POLICE",
+      link: "courseView.html",
+      submenu2: [
+        {
+          id: "si-police-online",
+          text: "Online",
+          link: "courseView.html"
+        },
+        {
+          id: "si-police-offline",
+          text: "Offline",
+          link: "courseView.html"
+        }
+      ]
+    },
+
+    // bank po
+    {
+      id: "bank-po",
+      text: "BANK PO",
+      link: "courseView.html",
+      submenu2: [
+        {
+          id: "bank-po-online",
+          text: "Online",
+          link: "courseView.html"
+        },
+        {
+          id: "bank-po-offline",
+          text: "Offline",
+          link: "courseView.html"
+        }
+      ]
+    },
+
+    // upsc
+   {
+      id: "upsc",
+      text: "UPSC",
+      link: "courseView.html",
+      submenu2: [
+        {
+          id: "upsc-online",
+          text: "Online",
+          link: "courseView.html"
+        },
+        {
+          id: "upsc-offline",
           text: "Offline",
           link: "courseView.html"
         }
