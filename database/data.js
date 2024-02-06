@@ -2846,6 +2846,1400 @@ const Data = {
       },
     },
 
+    //SUPER TET
+    {
+        courseId: "super-tet-online",
+        title: "Super TET 2024 Mastery Program (Online)",
+        discountText: "Special Discounted Price",
+        price: {
+          discountedPrice: "RS 2449",
+          regularPrice: "RS 2999",
+          discountPercentage: "(17% OFF)",
+        },
+        content: [
+          "Embark on your journey towards becoming a certified teacher with our Super TET 2024 Mastery Program online at Education Academy. Tailored specifically for the Super Teacher Eligibility Test (Super TET), this program equips aspiring teachers with the essential knowledge and skills needed to excel in the examination.",
+      
+         "Comprehensive Online Learning: Delve into the Super TET 2024 syllabus online, covering Child Development & Pedagogy, Language I & II (Hindi/English), Mathematics, Science, and Social Studies.",
+          
+          "Experienced Online Instructors: Learn from experienced educators who specialize in their subjects, providing insightful guidance and strategies for effective teaching, all in the online learning environment.",
+          
+          "Interactive Online Sessions: Engage in live discussions, interactive sessions, and teaching methodologies online to enhance your understanding of child development and improve your teaching techniques.",
+          
+          "Online Mock Tests: Regular online mock tests simulate Super TET exam conditions, aiding in time management and evaluating your preparation level effectively.",
+          
+          "Personalized Online Support: Benefit from small online class sizes for personalized attention and focused guidance, ensuring effective teacher training.",
+          
+          "Online Study Materials: Receive meticulously curated study materials online, covering the latest teaching methodologies and educational trends specific to Super TET.",
+          
+          "Emphasis on Teaching Fundamentals: Focus on building a strong foundation in teaching fundamentals, preparing you comprehensively for the Super TET exam.",  
+  
+        ],
+        batchDetails: {
+          title: "Batch Details",
+          items: [
+            { count: "Morning Batch", description: "9:00AM to 12:00" },
+            { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+            { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+          ],
+        },
+        faculty: {
+          title: "Our Faculties",
+          items: [
+            {
+              name: "Ram Singh",
+              qualification: "MSC in Biochemistry",
+              experience: "13 Years",
+              imageSrc: "/assets/img/5.course-view/1.faculty.png",
+            },
+          ],
+        },
+        faq: {
+          title: "FAQ",
+          items: [
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingOne",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseOne",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseOne",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseOne",
+                  class: "accordion-collapse collapse show",
+                  ariaLabelledby: "panelsStayOpen-headingOne",
+                },
+              },
+              question: "Q.Who are the instructors for the Super TET 2024 online course?",
+              answer:
+                "Our experienced educators are qualified professionals dedicated to providing high-quality teacher training in the online format.",
+            },
+  
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingTwo",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseTwo",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseTwo",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseTwo",
+                  class: "accordion-collapse collapse",
+                  ariaLabelledby: "panelsStayOpen-headingTwo",
+                },
+              },
+              question: "Q.Is study material provided for the Super TET 2024 online course?",
+              answer:
+                "Yes, you'll receive comprehensive online study materials designed for easy understanding, covering all aspects of the Super TET exam.",
+            },
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingThree",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseThree",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseThree",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseThree",
+                  class: "accordion-collapse collapse",
+                  ariaLabelledby: "panelsStayOpen-headingThree",
+                },
+              },
+              question: "Q.What is the fee structure for the Super TET 2024 Mastery Program online?",
+              answer:
+                "Connect with us for detailed online fee information and exclusive offers available for a limited time.",
+            },
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingFour",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseFour",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseFour",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseFour",
+                  class: "accordion-collapse collapse",
+                  ariaLabelledby: "panelsStayOpen-headingFour",
+                },
+              },
+              question: "Q.How are the online classes scheduled for the Super TET 2024 course?",
+              answer:
+                "Choose from morning, afternoon, or evening online sessions to fit your schedule seamlessly and make teacher training accessible from the comfort of your home.",
+            },
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingFive",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseFive",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseFive",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseFive",
+                  class: "accordion-collapse collapse",
+                  ariaLabelledby: "panelsStayOpen-headingFive",
+                },
+              },
+              question: "Q.What sets Education Academy apart in UPTET online preparation?",
+              answer:
+                "Our experienced online educators, interactive learning approach, personalized attention, and comprehensive curriculum make us the ideal choice for Super TET preparation. Join us to excel in Super TET 2024 and pave the way for a successful teaching career!",
+            },
+          ],
+        },
+  
+        buyCard: {
+          imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+          title: "Special Discount Price",
+          prices: {
+            discountedPrice: "RS 2449",
+            regularPrice: "RS 2999",
+            discountPercentage: "17% OFF",
+          },
+          button: {
+            link: "#",
+            buttonText: "Buy Now",
+          },
+        },
+    },
+    {
+        courseId: "super-tet-offline",
+        title: "Super TET 2024 Mastery Program (Offline)",
+        discountText: "Special Discounted Price",
+        price: {
+          discountedPrice: "RS 2449",
+          regularPrice: "RS 2999",
+          discountPercentage: "(17% OFF)",
+        },
+        content: [
+          "Limited Seats - Enroll Today!",
+  
+          "Begin your journey towards becoming a certified teacher with our UPTET 2024 Mastery Program at Education Academy. Tailored to meet the specific requirements of the Uttar Pradesh Teacher Eligibility Test (UPTET), this program provides aspiring teachers with the knowledge and skills needed to excel.",
+          
+          "Program Highlights:",
+          
+          "Comprehensive Learning: Dive into the UPTET 2024 syllabus, covering Child Development & Pedagogy, Language I & II, Mathematics, and Environmental Studies/Social Studies.",
+          
+          "Experienced Instructors: Learn from experienced educators who specialize in their subjects, delivering insightful guidance and strategies for effective teaching.",
+          
+          "Interactive Sessions: Engage in live discussions, interactive sessions, and teaching methodologies to enhance your understanding of child development and improve your teaching techniques.",
+          
+          "Mock Tests: Regular mock tests simulate UPTET exam conditions, aiding in time management and evaluating your preparation level effectively.",
+          
+          "Personalized Support: Benefit from small class sizes for personalized attention and focused guidance, ensuring effective teacher training.",
+          
+          "Comprehensive Study Materials: Receive carefully crafted study materials curated by our expert faculty, covering the latest teaching methodologies and educational trends specific to UPTET.",
+          
+          "Emphasis on Teaching Fundamentals: Focus on building a strong foundation in teaching fundamentals, preparing you for both Paper I and Paper II of the UPTET exam.",   
+  
+        ],
+        batchDetails: {
+          title: "Batch Details",
+          items: [
+            { count: "Morning Batch", description: "9:00AM to 12:00" },
+            { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+            { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+          ],
+        },
+        faculty: {
+          title: "Our Faculties",
+          items: [
+            {
+              name: "Ram Singh",
+              qualification: "MSC in Biochemistry",
+              experience: "13 Years",
+              imageSrc: "/assets/img/5.course-view/1.faculty.png",
+            },
+          ],
+        },
+        faq: {
+          title: "FAQ",
+          items: [
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingOne",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseOne",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseOne",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseOne",
+                  class: "accordion-collapse collapse show",
+                  ariaLabelledby: "panelsStayOpen-headingOne",
+                },
+              },
+              question: "Q.Do you provide assistance for job placement after completing the Super TET program?",
+              answer:
+                "Yes, we offer career guidance and assistance in job placement opportunities for our successful candidates.",
+            },
+  
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingTwo",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseTwo",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseTwo",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseTwo",
+                  class: "accordion-collapse collapse",
+                  ariaLabelledby: "panelsStayOpen-headingTwo",
+                },
+              },
+              question: "Q. Is there any provision for scholarship programs for economically disadvantaged students?",
+              answer:
+                "Yes, we have scholarship programs available. Please inquire with our admissions team for more information and eligibility criteria.",
+            },
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingThree",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseThree",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseThree",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseThree",
+                  class: "accordion-collapse collapse",
+                  ariaLabelledby: "panelsStayOpen-headingThree",
+                },
+              },
+              question: "Q.What support do you offer for candidates who require additional help with certain subjects?",
+              answer:
+                "Our instructors provide extra tutoring sessions and personalized assistance to help students grasp difficult concepts and subjects.",
+            },
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingFour",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseFour",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseFour",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseFour",
+                  class: "accordion-collapse collapse",
+                  ariaLabelledby: "panelsStayOpen-headingFour",
+                },
+              },
+              question: "Q.Can I switch to a different batch schedule if my availability changes?",
+              answer:
+                "Yes, we offer flexibility in batch schedules. You can request a switch to a different batch based on availability.",
+            },
+            {
+              accordion: {
+                head: {
+                  id: "panelsStayOpen-headingFive",
+                  button: {
+                    class: "accordion-button",
+                    dataBsTarget: "#panelsStayOpen-collapseFive",
+                    ariaExpanded: "false",
+                    ariaControls: "panelsStayOpen-collapseFive",
+                  },
+                },
+                body: {
+                  id: "panelsStayOpen-collapseFive",
+                  class: "accordion-collapse collapse",
+                  ariaLabelledby: "panelsStayOpen-headingFive",
+                },
+              },
+              question: "Q.Is there any provision for installment payments for the course fees?",
+              answer:
+                "Yes, we offer installment payment options. Please contact our administration for further details and arrangements.",
+            },
+          ],
+        },
+  
+        buyCard: {
+          imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+          title: "Special Discount Price",
+          prices: {
+            discountedPrice: "RS 2449",
+            regularPrice: "RS 2999",
+            discountPercentage: "17% OFF",
+          },
+          button: {
+            link: "#",
+            buttonText: "Buy Now",
+          },
+        },
+    },
+
+//NDA
+  {
+      courseId: "nda-online",
+      title: "NDA 2024 Mastery Program (Online)",
+      discountText: "Special Discounted Price",
+      price: {
+        discountedPrice: "RS 2449",
+        regularPrice: "RS 2999",
+        discountPercentage: "(17% OFF)",
+      },
+      content: [
+        "Embark on the journey towards a prestigious career in the armed forces with our NDA 2024 Mastery Program online at Education Academy. Tailored specifically for the National Defence Academy (NDA) entrance exam, this program equips aspirants with the knowledge and skills necessary to ace the examination and fulfill their aspirations of serving the nation.",
+
+"Comprehensive Online Learning: Dive deep into the NDA 2024 syllabus online, covering Mathematics, General Ability Test (English, General Knowledge, and Physics, Chemistry, General Science), and Psychological Tests.",
+
+"Experienced Online Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation in the online learning environment.",
+
+"Interactive Online Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises online to enhance your understanding and boost confidence.",
+
+"Online Mock Tests: Regular online mock tests simulate NDA exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+
+"Personalized Online Support: Benefit from small online class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+
+"Online Study Materials: Receive comprehensive study materials online, meticulously curated by our expert faculty, covering all aspects of the NDA exam and updated according to the latest exam patterns.",
+
+"Focus on Mental Aptitude: Emphasis on developing mental aptitude and analytical skills through specialized training to excel in the Psychological Tests section.",
+
+      ],
+      batchDetails: {
+        title: "Batch Details",
+        items: [
+          { count: "Morning Batch", description: "9:00AM to 12:00" },
+          { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+          { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+        ],
+      },
+      faculty: {
+        title: "Our Faculties",
+        items: [
+          {
+            name: "Ram Singh",
+            qualification: "MSC in Biochemistry",
+            experience: "13 Years",
+            imageSrc: "/assets/img/5.course-view/1.faculty.png",
+          },
+        ],
+      },
+      faq: {
+        title: "FAQ",
+        items: [
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingOne",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseOne",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseOne",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseOne",
+                class: "accordion-collapse collapse show",
+                ariaLabelledby: "panelsStayOpen-headingOne",
+              },
+            },
+            question: "Q.Who are the instructors for the NDA 2024 online course?",
+            answer:
+              "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for NDA aspirants in the online format..",
+          },
+
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingTwo",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseTwo",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseTwo",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseTwo",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingTwo",
+              },
+            },
+            question: "Q.Is there study material provided for the NDA 2024 online course?",
+            answer:
+              "Yes, comprehensive online study materials are provided, covering all subjects and topics relevant to the NDA exam.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingThree",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseThree",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseThree",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseThree",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingThree",
+              },
+            },
+            question: "Q.What is the fee structure for the NDA 2024 Mastery Program online?",
+            answer:
+              "Contact us for detailed fee information and special offers available for a limited time.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFour",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFour",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFour",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFour",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFour",
+              },
+            },
+            question: "Q.How are the online classes scheduled for the NDA 2024 course?",
+            answer:
+              "Choose from morning, afternoon, or evening sessions to accommodate your schedule and ensure convenient access to training.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFive",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFive",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFive",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFive",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFive",
+              },
+            },
+            question: "Q.What sets Education Academy apart in NDA online preparation?",
+            answer:
+              "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for NDA preparation. Join us online to excel in NDA 2024 and embark on a rewarding career in the armed forces!",
+          },
+        ],
+      },
+
+      buyCard: {
+        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        title: "Special Discount Price",
+        prices: {
+          discountedPrice: "RS 2449",
+          regularPrice: "RS 2999",
+          discountPercentage: "17% OFF",
+        },
+        button: {
+          link: "#",
+          buttonText: "Buy Now",
+        },
+      },
+  },
+  {
+      courseId: "nda-offline",
+      title: "NDA 2024 Mastery Program (Offline)",
+      discountText: "Special Discounted Price",
+      price: {
+        discountedPrice: "RS 2449",
+        regularPrice: "RS 2999",
+        discountPercentage: "(17% OFF)",
+      },
+      content: [
+"Join our NDA 2024 Mastery Program at Education Academy and pave the way for a prestigious career in the armed forces. Tailored specifically for the National Defence Academy (NDA) entrance exam, this program equips aspirants with the knowledge and skills necessary to excel in the examination and fulfill their aspirations of serving the nation.",
+
+"Comprehensive Learning: Delve deep into the NDA 2024 syllabus, covering Mathematics, General Ability Test (English, General Knowledge), and Psychological Tests.",
+
+"Experienced Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation.",
+
+"Interactive Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises to enhance your understanding and boost confidence.",
+
+"Mock Tests: Regular mock tests simulate NDA exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+
+"Personalized Support: Benefit from small class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+
+"Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the NDA exam and updated according to the latest exam patterns.",
+
+"Focus on Mental Aptitude: Emphasis on developing mental aptitude and analytical skills through specialized training to excel in the Psychological Tests section.",
+
+      ],
+      batchDetails: {
+        title: "Batch Details",
+        items: [
+          { count: "Morning Batch", description: "9:00AM to 12:00" },
+          { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+          { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+        ],
+      },
+      faculty: {
+        title: "Our Faculties",
+        items: [
+          {
+            name: "Ram Singh",
+            qualification: "MSC in Biochemistry",
+            experience: "13 Years",
+            imageSrc: "/assets/img/5.course-view/1.faculty.png",
+          },
+        ],
+      },
+      faq: {
+        title: "FAQ",
+        items: [
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingOne",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseOne",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseOne",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseOne",
+                class: "accordion-collapse collapse show",
+                ariaLabelledby: "panelsStayOpen-headingOne",
+              },
+            },
+            question: "Q.Who are the instructors for the NDA 2024 offline course?",
+            answer:
+              "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for NDA aspirants.",
+          },
+
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingTwo",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseTwo",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseTwo",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseTwo",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingTwo",
+              },
+            },
+            question: "Q.Is there study material provided for the NDA 2024 offline course?",
+            answer:
+              "Yes, comprehensive study materials are provided, covering all subjects and topics relevant to the NDA exam.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingThree",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseThree",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseThree",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseThree",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingThree",
+              },
+            },
+            question: "Q.What is the fee structure for the NDA 2024 Mastery Program offline?",
+            answer:
+              "Contact us for detailed fee information and special offers available for a limited time.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFour",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFour",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFour",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFour",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFour",
+              },
+            },
+            question: "Q.How are the classes scheduled for the NDA 2024 course?",
+            answer:
+              "Choose from morning, afternoon, or evening batches to accommodate your schedule and ensure convenient access to training.",
+          },
+          {
+            accordion: {
+              head: {
+                id: "panelsStayOpen-headingFive",
+                button: {
+                  class: "accordion-button",
+                  dataBsTarget: "#panelsStayOpen-collapseFive",
+                  ariaExpanded: "false",
+                  ariaControls: "panelsStayOpen-collapseFive",
+                },
+              },
+              body: {
+                id: "panelsStayOpen-collapseFive",
+                class: "accordion-collapse collapse",
+                ariaLabelledby: "panelsStayOpen-headingFive",
+              },
+            },
+            question: "Q.What sets Education Academy apart in NDA offline preparation?",
+            answer:
+              "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for NDA preparation. Join us to excel in NDA 2024 and embark on a rewarding career in the armed forces!",
+          },
+        ],
+      },
+
+      buyCard: {
+        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        title: "Special Discount Price",
+        prices: {
+          discountedPrice: "RS 2449",
+          regularPrice: "RS 2999",
+          discountPercentage: "17% OFF",
+        },
+        button: {
+          link: "#",
+          buttonText: "Buy Now",
+        },
+      },
+  },
+
+  //CDS
+{
+    courseId: "cds-online",
+    title: "CDS 2024 Mastery Program (Online)",
+    discountText: "Special Discounted Price",
+    price: {
+      discountedPrice: "RS 2449",
+      regularPrice: "RS 2999",
+      discountPercentage: "(17% OFF)",
+    },
+    content: [
+"Embark on the journey towards a distinguished career in the armed forces with our CDS 2024 Mastery Program online at Education Academy. Tailored specifically for the Combined Defence Services (CDS) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the nation with honor.",
+
+"Comprehensive Online Learning: Delve into the CDS 2024 syllabus online, covering English, General Knowledge, and Elementary Mathematics.",
+
+"Expert Online Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation in the online learning environment.",
+
+"Interactive Online Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises online to enhance your understanding and boost confidence.",
+
+"Online Mock Tests: Regular online mock tests simulate CDS exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+
+"Personalized Online Support: Benefit from small online class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+
+"Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the CDS exam and updated according to the latest exam patterns.",
+
+"Emphasis on Time Management: Focus on developing time management skills and exam strategies to effectively tackle the CDS examination within the stipulated time frame.",
+
+    ],
+    batchDetails: {
+      title: "Batch Details",
+      items: [
+        { count: "Morning Batch", description: "9:00AM to 12:00" },
+        { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+        { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+      ],
+    },
+    faculty: {
+      title: "Our Faculties",
+      items: [
+        {
+          name: "Ram Singh",
+          qualification: "MSC in Biochemistry",
+          experience: "13 Years",
+          imageSrc: "/assets/img/5.course-view/1.faculty.png",
+        },
+      ],
+    },
+    faq: {
+      title: "FAQ",
+      items: [
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingOne",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseOne",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseOne",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseOne",
+              class: "accordion-collapse collapse show",
+              ariaLabelledby: "panelsStayOpen-headingOne",
+            },
+          },
+          question: "Q.Who are the instructors for the CDS 2024 online course?",
+          answer:
+            "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for CDS aspirants in the online format.",
+        },
+
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingTwo",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseTwo",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseTwo",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseTwo",
+              class: "accordion-collapse collapse",
+              ariaLabelledby: "panelsStayOpen-headingTwo",
+            },
+          },
+          question: "Q.Is there study material provided for the CDS 2024 online course?",
+          answer:
+            "Yes, comprehensive online study materials are provided, covering all subjects and topics relevant to the CDS exam.",
+        },
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingThree",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseThree",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseThree",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseThree",
+              class: "accordion-collapse collapse",
+              ariaLabelledby: "panelsStayOpen-headingThree",
+            },
+          },
+          question: "Q.What is the fee structure for the CDS 2024 Mastery Program online?",
+          answer:
+            "Contact us for detailed fee information and special offers available for a limited time.",
+        },
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingFour",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseFour",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseFour",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseFour",
+              class: "accordion-collapse collapse",
+              ariaLabelledby: "panelsStayOpen-headingFour",
+            },
+          },
+          question: "Q.What sets Education Academy apart in CDS online preparation?",
+          answer:
+            "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for CDS preparation. Join us to excel in CDS 2024 and serve the nation with pride!",
+        },
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingFive",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseFive",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseFive",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseFive",
+              class: "accordion-collapse collapse",
+              ariaLabelledby: "panelsStayOpen-headingFive",
+            },
+          },
+          question: "Q.What sets Education Academy apart in NDA online preparation?",
+          answer:
+            "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for NDA preparation. Join us online to excel in NDA 2024 and embark on a rewarding career in the armed forces!",
+        },
+      ],
+    },
+
+    buyCard: {
+      imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+      title: "Special Discount Price",
+      prices: {
+        discountedPrice: "RS 2449",
+        regularPrice: "RS 2999",
+        discountPercentage: "17% OFF",
+      },
+      button: {
+        link: "#",
+        buttonText: "Buy Now",
+      },
+    },
+},
+{
+    courseId: "cds-offline",
+    title: "CDS 2024 Mastery Program (Offline)",
+    discountText: "Special Discounted Price",
+    price: {
+      discountedPrice: "RS 2449",
+      regularPrice: "RS 2999",
+      discountPercentage: "(17% OFF)",
+    },
+    content: [
+      "Join our CDS 2024 Mastery Program at Education Academy and embark on the path to a distinguished career in the armed forces. Tailored specifically for the Combined Defence Services (CDS) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the nation with honor.",
+
+      "Comprehensive Learning: Delve into the CDS 2024 syllabus, covering English, General Knowledge, and Elementary Mathematics.",
+      
+      "Experienced Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation.",
+      
+      "Interactive Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises to enhance your understanding and boost confidence.",
+      
+      "Mock Tests: Regular mock tests simulate CDS exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+      
+      "Personalized Support: Benefit from small class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+      
+      "Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the CDS exam and updated according to the latest exam patterns.",
+      
+      "Emphasis on Time Management: Focus on developing time management skills and exam strategies to effectively tackle the CDS examination within the stipulated time frame.",
+
+    ],
+    batchDetails: {
+      title: "Batch Details",
+      items: [
+        { count: "Morning Batch", description: "9:00AM to 12:00" },
+        { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+        { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+      ],
+    },
+    faculty: {
+      title: "Our Faculties",
+      items: [
+        {
+          name: "Ram Singh",
+          qualification: "MSC in Biochemistry",
+          experience: "13 Years",
+          imageSrc: "/assets/img/5.course-view/1.faculty.png",
+        },
+      ],
+    },
+    faq: {
+      title: "FAQ",
+      items: [
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingOne",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseOne",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseOne",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseOne",
+              class: "accordion-collapse collapse show",
+              ariaLabelledby: "panelsStayOpen-headingOne",
+            },
+          },
+          question: "Q.Who are the instructors for the CDS 2024 offline course?",
+          answer:
+            "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for CDS aspirants.",
+        },
+
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingTwo",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseTwo",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseTwo",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseTwo",
+              class: "accordion-collapse collapse",
+              ariaLabelledby: "panelsStayOpen-headingTwo",
+            },
+          },
+          question: "Q. Is there study material provided for the CDS 2024 offline course?",
+          answer:
+            "Yes, comprehensive study materials are provided, covering all subjects and topics relevant to the CDS exam.",
+        },
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingThree",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseThree",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseThree",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseThree",
+              class: "accordion-collapse collapse",
+              ariaLabelledby: "panelsStayOpen-headingThree",
+            },
+          },
+          question: "Q.What is the fee structure for the NDA 2024 Mastery Program offline?",
+          answer:
+            "Contact us for detailed fee information and special offers available for a limited time.",
+        },
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingFour",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseFour",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseFour",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseFour",
+              class: "accordion-collapse collapse",
+              ariaLabelledby: "panelsStayOpen-headingFour",
+            },
+          },
+          question: "Q. How are the classes scheduled for the CDS 2024 course?",
+          answer:
+            "Choose from morning, afternoon, or evening batches to accommodate your schedule and ensure convenient access to training.",
+        },
+        {
+          accordion: {
+            head: {
+              id: "panelsStayOpen-headingFive",
+              button: {
+                class: "accordion-button",
+                dataBsTarget: "#panelsStayOpen-collapseFive",
+                ariaExpanded: "false",
+                ariaControls: "panelsStayOpen-collapseFive",
+              },
+            },
+            body: {
+              id: "panelsStayOpen-collapseFive",
+              class: "accordion-collapse collapse",
+              ariaLabelledby: "panelsStayOpen-headingFive",
+            },
+          },
+          question: "Q.What sets Education Academy apart in CDS offline preparation?",
+          answer:
+            "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for CDS preparation. Join us to excel in CDS 2024 and serve the nation with pride!",
+        },
+      ],
+    },
+
+    buyCard: {
+      imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+      title: "Special Discount Price",
+      prices: {
+        discountedPrice: "RS 2449",
+        regularPrice: "RS 2999",
+        discountPercentage: "17% OFF",
+      },
+      button: {
+        link: "#",
+        buttonText: "Buy Now",
+      },
+    },
+},
+
+//SI Police
+{
+  courseId: "cds-online",
+  title: "CDS 2024 Mastery Program (Online)",
+  discountText: "Special Discounted Price",
+  price: {
+    discountedPrice: "RS 2449",
+    regularPrice: "RS 2999",
+    discountPercentage: "(17% OFF)",
+  },
+  content: [
+"Embark on the journey towards a distinguished career in the armed forces with our CDS 2024 Mastery Program online at Education Academy. Tailored specifically for the Combined Defence Services (CDS) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the nation with honor.",
+
+"Comprehensive Online Learning: Delve into the CDS 2024 syllabus online, covering English, General Knowledge, and Elementary Mathematics.",
+
+"Expert Online Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation in the online learning environment.",
+
+"Interactive Online Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises online to enhance your understanding and boost confidence.",
+
+"Online Mock Tests: Regular online mock tests simulate CDS exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+
+"Personalized Online Support: Benefit from small online class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+
+"Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the CDS exam and updated according to the latest exam patterns.",
+
+"Emphasis on Time Management: Focus on developing time management skills and exam strategies to effectively tackle the CDS examination within the stipulated time frame.",
+
+  ],
+  batchDetails: {
+    title: "Batch Details",
+    items: [
+      { count: "Morning Batch", description: "9:00AM to 12:00" },
+      { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+      { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+    ],
+  },
+  faculty: {
+    title: "Our Faculties",
+    items: [
+      {
+        name: "Ram Singh",
+        qualification: "MSC in Biochemistry",
+        experience: "13 Years",
+        imageSrc: "/assets/img/5.course-view/1.faculty.png",
+      },
+    ],
+  },
+  faq: {
+    title: "FAQ",
+    items: [
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingOne",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseOne",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseOne",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseOne",
+            class: "accordion-collapse collapse show",
+            ariaLabelledby: "panelsStayOpen-headingOne",
+          },
+        },
+        question: "Q.Who are the instructors for the CDS 2024 online course?",
+        answer:
+          "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for CDS aspirants in the online format.",
+      },
+
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingTwo",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseTwo",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseTwo",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseTwo",
+            class: "accordion-collapse collapse",
+            ariaLabelledby: "panelsStayOpen-headingTwo",
+          },
+        },
+        question: "Q.Is there study material provided for the CDS 2024 online course?",
+        answer:
+          "Yes, comprehensive online study materials are provided, covering all subjects and topics relevant to the CDS exam.",
+      },
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingThree",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseThree",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseThree",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseThree",
+            class: "accordion-collapse collapse",
+            ariaLabelledby: "panelsStayOpen-headingThree",
+          },
+        },
+        question: "Q.What is the fee structure for the CDS 2024 Mastery Program online?",
+        answer:
+          "Contact us for detailed fee information and special offers available for a limited time.",
+      },
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingFour",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseFour",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseFour",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseFour",
+            class: "accordion-collapse collapse",
+            ariaLabelledby: "panelsStayOpen-headingFour",
+          },
+        },
+        question: "Q.What sets Education Academy apart in CDS online preparation?",
+        answer:
+          "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for CDS preparation. Join us to excel in CDS 2024 and serve the nation with pride!",
+      },
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingFive",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseFive",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseFive",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseFive",
+            class: "accordion-collapse collapse",
+            ariaLabelledby: "panelsStayOpen-headingFive",
+          },
+        },
+        question: "Q.What sets Education Academy apart in NDA online preparation?",
+        answer:
+          "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for NDA preparation. Join us online to excel in NDA 2024 and embark on a rewarding career in the armed forces!",
+      },
+    ],
+  },
+
+  buyCard: {
+    imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+    title: "Special Discount Price",
+    prices: {
+      discountedPrice: "RS 2449",
+      regularPrice: "RS 2999",
+      discountPercentage: "17% OFF",
+    },
+    button: {
+      link: "#",
+      buttonText: "Buy Now",
+    },
+  },
+},
+{
+  courseId: "cds-offline",
+  title: "CDS 2024 Mastery Program (Offline)",
+  discountText: "Special Discounted Price",
+  price: {
+    discountedPrice: "RS 2449",
+    regularPrice: "RS 2999",
+    discountPercentage: "(17% OFF)",
+  },
+  content: [
+    "Join our CDS 2024 Mastery Program at Education Academy and embark on the path to a distinguished career in the armed forces. Tailored specifically for the Combined Defence Services (CDS) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the nation with honor.",
+
+    "Comprehensive Learning: Delve into the CDS 2024 syllabus, covering English, General Knowledge, and Elementary Mathematics.",
+    
+    "Experienced Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation.",
+    
+    "Interactive Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises to enhance your understanding and boost confidence.",
+    
+    "Mock Tests: Regular mock tests simulate CDS exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+    
+    "Personalized Support: Benefit from small class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+    
+    "Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the CDS exam and updated according to the latest exam patterns.",
+    
+    "Emphasis on Time Management: Focus on developing time management skills and exam strategies to effectively tackle the CDS examination within the stipulated time frame.",
+
+  ],
+  batchDetails: {
+    title: "Batch Details",
+    items: [
+      { count: "Morning Batch", description: "9:00AM to 12:00" },
+      { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
+      { count: "Evening Batch", description: "4:00PM to 7:00PM" },
+    ],
+  },
+  faculty: {
+    title: "Our Faculties",
+    items: [
+      {
+        name: "Ram Singh",
+        qualification: "MSC in Biochemistry",
+        experience: "13 Years",
+        imageSrc: "/assets/img/5.course-view/1.faculty.png",
+      },
+    ],
+  },
+  faq: {
+    title: "FAQ",
+    items: [
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingOne",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseOne",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseOne",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseOne",
+            class: "accordion-collapse collapse show",
+            ariaLabelledby: "panelsStayOpen-headingOne",
+          },
+        },
+        question: "Q.Who are the instructors for the CDS 2024 offline course?",
+        answer:
+          "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for CDS aspirants.",
+      },
+
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingTwo",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseTwo",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseTwo",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseTwo",
+            class: "accordion-collapse collapse",
+            ariaLabelledby: "panelsStayOpen-headingTwo",
+          },
+        },
+        question: "Q. Is there study material provided for the CDS 2024 offline course?",
+        answer:
+          "Yes, comprehensive study materials are provided, covering all subjects and topics relevant to the CDS exam.",
+      },
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingThree",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseThree",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseThree",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseThree",
+            class: "accordion-collapse collapse",
+            ariaLabelledby: "panelsStayOpen-headingThree",
+          },
+        },
+        question: "Q.What is the fee structure for the NDA 2024 Mastery Program offline?",
+        answer:
+          "Contact us for detailed fee information and special offers available for a limited time.",
+      },
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingFour",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseFour",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseFour",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseFour",
+            class: "accordion-collapse collapse",
+            ariaLabelledby: "panelsStayOpen-headingFour",
+          },
+        },
+        question: "Q. How are the classes scheduled for the CDS 2024 course?",
+        answer:
+          "Choose from morning, afternoon, or evening batches to accommodate your schedule and ensure convenient access to training.",
+      },
+      {
+        accordion: {
+          head: {
+            id: "panelsStayOpen-headingFive",
+            button: {
+              class: "accordion-button",
+              dataBsTarget: "#panelsStayOpen-collapseFive",
+              ariaExpanded: "false",
+              ariaControls: "panelsStayOpen-collapseFive",
+            },
+          },
+          body: {
+            id: "panelsStayOpen-collapseFive",
+            class: "accordion-collapse collapse",
+            ariaLabelledby: "panelsStayOpen-headingFive",
+          },
+        },
+        question: "Q.What sets Education Academy apart in CDS offline preparation?",
+        answer:
+          "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for CDS preparation. Join us to excel in CDS 2024 and serve the nation with pride!",
+      },
+    ],
+  },
+
+  buyCard: {
+    imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+    title: "Special Discount Price",
+    prices: {
+      discountedPrice: "RS 2449",
+      regularPrice: "RS 2999",
+      discountPercentage: "17% OFF",
+    },
+    button: {
+      link: "#",
+      buttonText: "Buy Now",
+    },
+  },
+},
+
+
+
+
+
+
+
     
     
   ],
@@ -3103,6 +4497,7 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     }
+    
   ]
 },
 
