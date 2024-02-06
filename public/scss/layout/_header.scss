@@ -324,8 +324,11 @@ display: flex;
         
               }
               span{
+                display: block;
                 font-weight: $bold;
                 color: $secondary-color;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.342);
+                margin-right: 20px;
               }
     
               // Styles for the second level menu item
