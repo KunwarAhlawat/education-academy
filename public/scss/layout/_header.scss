@@ -1,7 +1,6 @@
 
 //style for desktop menu
 .nav-section{
-
   background-color: $text-light;
   box-shadow: $shadow-1;
   
@@ -275,6 +274,7 @@ display: flex;
       .mobile-menu-items {
         padding: 20px 10px;
         margin-left: 10px;
+    
         // Custom accordion item styles
         .custom-accordion-item {
           // Custom accordion header styles
@@ -304,6 +304,10 @@ display: flex;
               a {
                 font-size: 1rem;
                 color: $text-dark;
+              }
+              span{
+                font-weight: $bold;
+                color: $secondary-color;
               }
     
               // Styles for the second level menu item
