@@ -2891,10 +2891,7 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
   text: "COMPETITIVE EXAMS",
   link: "course-view.html",
   submenu: [
-<<<<<<< HEAD
-=======
     //up police
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
     {
       id: "up-police",
       text: "UP Police",
@@ -2915,7 +2912,7 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
     {
       id: "ssc-cgl",
       text: "CGL",
-
+    },
     // ssc cgl
     {
       id: "ssc-cgl",
@@ -2960,7 +2957,9 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
       submenu2: [
         {
           id: "tet-online",
-
+        }
+      ]
+    },
     //ctet
     {
       id: "ctet",
