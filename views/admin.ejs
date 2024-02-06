@@ -1,0 +1,248 @@
+ 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="sidebar">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Analytics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="content">
+        <table id="myTable" class="stripe display border hover">
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+ 
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include DataTables -->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $.ajax({
+      type: 'get',
+      url: '/getStudentsTableData',
+      success: function(data) {
+        console.log(data);
+
+        if (data.length > 0) {
+          // Assuming data is an array of objects, use the keys of the first object as columns
+          var columns = Object.keys(data[0]).map(function(key) {
+            return { data: key, title: key };
+          });
+
+       
+         // Add a checkbox column
+         columns.unshift({
+        data: null,
+        className: 'select-checkbox',
+        orderable: false,
+        targets: 0,
+        render: function() {
+          return ''; // Placeholder for the checkbox
+        }
+      });
+
+          // Initialize DataTable with dynamically generated columns
+          $('#myTable').DataTable({
+            dom: "Bfrtip",
+            data: data,
+            destroy: true,
+          orderCellsTop: true,
+          fixedHeader: true,
+            columns: columns,
+            select: {
+              style: 'os',
+              selector: 'td:first-child',
+              style: 'multi'
+          },
+          order: [[1, 'asc']],
+          pageLength: 20,
+          scrollY: 500,
+          dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ],
+          searching: false,
+          initComplete: function() {
+              var api = this.api();
+  
+              // For each column
+              api.columns().eq(0).each(function(colIdx) {
+                  // Set the header cell to contain the input element
+                  var cell = $('.filters th').eq($(api.column(colIdx).header()).index());
+                  var title = $(cell).text();
+                  $(cell).html('<input type="text" placeholder="' + title + '" />');
+  
+                  // On every keypress in this input
+                  $('input', $('.filters th').eq($(api.column(colIdx).header()).index()))
+                      .off('keyup change')
+                      .on('change', function(e) {
+                          // Get the search value
+                          $(this).attr('title', $(this).val());
+                          var regexr = '({search})';
+  
+                          var cursorPosition = this.selectionStart;
+                          // Search the column for that value
+                          api.column(colIdx)
+                              .search(
+                                  this.value != ''
+                                      ? regexr.replace('{search}', '(((' + this.value + ')))')
+                                      : '',
+                                  this.value != '',
+                                  this.value == ''
+                              )
+                              .draw();
+                      })
+                      .on('keyup', function(e) {
+                          e.stopPropagation();
+  
+                          $(this).trigger('change');
+                          $(this)
+                              .focus()[0]
+                              .setSelectionRange(cursorPosition, cursorPosition);
+                      });
+              });
+          },
+          });
+        } else {
+          // Handle case when there is no data
+          console.log("No data available");
+        }
+      },
+      error: function(error) {
+        // Handle the error
+        console.error("Error fetching data:", error);
+      },
+    });
+  });
+
+  function GetData(){
+    return 
+  }
+</script>
+
+
+<!-- <script>
+  $(document).ready(function() {
+      $('#myTable').DataTable({
+          destroy: true,
+          orderCellsTop: true,
+          fixedHeader: true,
+          ajax: {
+              url: '/admin', // Replace with your API endpoint
+              method: "get",
+              dataSrc: ''
+          },
+          columns: [
+              {
+                  data: null,
+                  className: 'select-checkbox',
+                  orderable: false,
+                  targets: 0,
+                  render: function() {
+                      return ''; // Placeholder for the checkbox
+                  }
+              },
+              { data: 'Name' },
+              { data: 'email' },
+              { data: 'mobileNum' },
+              { data: 'Courses' },
+              { data: 'Address' }
+          ],
+          select: {
+              style: 'os',
+              selector: 'td:first-child',
+              style: 'multi'
+          },
+          order: [[1, 'asc']],
+          pageLength: 20,
+          scrollY: 300,
+          dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ],
+          searching: false,
+          initComplete: function() {
+              var api = this.api();
+  
+              // For each column
+              api.columns().eq(0).each(function(colIdx) {
+                  // Set the header cell to contain the input element
+                  var cell = $('.filters th').eq($(api.column(colIdx).header()).index());
+                  var title = $(cell).text();
+                  $(cell).html('<input type="text" placeholder="' + title + '" />');
+  
+                  // On every keypress in this input
+                  $('input', $('.filters th').eq($(api.column(colIdx).header()).index()))
+                      .off('keyup change')
+                      .on('change', function(e) {
+                          // Get the search value
+                          $(this).attr('title', $(this).val());
+                          var regexr = '({search})';
+  
+                          var cursorPosition = this.selectionStart;
+                          // Search the column for that value
+                          api.column(colIdx)
+                              .search(
+                                  this.value != ''
+                                      ? regexr.replace('{search}', '(((' + this.value + ')))')
+                                      : '',
+                                  this.value != '',
+                                  this.value == ''
+                              )
+                              .draw();
+                      })
+                      .on('keyup', function(e) {
+                          e.stopPropagation();
+  
+                          $(this).trigger('change');
+                          $(this)
+                              .focus()[0]
+                              .setSelectionRange(cursorPosition, cursorPosition);
+                      });
+              });
+          },
+      });
+  
+      var DT1 = $('#myTable').DataTable();
+      $(".selectAll").on("click", function(e) {
+          if ($(this).is(":checked")) {
+              DT1.rows().select();
+          } else {
+              DT1.rows().deselect();
+          }
+      });
+  });
+  </script>
+   -->
