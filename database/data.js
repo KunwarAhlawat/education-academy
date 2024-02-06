@@ -128,40 +128,28 @@ const Data = {
   banner: [
     {
       imgSrc: "/assets/img/2.home/1.slider/neet2.png",
-<<<<<<< HEAD
       imgSrc2: "/assets/img/2.home/1.slider/mobile/neetBatches.png",
-=======
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
       altText: "Slide 1",
       link: "/courseview/10",
       class: "active",
     },
     {
       imgSrc: "/assets/img/2.home/1.slider/iije.png",
-<<<<<<< HEAD
       imgSrc2: "/assets/img/2.home/1.slider/mobile/iitJee.png",
-=======
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
       altText: "Slide 2",
       link: "/courseview/11",
     },
     {
       imgSrc: "/assets/img/2.home/1.slider/cat1.png",
-<<<<<<< HEAD
       imgSrc2: "/assets/img/2.home/1.slider/mobile/cat.png",
 
-=======
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
       altText: "Slide 3",
       link: "/courseview/12",
     },
     
   ],
   courseView: [
-<<<<<<< HEAD
-=======
     //NEET
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
     {
       courseId: "NEET-2024-Offline",
       title: " NEET 2024 Mastery Program(Offline)",
@@ -499,11 +487,8 @@ const Data = {
         },
       },
     },
-<<<<<<< HEAD
-=======
 
     //IIT JEE
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
     {
       courseId: "IIT-JEE-2024-Offline",
       title: "IIT JEE 2024 Mastery Program(Offline)",
@@ -833,11 +818,8 @@ const Data = {
         },
       },
     },
-<<<<<<< HEAD
-=======
 
     //CAT
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
     {
       courseId: "CAT-2024-Offline",
       title: "CAT 2024 Preparation Program(Offline)",
@@ -1165,11 +1147,8 @@ const Data = {
         },
       },
     },
-<<<<<<< HEAD
-=======
 
     // UP Police
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
     {
       courseId: "UP-Police-2024-Offline",
       title: " UP Police 2024 Mastery Program (Offline)",
@@ -2166,9 +2145,7 @@ const Data = {
         },
       },
     },
-<<<<<<< HEAD
     
-=======
 
     //CTET
     {
@@ -2869,7 +2846,6 @@ const Data = {
       },
     },
 
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
     
     
   ],
@@ -2936,17 +2912,14 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     },
-<<<<<<< HEAD
     {
       id: "ssc-cgl",
       text: "CGL",
-=======
 
     // ssc cgl
     {
       id: "ssc-cgl",
       text: "SSC-CGL",
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
       link: "courseView.html",
       submenu2: [
         {
@@ -2961,11 +2934,8 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     },
-<<<<<<< HEAD
-=======
 
     //ssc gd
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
     {
       id: "ssc-gd",
       text: "SSS GD",
@@ -2983,7 +2953,6 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         }
       ]
     },
-<<<<<<< HEAD
     {
       id: "TET",
       text: "TET",
@@ -2991,7 +2960,6 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
       submenu2: [
         {
           id: "tet-online",
-=======
 
     //ctet
     {
@@ -3039,22 +3007,17 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
       submenu2: [
         {
           id: "supertet-online",
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
           text: "Online",
           link: "courseView.html"
         },
         {
-<<<<<<< HEAD
           id: "tet-offline",
-=======
           id: "supertet-offline",
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
           text: "Offline",
           link: "courseView.html"
         }
       ]
     },
-<<<<<<< HEAD
     {
       id: "SUPER-TET",
       text: "SUPER TET",
@@ -3062,8 +3025,9 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
       submenu2: [
         {
           id: "super-tet-online",
-=======
-
+        }
+      ]
+    },
     //nda
     {
       id: "nda",
@@ -3072,14 +3036,11 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
       submenu2: [
         {
           id: "nda-online",
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
           text: "Online",
           link: "courseView.html"
         },
         {
-<<<<<<< HEAD
           id: "super-tet-offline",
-=======
           id: "nda-offline",
           text: "Offline",
           link: "courseView.html"
@@ -3157,7 +3118,6 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         },
         {
           id: "upsc-offline",
->>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
           text: "Offline",
           link: "courseView.html"
         }
