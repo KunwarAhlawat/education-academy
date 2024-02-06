@@ -1,0 +1,205 @@
+ 
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4><strong>Head Office-</strong></h4>
+                            <span> Paradise mall, 5, Baghpat Rd <br> Sabun Godam,
+                                Jwala Nagar,Naval Vihar, <br> Meerut, Uttar Pradesh
+                                250002</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4><strong>Corporate Office-</strong></h4>
+                            <span> Office No. 306, 3rd Floor, <br> H-140 BSI Building
+                                Sector-63,Noida</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-telephone-fill"></i> 
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>+91 8449511111</span>  <br>
+                            <span>info@educationacademy.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="/assets/img/1.logo/ea-logo.png" class="img-fluid" alt="logo"></a>
+                            <p>E. Academy</p>
+                        </div>
+                        <!-- <div class="footer-text">
+                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                            elit,Lorem ipsum dolor sit amet.</p>
+                        </div> -->
+                        <!-- <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg p-3"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg p-3"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg p-3"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Our Courses</h3>
+                        </div>
+                        <ul>
+                            <li><a href="/courseview/IIT-JEE-2024-Offline">IIT JEE</a></li>
+                            <li><a href="/courseview/NEET-2024-Offline">NEET</a></li>
+                            <li><a href="/courseview/UP-Police-2024-Offline">UP POLICE</a></li>
+                            <li><a href="/courseview/NEET-2024-Offline">CLASS 12</a></li>
+                            <li><a href="/courseview/NEET-2024-Offline">CLASS 11</a></li>
+                      
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Quick Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class=" col text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2024, All Right Reserved  <a href="/"><strong>Education Academy</strong></a></p>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/assets/vendor/js/jquery-3.7.1.min.js"></script>
+
+<script src="/assets/vendor/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/js/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+       
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    lazyLoad: true,
+    // autoplay:true,
+    // autoplayTimeout:1000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
+ 
+    // Custom email validation using regex
+    $.validator.addMethod("customEmail", function (value, element) {
+                // Modify the regular expression according to your needs
+                return this.optional(element) || /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);
+            }, "Please enter a valid email address");
+
+  $("#addRegisterForm").validate({
+  
+      submitHandler:function(form ,event){
+       
+        event.preventDefault()
+        console.log($(form).serialize())
+        $.ajax({
+                type: "POST",
+                url: "/admin",
+                data: $(form).serialize(),
+                success: function (data, status) {
+                    console.log("DataReturn:", data);
+                    console.log("Status:", status);
+
+                    // Remove previous error messages
+                    $('.error-message').remove();
+                    $('.success').remove();
+                    console.log("er" , data.errors)
+                    if (data.errors) {
+                        data.errors.forEach(err => {
+                            var inputName = err.path;
+                            var errorMessage = err.msg;
+                            console.log("inputName" , inputName)
+                            console.log("errorMessage" , errorMessage)
+                            $('[name="' + inputName + '"]').after('<div class="error-message">' + errorMessage + '</div>');
+                        });
+                    }
+
+                    if (data.msg && status === "success") {
+                        const message = data.msg;
+                        console.log("message" , message)
+                        // Check for specific messages related to email and phone duplication
+                        if (message === "Email already exists") {
+                            $('#addRegisterForm').append('<div class="error-message">' + message + '</div>');
+                        } else if (message === "Mobile number already exists") {
+                            $('#addRegisterForm').append('<div class="error-message">' + message + '</div>');
+                        } else if (message === "Email and Mobile number already exist") {
+                            // Handle the case where both email and mobile are duplicated
+                            $('#addRegisterForm').append('<div class="error-message">' + message + '</div>');
+                        } else {
+                            // Display success message for other cases
+                            $('#addRegisterForm').append('<h4 class="success">' + message + '</h4>');
+                        }
+                    }
+                    // Additional logic after successful submission
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
+
+    }
+  });
+})
+</script>
+ 
+<script>
+</script>

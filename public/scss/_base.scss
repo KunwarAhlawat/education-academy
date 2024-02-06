@@ -1,0 +1,204 @@
+/* --------------------------------------------
+    Typography 
+ ---------------------------------------------- */
+
+
+$heading-font: 'Montserrat', sans-serif;
+$body-font: 'Inter', sans-serif;
+
+
+body {
+    font-family: $body-font;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    margin: 0px;
+    line-height: 120%;
+}
+
+h1 {
+    font-size: 2.986rem;
+}
+
+// Media query for tablets (portrait and landscape)
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+    h1 {
+        font-size: 2.6874rem;
+
+    }
+
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 599px) {
+    h1 {
+        font-size: 2.388rem;
+    }
+
+}
+
+
+
+
+
+h2 {
+    font-size: 2.388rem;
+}
+
+// Media query for tablets (portrait and landscape)
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    h2 {
+        font-size: 2.149rem;
+    }
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 599px) {
+    h2 {
+        font-size: 1.9104rem;
+    }
+}
+
+
+
+
+h3 {
+    font-size: 2.074rem;
+}
+
+// Media query for tablets (portrait and landscape)
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    h3 {
+        font-size: 1.866rem;
+    }
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 599px) {
+    h3 {
+        font-size: 1.659rem;
+    }
+}
+
+
+h4 {
+    font-size: 1.728rem;
+}
+
+// Media query for tablets (portrait and landscape)
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    h4 {
+        font-size: 1.555rem;
+    }
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 599px) {
+    h4 {
+        font-size: 1.3824rem;
+    }
+}
+
+
+h5 {
+    font-size: 1.44rem;
+}
+
+// Media query for tablets (portrait and landscape)
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    h5 {
+        font-size: 1.296rem;
+    }
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 599px) {
+    h5 {
+        font-size: 1.152rem;
+    }
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+// Media query for tablets (portrait and landscape)
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    h6 {
+        font-size: 0.9rem;
+    }
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 599px) {
+    h6 {
+        font-size: 0.8rem;
+    }
+}
+
+
+a {
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: $bold;
+    color: $primary-color;
+    text-decoration: none;
+    outline: none !important;
+    cursor: pointer;
+    &:hover{
+        color: $accent-color;
+    }
+}
+
+// Media query for tablets (portrait and landscape)
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    a {
+        font-size: 0.9rem;
+    }
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 599px) {
+    a {
+        font-size: 0.8rem;
+    }
+}
+
+
+p {
+    margin: 0px;
+    font-size: 1rem;
+
+}
+
+// Media query for tablets (portrait and landscape)
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 599px) {
+    p {
+        font-size: 0.8rem;
+    }
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}

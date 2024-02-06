@@ -1,0 +1,39 @@
+//color variable 
+//Colors-Education Studies
+$primary-color: #2f207d;
+$secondary-color: #00671e;
+$accent-color: #47c341;
+$nutral-color: #0e70a1;
+$text-dark: #333;
+$text-light: #fff;
+
+$bg-color-1:#FAFAFA;
+$bg-color-2:#ECEFF1;
+$bg-color-3: #ffffff;
+
+// typography variable
+$bold:700;
+$reg:400;
+$med:600;
+//box shadow variable
+$shadow-1 :rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$shadow-2: 0px 55px 89px rgba(0, 0, 0, 0.1); //binny
+// $shadow-3: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+// $shadow-4: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+// $shadow-5: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+$shadow-menu : rgba(0, 0, 0, 0.2) 0px 20px 30px;
+
+$border_menu : 1px solid rgba(0, 0, 0, 0.027);
+$small-font: 0.875rem; //14px
+$smaller-font: 0.75rem; //12px
+
+$border1 : 1px solid #f5f5f5;
+$border2: 1px solid rgba(0, 0, 0, 0.062);
+$borderInput :  1px solid #d2d8dd;
+$small-font:0.875rem;
+
+// responsive 
+$tab:'(max-width: 991px)';
+$small_mobile:'(max-width: 576px)';
+$xs_mobile:'(max-width: 420px)';

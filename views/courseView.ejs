@@ -1,0 +1,259 @@
+<%- include('partials/header') %>
+  <style>
+    .main{
+        position: relative;
+    }
+    #content{
+        position: relative;
+    }
+    .f-space {
+    margin-top: 325px;
+    position: absolute;
+    top: 0;
+}
+  .buy-card-abs {
+    position: absolute;
+    bottom: -.4%;
+}
+.buy-card-fix {
+    position: fixed;
+    bottom: 10%;
+}
+  </style>
+ <!-- hero area start -->
+ <section class="course-view-hero-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="hero-text">
+                    <h2><%= courseViewData.title %></h2>
+                     
+                    <p><%= courseViewData.discountText %></p>
+                    <div class="hero-price-area">
+                        <span><%= courseViewData.price.discountedPrice %></span>
+                        <span><%= courseViewData.price.regularPrice %></span>
+                        <span><%= courseViewData.price.discountPercentage %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- hero area end -->
+
+<!-- main area start -->
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- course content area start -->
+                <section class="course-view-content-area ">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Course Detail</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="course-content">
+                            <ol>
+                                <% courseViewData.content.forEach(text => { %>
+                                    <li><%= text %> </li>
+                               <%  }) %> 
+                            </ol>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- course content area end -->
+
+                <!-- course include area start -->
+                <section class="course-view-course-include-area">
+                    <div class="row">
+                        <div class="col">
+                            <h4><%= courseViewData.batchDetails.title %></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                      
+                            <% courseViewData.batchDetails.items.forEach(text => { %>
+                                <div class="col-md-4">
+                                <div class="course-include-item">
+                                    <span><%= text.count %></span>
+                                    <h6><%= text.description %></h6>
+                                </div>
+                            </div>
+                           <%  }) %> 
+
+                         
+                       
+               
+                    </div>
+
+                </section>
+                <!-- course include area end -->
+
+                <!-- course top faculties area start -->
+                <section class="course-view-top-faculties-area">
+                    <div class="row">
+                        <div class="col">
+                            <h4><%= courseViewData.faculty.title %></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="owl-carousel">
+
+                                
+                            <% courseViewData.faculty.items.forEach(text => { %>
+                                <a href="/faculty/<%= text.facultyId %>">
+                                <div class="faculty-item">
+                                    <div class="faculty-text">
+                                        <h5><%= text.name %></h5>
+                                        <span><%= text.qualification %></span>
+                                        <ul>
+                                            <li><%= text.experience %></li>
+                                     
+                                        </ul>
+                                    </div>
+                                    <div class="faculty-img">
+                                        <img width="20" src="<%= text.imageSrc %>" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                           <%  }) %> 
+ 
+                             
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+                <!-- course top faculties area end -->
+
+                <!-- course FAQ area start -->
+                <section class="course-view-faq-area ">
+                    <div class="row">
+                        <div class="col">
+                            <h2>FAQ</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+                                <% courseViewData.faq.items.forEach(text => { %>
+                                  
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="<%= text.accordion.head.id %>">
+                                            <button class="<%= text.accordion.head.button.class %>" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="<%= text.accordion.head.button.dataBsTarget %>" aria-expanded="<%= text.accordion.head.button.ariaExpanded %>"
+                                                aria-controls="<%= text.accordion.head.button.ariaControls %>">
+                                                <%= text.question %>
+                                            </button>
+                                        </h2>
+                                        <div id="<%= text.accordion.body.id %>" class="<%= text.accordion.body.class %>"
+                                            aria-labelledby="<%= text.accordion.body.ariaLabelledby %>">
+                                            <div class="accordion-body">
+                                                <%= text.answer %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                               <%  }) %> 
+
+                            
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+                <!-- course FAQ area start -->
+            </div>
+
+            <!-- sidebar area start -->
+            <div class="col-md-4">
+                <section class="course-view-sidebar-area">
+
+                    <div class="row">
+                        <div class="col">
+                            <div id="fixedDiv" class="sidebar-cta-card shadow buy-card-fix">
+                                <img src="<%= courseViewData.buyCard.imageSrc %>" alt="" class="img-fluid">
+                                <h6><%= courseViewData.buyCard.title %></h6>
+                                <ul>
+                                    <li><%= courseViewData.buyCard.prices.discountedPrice %></li>
+                                    <li><%= courseViewData.buyCard.prices.regularPrice %></li>
+                                    <li><%= courseViewData.buyCard.prices.discountPercentage %></li>
+                                </ul>
+                                <a href="<%= courseViewData.buyCard.button.link %>"><button class="secondary-button"><%= courseViewData.buyCard.button.buttonText %></button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- main area end -->
+
+
+   <!-- cta area start -->
+   <section id="content" class="cta-area">
+    <div class="f-space"></div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <div class="cta-text ">
+                    <h2>Join 15 Million students on the app today!</h2>
+                    <p>Creating new benchmarks in learning experiences</p>
+                </div>
+                <div class="cta">
+                    <button class="primary-button " data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include("partials/footer.ejs")%>
+<script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:2
+        }
+    }
+})
+</script>
+ <script>
+      function checkOffset() {
+            if ($('#fixedDiv').offset().top + $('#fixedDiv').height() >= $('.f-space').offset().top -350  )
+           {
+           
+                $('#fixedDiv').removeClass('buy-card-fix');
+                $('#fixedDiv').addClass('buy-card-abs');
+           
+           }
+            if ($(document).scrollTop() + window.innerHeight   < $('.f-space').offset().top - 210 )  
+               {
+                 $('#fixedDiv').addClass('buy-card-fix');
+               
+               }
+        }
+        $(document).scroll(function () {
+            checkOffset();
+        });
+</script>
+<%- include("partials/copyright.ejs")%>

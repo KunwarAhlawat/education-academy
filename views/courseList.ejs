@@ -1,0 +1,109 @@
+<%- include('partials/header') %>
+
+   
+    <section class="course-list-hero-area">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="hero-text">
+
+              <h2>ONLINE IIT JEE COACHING</h2>
+              <p>The online class is considered one of the best options for preparing for the IIT JEE exam.
+                Physics Wallah offers the best online coaching for IIT JEE exam preparation, making it an
+                ideal choice for aspirants. With the PW IIT JEE Online Coaching Program, students can access
+                the best courses that are both effective and affordable. By opting for this accessible and
+                cost-effective online coaching for IIT JEE, students can effectively prepare themselves for
+                the renowned engineering examination.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="course-list-area section-padding">
+      <div class="container">
+
+        <div class="row ">
+
+          <% courseData.courseList.forEach(course=> { %>
+            <div class="col-md-4">
+              <div class="course-item">
+                <div class="course-item-img">
+                  <img src="<%= course.courseListPage.imgSrc2 %>" alt="" class="img-fluid">
+                </div>
+                <div class="course-item-text">
+                  <h5>
+                    <%= course.courseListPage.title2 %>
+                  </h5>
+                  <p>
+                    <%= course.courseListPage.details2 %>
+                  </p>
+                  <div class="included-text">
+                    <ul class="left-text">
+                      <% course.courseListPage.includedText.left.forEach(item=> { %>
+
+                        <li><i class="<%= item.icon %>"></i><span>
+                            <%= item.text %>
+                          </span> </li>
+
+                        <% }) %>
+                    </ul>
+                    <ul class="right-text">
+                      <% course.courseListPage.includedText.right.forEach(item=> { %>
+
+                        <li><i class="<%= item.icon %>"></i><span>
+                            <%= item.text %>
+                          </span></li>
+
+                        <% }) %>
+                    </ul>
+
+
+                  </div>
+                </div>
+                <div class="course-item-price">
+                  <p>Course Price</p>
+                  <ul>
+                    <li><%= course.courseListPage.price.regularPrice %></li>
+                    <li><%= course.courseListPage.price.discountedPrice %> </li>
+                    <li><%= course.courseListPage.price.discountPercentage %></li>
+                  </ul>
+                </div>
+                <hr>
+                <div class="course-item-button">
+               <a href="/courseview/<%= course.id %>">  <button class="outline-button">Explore</button></a> 
+                <a href="<%= course.courseListPage.links.buyNow %>">  <button class="cta-button">Buy Now</button></a>
+
+                </div>
+
+              </div>
+            </div>
+            <% }) %>
+
+             
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-area">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <div class="cta-text ">
+              <h2>Join 15 Million students on the app today!</h2>
+              <p>Creating new benchmarks in learning experiences</p>
+            </div>
+            <div class="cta">
+              <button class="cta-button" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <%- include('partials/footer.ejs')%>
+      <%- include('partials/copyright.ejs')%>

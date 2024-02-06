@@ -1,0 +1,33 @@
+//offcanvass override 
+
+.offcanvas-header, .offcanvas-body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+
+//accordian override
+
+.accordion{
+    .accordion-item{
+       margin-top: 20px;
+        .accordion-header{
+            border: 0;
+           
+            button{
+                padding: 10px;
+               box-shadow: $shadow-1;
+               color: $text-dark;
+               font-weight: $bold;
+               &:hover{
+                color: $accent-color;
+               }
+            }
+        
+        }
+    }
+}
