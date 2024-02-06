@@ -1,7 +1,10 @@
 
 //style for desktop menu
 .nav-section{
+<<<<<<< HEAD
 
+=======
+>>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
   background-color: $text-light;
   box-shadow: $shadow-1;
   
@@ -274,6 +277,10 @@ display: flex;
       // Mobile menu items container styles
       .mobile-menu-items {
         padding: 20px 10px;
+<<<<<<< HEAD
+=======
+        margin-left: 10px;
+>>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
     
         // Custom accordion item styles
         .custom-accordion-item {
@@ -300,18 +307,41 @@ display: flex;
             // Styles for the first level menu item
             .m-menu-item-1 {
              padding: 5px;
+<<<<<<< HEAD
+=======
+             margin-left: 10px;
+>>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
               a {
                 font-size: 1rem;
                 color: $text-dark;
               }
+<<<<<<< HEAD
+=======
+              span{
+                font-weight: $bold;
+                color: $secondary-color;
+              }
+>>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
     
               // Styles for the second level menu item
               .m-menu-item-2 {
                 margin-left: 10px;
               }
+<<<<<<< HEAD
             }
           }
         }
+=======
+            
+            }
+         
+          }
+        }
+        .cta-button{
+          margin-top: 20px;
+          width: 100%;
+        }
+>>>>>>> 508ef17c53e73a9434cd089aeabd83947e33969f
       }
     }
     
