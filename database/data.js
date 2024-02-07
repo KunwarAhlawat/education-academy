@@ -1,10 +1,11 @@
 const Data = {
   courseList: [
+    // neet
     {
       id: "NEET-2024-Offline",
       onlineCourse: {
         imgSrc2: "/assets/img/onlineCourseList/1.png",
-        title2: "NEET 2024 Course",
+        title2: "NEET 2024 Preparation Online Program",
         details2: "Course Details:",
         includedText: {
           left: [
@@ -12,7 +13,7 @@ const Data = {
             { icon: "bi bi-check-square", text: "100+ Lectures" },
           ],
           right: [
-            { icon: "bi bi-check-square", text: "Offline" },
+            { icon: "bi bi-check-square", text: "Online" },
             { icon: "bi bi-check-square", text: "3 Batches" },
           ],
         },
@@ -22,14 +23,14 @@ const Data = {
           discountPercentage: "28% OFF",
         },
         links: {
-          explore: "/courseview/NEET-2024-Offline", // Add the appropriate URL
+          explore: "NEET-2024-Online", // Add the appropriate URL
           buyNow: "#", // Add the appropriate URL
         },
       },
 
       courseListPage: {
-        imgSrc2: "/assets/img/4.course-list/1.png",
-        title2: "IIT-JJE 2024 Mastery Offline Program",
+        imgSrc2: "/assets/img/4.course-list/3.png",
+        title2: "NEET 2024 Preparation  Offline Course",
         details2: "Course Details:",
         includedText: {
           left: [
@@ -52,11 +53,13 @@ const Data = {
         },
       },
     },
+
+    // iit
     {
       id: "IIT-JEE-2024-Offline",
       onlineCourse: {
-        imgSrc2: "/assets/img/onlineCourseList/2.png",
-        title2: "CAT 2024 Course",
+        imgSrc2: "/assets/img/onlineCourseList/3.png",
+        title2: "IIT-JEE 2024 Preparation Online Program",
         details2: "Course Details:",
         includedText: {
           left: [
@@ -64,7 +67,7 @@ const Data = {
             { icon: "bi bi-check-square", text: "100+ Lectures" },
           ],
           right: [
-            { icon: "bi bi-check-square", text: "Offline" },
+            { icon: "bi bi-check-square", text: "Online" },
             { icon: "bi bi-check-square", text: "3 Batches" },
           ],
         },
@@ -74,15 +77,15 @@ const Data = {
           discountPercentage: "28% OFF",
         },
         links: {
-          explore: "/courseview/NEET-2024-Offline", // Add the appropriate URL
+          explore: "NEET-2024-Online", // Add the appropriate URL
           buyNow: "#", // Add the appropriate URL
         },
       },
 
 
       courseListPage: {
-        imgSrc2: "/assets/img/4.course-list/4.png",
-        title2: "CAT-2024 Mastery Offline Program",
+        imgSrc2: "/assets/img/4.course-list/1.png",
+        title2: "IIT-JEE 2024 Preparation  Offline Course",
         details2: "Course Details:",
         includedText: {
           left: [
@@ -105,11 +108,13 @@ const Data = {
         },
       },
     },
+
+    // cat
     {
       id: "CAT-2024-Offline",
       onlineCourse: {
-        imgSrc2: "/assets/img/onlineCourseList/3.png",
-        title2: "IIT-JE E 2024  Course",
+        imgSrc2: "/assets/img/onlineCourseList/2.png",
+        title2: "CAT 2024 Preparation Online Program",
         details2: "Course Details:",
         includedText: {
           left: [
@@ -117,7 +122,7 @@ const Data = {
             { icon: "bi bi-check-square", text: "100+ Lectures" },
           ],
           right: [
-            { icon: "bi bi-check-square", text: "Offline" },
+            { icon: "bi bi-check-square", text: "Online" },
             { icon: "bi bi-check-square", text: "3 Batches" },
           ],
         },
@@ -127,15 +132,15 @@ const Data = {
           discountPercentage: "28% OFF",
         },
         links: {
-          explore: "/courseview/NEET-2024-Offline", // Add the appropriate URL
+          explore: "NEET-2024-Online", // Add the appropriate URL
           buyNow: "#", // Add the appropriate URL
         },
       },
 
 
       courseListPage: {
-        imgSrc2: "/assets/img/4.course-list/3.png",
-        title2: "NEET 2024 Preparation Offline Program ",
+        imgSrc2: "/assets/img/4.course-list/2.png",
+        title2: "CAT 2024 Preparation Offline Program ",
         details2: "Course Details:",
         includedText: {
           left: [

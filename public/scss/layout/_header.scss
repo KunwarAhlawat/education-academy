@@ -280,17 +280,26 @@ display: flex;
         // Custom accordion item styles
         .custom-accordion-item {
           // Custom accordion header styles
-          margin-bottom: 20px;
+       
           padding: 0;
           border: 0;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+          // border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+          margin: 10px;
+          // padding: 30px 0;
+          font-weight: 700;
+          .accordion-collapse {
+            // background: red;
+            padding: 10px!important;
+        }
           .custom-accordion-header {
+            border: 1px solid #0000001c!important;
+            padding: 10px!important;
             button {
               box-shadow: none;
               padding: 5px 10px;
               background-color: $text-light;
           span{
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: $bold;
             letter-spacing: 1px;
             // background-color: green;
@@ -302,7 +311,7 @@ display: flex;
             }
           }
         .show{
-          background-color: #e7f1ff;
+          // background-color: #e7f1ff;
         }
           // Custom accordion body styles
           .custom-accordion-body {
@@ -315,30 +324,43 @@ display: flex;
             // Styles for the first level menu item
             .m-menu-item-1 {
              margin-left: 20px;
-             margin-bottom: 10px;
+            //  margin-bottom: 10px;
               a {
                 display: block;
-                font-size: 1rem;
+                 
                 color: $text-dark;
-                padding: 10px 0px;
-        
+                font-size: 1.6rem;
+                padding: 15px 0px;
+                text-transform: uppercase;
               }
               span{
                 display: block;
-                font-weight: $bold;
-                color: $secondary-color;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.342);
+                font-weight: 600;
+                color: #000000;
+                /* border-bottom: 1px solid rgba(0, 0, 0, 0.342); */
                 margin-right: 20px;
+                padding: 14px 0;
+                font-size: 1.5rem;
               }
     
               // Styles for the second level menu item
               .m-menu-item-2 {
-                margin-left: 10px;
+                 display: flex;
                 a{
-                  font-size: 1rem;
-                  color: $text-dark;
+                  font-size: 1.3rem;
+                  color: #333;
                   padding: 10px 0px;
                   display: block;
+                  margin: 10px;
+                  text-transform: uppercase;
+                  background: white;
+                  padding: 10px;
+                  /* margin-right: 20px; */
+                  width: 100%;
+                  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 8px 0px;
+                  &:hover{
+                    color: inherit;
+                  }
                 }
               }
             }
@@ -356,4 +378,15 @@ display: flex;
       }
  
     
- 
+      .accordion .accordion-item .accordion-header button:hover{
+        color: inherit!important;
+      }
+
+      .accordion-button:focus{
+
+      }
+
+      .accordion-button:not(.collapsed){
+        background-color: inherit!important;
+        box-shadow: none!important;
+      }

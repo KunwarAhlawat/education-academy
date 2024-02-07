@@ -119,12 +119,15 @@
                                                 <div class="m-menu-item-1">
                                                     <% if(subItem.submenu2 && subItem.submenu2.length > 0){ %>
                                                     <span><%= subItem.text %></span>
-                                                    <% subItem.submenu2.forEach((subItem2, subIndex2) => { %>
                                                     <div class="m-menu-item-2">
-                                                        <a href="/courseview/<%= subItem2.link %>"><%= subItem2.text %></a>
-                                                    </div>
+                                                    <% subItem.submenu2.forEach((subItem2, subIndex2) => { %>
+                                                        
+                                                        <a href="/courseview/<%= subItem2.link %>"><i class="bi bi-arrow-down-right-square-fill"></i> &nbsp;<%= subItem2.text %></a>
+                                                    
                                                     <% }); %>
+                                                    </div>
                                                     <% } else{ %>
+                                                        
                                                         <a href="/courseview/<%= subItem.link %>"><%= subItem.text %></a>
                                                     <% } %>
                                                 </div>
