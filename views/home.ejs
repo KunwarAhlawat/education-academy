@@ -107,18 +107,18 @@
                     <div class="col-md-4">
                         <div class="course-item">
                             <div class="course-item-img">
-                                <img src="<%= course.courseListPage.imgSrc2 %>" alt="" class="img-fluid">
+                                <img src="<%= course.onlineCourse.imgSrc2 %>" alt="" class="img-fluid">
                             </div>
                             <div class="course-item-text">
                                 <h5>
-                                    <%= course.courseListPage.title2 %>
+                                    <%= course.onlineCourse.title2 %>
                                 </h5>
                                 <!-- <p>
                                     <%= course.courseListPage.details2 %>
                                 </p> -->
                                 <div class="included-text mt-3 ">
                                     <ul class="left-text">
-                                        <% course.courseListPage.includedText.left.forEach(item=> { %>
+                                        <% course.onlineCourse.includedText.left.forEach(item=> { %>
 
                                             <li><i class="<%= item.icon %>"></i><span>
                                                     <%= item.text %>
@@ -127,7 +127,7 @@
                                             <% }) %>
                                     </ul>
                                     <ul class="right-text">
-                                        <% course.courseListPage.includedText.right.forEach(item=> { %>
+                                        <% course.onlineCourse.includedText.right.forEach(item=> { %>
 
                                             <li><i class="<%= item.icon %>"></i><span>
                                                     <%= item.text %>
@@ -143,19 +143,19 @@
                                 <!-- <p>Course Price</p> -->
                                 <ul>
                                     <li>
-                                        <%= course.courseListPage.price.regularPrice %>
+                                        <%= course.onlineCourse.price.regularPrice %>
                                     </li>
                                     <li class="badge text-bg-dark">
-                                        <%= course.courseListPage.price.discountedPrice %>
+                                        <%= course.onlineCourse.price.discountedPrice %>
                                     </li>
-                                    <li>
-                                        <%= course.courseListPage.price.discountPercentage %>
-                                    </li>
+                                    <!-- <li>
+                                        <%= course.onlineCourse.price.discountPercentage %>
+                                    </li> -->
                                 </ul>
                             </div>
                             <hr>
                             <div class="course-item-button">
-                                <a href="/courseview/<%= course.id %>"> <button
+                                <a href="/courseview/<%= course.onlineCourse.links.explore %>"> <button
                                         class="exploreNow">Explore</button></a>
                                 <a href="<%= course.courseListPage.links.buyNow %>"> <button class="buyNow">Buy
                                         Now</button></a>
@@ -232,9 +232,9 @@
                                     <li class="badge text-bg-dark">
                                         <%= course.courseListPage.price.discountedPrice %>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <%= course.courseListPage.price.discountPercentage %>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                             <hr>
