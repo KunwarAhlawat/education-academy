@@ -6154,7 +6154,7 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
     //science stream
     {
       id: "science-stream-menu",
-      text: "Sciecne Stream",
+      text: "Science Stream",
       link: "courseView.html",
       submenu2: [
         {
