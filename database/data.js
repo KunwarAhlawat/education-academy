@@ -2,23 +2,9 @@ const Data = {
   courseList: [
     {
       id: "NEET-2024-Offline",
-      homePageCourse: {
-        title: "NEET 2024 Mastery Program",
-        imgSrc: "/assets/img/4.course-list/IIIT.png",
-        details: [
-          { icon: "bi bi-check-square-fill", text: "Class 12" },
-          { icon: "bi bi-check-square-fill", text: "Class 12" },
-          { icon: "bi bi-check-square-fill", text: "Dropper" },
-        ],
-        links: {
-          explore: "/courseview/NEET-2024-Offline",
-          buyNow: "#",
-        },
-      },
-
-      courseListPage: {
-        imgSrc2: "/assets/img/4.course-list/IIIT.png",
-        title2: "NEET 2024 Mastery Program(Offline)",
+      onlineCourse: {
+        imgSrc2: "/assets/img/onlineCourseList/1.png",
+        title2: "NEET 2024 Course",
         details2: "Course Details:",
         includedText: {
           left: [
@@ -31,8 +17,33 @@ const Data = {
           ],
         },
         price: {
-          regularPrice: "Rs 2442",
-          discountedPrice: "Rs 1799",
+          regularPrice: "Rs 499/-",
+          discountedPrice: "Rs 2999/-",
+          discountPercentage: "28% OFF",
+        },
+        links: {
+          explore: "/courseview/NEET-2024-Offline", // Add the appropriate URL
+          buyNow: "#", // Add the appropriate URL
+        },
+      },
+
+      courseListPage: {
+        imgSrc2: "/assets/img/4.course-list/1.png",
+        title2: "IIT-JJE 2024 Mastery Offline Program",
+        details2: "Course Details:",
+        includedText: {
+          left: [
+            { icon: "bi bi-check-square", text: "1 year Duration" },
+            { icon: "bi bi-check-square", text: "100+ Lectures" },
+          ],
+          right: [
+            { icon: "bi bi-check-square", text: "Offline" },
+            { icon: "bi bi-check-square", text: "3 Batches" },
+          ],
+        },
+        price: {
+          regularPrice: "Rs 499/-",
+          discountedPrice: "Rs 2999/-",
           discountPercentage: "28% OFF",
         },
         links: {
@@ -43,23 +54,9 @@ const Data = {
     },
     {
       id: "IIT-JEE-2024-Offline",
-      homePageCourse: {
-        title: "IIT JEE 2024 Mastery Program(Offline)",
-        imgSrc: "/assets/img/4.course-list/IIIT.png",
-        details: [
-          { icon: "bi bi-check-square-fill", text: "Class 12" },
-          { icon: "bi bi-check-square-fill", text: "Class 12" },
-          { icon: "bi bi-check-square-fill", text: "Dropper" },
-        ],
-        links: {
-          explore: "courseview/IIT-JEE-2024-Offline",
-          buyNow: "#",
-        },
-      },
-
-      courseListPage: {
-        imgSrc2: "/assets/img/4.course-list/IIIT.png",
-        title2: "IIT JEE 2024 Mastery Program(Offline)",
+      onlineCourse: {
+        imgSrc2: "/assets/img/onlineCourseList/2.png",
+        title2: "CAT 2024 Course",
         details2: "Course Details:",
         includedText: {
           left: [
@@ -72,8 +69,34 @@ const Data = {
           ],
         },
         price: {
-          regularPrice: "Rs 2442",
-          discountedPrice: "Rs 1799",
+          regularPrice: "Rs 499/-",
+          discountedPrice: "Rs 2999/-",
+          discountPercentage: "28% OFF",
+        },
+        links: {
+          explore: "/courseview/NEET-2024-Offline", // Add the appropriate URL
+          buyNow: "#", // Add the appropriate URL
+        },
+      },
+
+
+      courseListPage: {
+        imgSrc2: "/assets/img/4.course-list/4.png",
+        title2: "CAT-2024 Mastery Offline Program",
+        details2: "Course Details:",
+        includedText: {
+          left: [
+            { icon: "bi bi-check-square", text: "1 year Duration" },
+            { icon: "bi bi-check-square", text: "100+ Lectures" },
+          ],
+          right: [
+            { icon: "bi bi-check-square", text: "Offline" },
+            { icon: "bi bi-check-square", text: "3 Batches" },
+          ],
+        },
+        price: {
+          regularPrice: "Rs 999/-",
+          discountedPrice: "Rs 4999/-",
           discountPercentage: "28% OFF",
         },
         links: {
@@ -84,23 +107,9 @@ const Data = {
     },
     {
       id: "CAT-2024-Offline",
-      homePageCourse: {
-        title: "CAT 2024 Preparation Program(Offline)",
-        imgSrc: "/assets/img/4.course-list/IIIT.png",
-        details: [
-          { icon: "bi bi-check-square-fill", text: "Class 12" },
-          { icon: "bi bi-check-square-fill", text: "Class 12" },
-          { icon: "bi bi-check-square-fill", text: "Dropper" },
-        ],
-        links: {
-          explore: "courseview/CAT-2024-Offline",
-          buyNow: "#",
-        },
-      },
-
-      courseListPage: {
-        imgSrc2: "/assets/img/4.course-list/IIIT.png",
-        title2: "CAT 2024 Preparation Program(Offline)",
+      onlineCourse: {
+        imgSrc2: "/assets/img/onlineCourseList/3.png",
+        title2: "IIT-JE E 2024  Course",
         details2: "Course Details:",
         includedText: {
           left: [
@@ -113,8 +122,34 @@ const Data = {
           ],
         },
         price: {
-          regularPrice: "Rs 2442",
-          discountedPrice: "Rs 1799",
+          regularPrice: "Rs 499/-",
+          discountedPrice: "Rs 2999/-",
+          discountPercentage: "28% OFF",
+        },
+        links: {
+          explore: "/courseview/NEET-2024-Offline", // Add the appropriate URL
+          buyNow: "#", // Add the appropriate URL
+        },
+      },
+
+
+      courseListPage: {
+        imgSrc2: "/assets/img/4.course-list/3.png",
+        title2: "NEET 2024 Preparation Offline Program ",
+        details2: "Course Details:",
+        includedText: {
+          left: [
+            { icon: "bi bi-check-square", text: "1 year Duration" },
+            { icon: "bi bi-check-square", text: "100+ Lectures" },
+          ],
+          right: [
+            { icon: "bi bi-check-square", text: "Offline" },
+            { icon: "bi bi-check-square", text: "3 Batches" },
+          ],
+        },
+        price: {
+          regularPrice: "Rs 599/-",
+          discountedPrice: "Rs 5999/-",
           discountPercentage: "28% OFF",
         },
         links: {

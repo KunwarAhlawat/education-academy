@@ -63,7 +63,7 @@
 
        
          // Add a checkbox column
-         columns.unshift({
+        columns.unshift({
         data: null,
         className: 'select-checkbox',
         orderable: false,
@@ -78,15 +78,17 @@
             dom: "Bfrtip",
             data: data,
             destroy: true,
-          orderCellsTop: true,
-          fixedHeader: true,
+            orderCellsTop: true,
+            fixedHeader: true,
             columns: columns,
             select: {
               style: 'os',
               selector: 'td:first-child',
               style: 'multi'
           },
-          order: [[1, 'asc']],
+          // order: [[1, 'asc']],
+          order: [[0, 'asc'], [1, 'asc']], // Order by row_order first, then by the second column (change as needed)
+
           pageLength: 20,
           scrollY: 500,
           dom: 'Bfrtip',
@@ -145,6 +147,9 @@
         console.error("Error fetching data:", error);
       },
     });
+  
+  
+  
   });
 
   function GetData(){
