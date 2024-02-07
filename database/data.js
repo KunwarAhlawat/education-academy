@@ -3890,349 +3890,1976 @@ const Data = {
 
 //SI Police
 {
-  courseId: "cds-online",
-  title: "CDS 2024 Mastery Program (Online)",
-  discountText: "Special Discounted Price",
-  price: {
-    discountedPrice: "RS 2449",
-    regularPrice: "RS 2999",
-    discountPercentage: "(17% OFF)",
+  "courseId": "si-police-online",
+  "title": "SI Police 2024 Mastery Program (Online)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
   },
-  content: [
-"Embark on the journey towards a distinguished career in the armed forces with our CDS 2024 Mastery Program online at Education Academy. Tailored specifically for the Combined Defence Services (CDS) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the nation with honor.",
+  "content": [
+    
+"SI Police 2024 Mastery Program (Online)",
 
-"Comprehensive Online Learning: Delve into the CDS 2024 syllabus online, covering English, General Knowledge, and Elementary Mathematics.",
+"Limited Online Slots - Reserve Your Seat Now!",
 
-"Expert Online Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation in the online learning environment.",
+"Embark on the journey towards a rewarding career in law enforcement with our SI Police 2024 Mastery Program online at Education Academy. Tailored specifically for the Sub-Inspector (SI) Police examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the community with dedication.",
+
+"Comprehensive Online Learning: Dive into the SI Police 2024 syllabus online, covering General Knowledge, Quantitative Aptitude, Reasoning, and English/Hindi.",
+
+"Expert Online Instructors: Learn from experienced educators who specialize in their subjects, providing expert guidance and strategies for effective preparation in the online learning environment.",
 
 "Interactive Online Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises online to enhance your understanding and boost confidence.",
 
-"Online Mock Tests: Regular online mock tests simulate CDS exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+"Online Mock Tests: Regular online mock tests simulate SI Police exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
 
 "Personalized Online Support: Benefit from small online class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
 
-"Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the CDS exam and updated according to the latest exam patterns.",
+"Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the SI Police exam and updated according to the latest exam patterns.",
 
-"Emphasis on Time Management: Focus on developing time management skills and exam strategies to effectively tackle the CDS examination within the stipulated time frame.",
-
+"Focus on Physical Fitness: Emphasis on physical fitness training and preparation to excel in the physical endurance tests and physical measurement tests conducted as part of the SI Police recruitment process.",
   ],
-  batchDetails: {
-    title: "Batch Details",
-    items: [
-      { count: "Morning Batch", description: "9:00AM to 12:00" },
-      { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
-      { count: "Evening Batch", description: "4:00PM to 7:00PM" },
-    ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
   },
-  faculty: {
-    title: "Our Faculties",
-    items: [
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
       {
-        name: "Ram Singh",
-        qualification: "MSC in Biochemistry",
-        experience: "13 Years",
-        imageSrc: "/assets/img/5.course-view/1.faculty.png",
-      },
-    ],
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
   },
-  faq: {
-    title: "FAQ",
-    items: [
+  "faq": {
+    "title": "FAQ",
+    "items": [
       {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingOne",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseOne",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseOne",
-            },
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
           },
-          body: {
-            id: "panelsStayOpen-collapseOne",
-            class: "accordion-collapse collapse show",
-            ariaLabelledby: "panelsStayOpen-headingOne",
-          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
         },
-        question: "Q.Who are the instructors for the CDS 2024 online course?",
-        answer:
-          "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for CDS aspirants in the online format.",
-      },
-
-      {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingTwo",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseTwo",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseTwo",
-            },
-          },
-          body: {
-            id: "panelsStayOpen-collapseTwo",
-            class: "accordion-collapse collapse",
-            ariaLabelledby: "panelsStayOpen-headingTwo",
-          },
-        },
-        question: "Q.Is there study material provided for the CDS 2024 online course?",
-        answer:
-          "Yes, comprehensive online study materials are provided, covering all subjects and topics relevant to the CDS exam.",
+        "question": "Q.Who are the instructors for the SI Police 2024 online course?",
+        "answer": "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for SI Police aspirants in the online format."
       },
       {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingThree",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseThree",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseThree",
-            },
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
           },
-          body: {
-            id: "panelsStayOpen-collapseThree",
-            class: "accordion-collapse collapse",
-            ariaLabelledby: "panelsStayOpen-headingThree",
-          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
         },
-        question: "Q.What is the fee structure for the CDS 2024 Mastery Program online?",
-        answer:
-          "Contact us for detailed fee information and special offers available for a limited time.",
+        "question": "Q.Is there study material provided for the SI Police 2024 online course?",
+        "answer": "Yes, comprehensive online study materials are provided, covering all subjects and topics relevant to the SI Police exam."
       },
       {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingFour",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseFour",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseFour",
-            },
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
           },
-          body: {
-            id: "panelsStayOpen-collapseFour",
-            class: "accordion-collapse collapse",
-            ariaLabelledby: "panelsStayOpen-headingFour",
-          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
         },
-        question: "Q.What sets Education Academy apart in CDS online preparation?",
-        answer:
-          "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for CDS preparation. Join us to excel in CDS 2024 and serve the nation with pride!",
+        "question": "Q.What is the fee structure for the SI Police 2024 Mastery Program online?",
+        "answer": "Contact us for detailed fee information and special offers available for a limited time."
       },
       {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingFive",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseFive",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseFive",
-            },
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
           },
-          body: {
-            id: "panelsStayOpen-collapseFive",
-            class: "accordion-collapse collapse",
-            ariaLabelledby: "panelsStayOpen-headingFive",
-          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
         },
-        question: "Q.What sets Education Academy apart in NDA online preparation?",
-        answer:
-          "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for NDA preparation. Join us online to excel in NDA 2024 and embark on a rewarding career in the armed forces!",
-      },
-    ],
+        "question": "Q.What sets Education Academy apart in SI Police online preparation?",
+        "answer": "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for SI Police preparation. Join us to excel in SI Police 2024 and serve the community with dedication!"
+      }
+    ]
   },
-
-  buyCard: {
-    imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
-    title: "Special Discount Price",
-    prices: {
-      discountedPrice: "RS 2449",
-      regularPrice: "RS 2999",
-      discountPercentage: "17% OFF",
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
     },
-    button: {
-      link: "#",
-      buttonText: "Buy Now",
-    },
-  },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
 },
 {
-  courseId: "cds-offline",
-  title: "CDS 2024 Mastery Program (Offline)",
-  discountText: "Special Discounted Price",
-  price: {
-    discountedPrice: "RS 2449",
-    regularPrice: "RS 2999",
-    discountPercentage: "(17% OFF)",
+  "courseId": "si-police-offline",
+  "title": "SI Police 2024 Mastery Program (Offline)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
   },
-  content: [
-    "Join our CDS 2024 Mastery Program at Education Academy and embark on the path to a distinguished career in the armed forces. Tailored specifically for the Combined Defence Services (CDS) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the nation with honor.",
+  "content": [
+    "Limited Seats - Enroll Today!",
 
-    "Comprehensive Learning: Delve into the CDS 2024 syllabus, covering English, General Knowledge, and Elementary Mathematics.",
+    "Join our SI Police 2024 Mastery Program at Education Academy and embark on the path to a rewarding career in law enforcement. Tailored specifically for the Sub-Inspector (SI) Police examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the community with dedication.",
+    
+    "Comprehensive Learning: Delve into the SI Police 2024 syllabus, covering General Knowledge, Quantitative Aptitude, Reasoning, and English/Hindi.",
     
     "Experienced Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation.",
     
     "Interactive Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises to enhance your understanding and boost confidence.",
     
-    "Mock Tests: Regular mock tests simulate CDS exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+    "Mock Tests: Regular mock tests simulate SI Police exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
     
     "Personalized Support: Benefit from small class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
     
-    "Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the CDS exam and updated according to the latest exam patterns.",
+    "Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the SI Police exam and updated according to the latest exam patterns.",
     
-    "Emphasis on Time Management: Focus on developing time management skills and exam strategies to effectively tackle the CDS examination within the stipulated time frame.",
+    "Focus on Physical Fitness: Emphasis on physical fitness training and preparation to excel in the physical endurance tests and physical measurement tests conducted as part of the SI Police recruitment process.",   
 
   ],
-  batchDetails: {
-    title: "Batch Details",
-    items: [
-      { count: "Morning Batch", description: "9:00AM to 12:00" },
-      { count: "Afternoon Batch", description: "12:00 to 3:00PM" },
-      { count: "Evening Batch", description: "4:00PM to 7:00PM" },
-    ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
   },
-  faculty: {
-    title: "Our Faculties",
-    items: [
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
       {
-        name: "Ram Singh",
-        qualification: "MSC in Biochemistry",
-        experience: "13 Years",
-        imageSrc: "/assets/img/5.course-view/1.faculty.png",
-      },
-    ],
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
   },
-  faq: {
-    title: "FAQ",
-    items: [
+  "faq": {
+    "title": "FAQ",
+    "items": [
       {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingOne",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseOne",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseOne",
-            },
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
           },
-          body: {
-            id: "panelsStayOpen-collapseOne",
-            class: "accordion-collapse collapse show",
-            ariaLabelledby: "panelsStayOpen-headingOne",
-          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
         },
-        question: "Q.Who are the instructors for the CDS 2024 offline course?",
-        answer:
-          "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for CDS aspirants.",
-      },
-
-      {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingTwo",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseTwo",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseTwo",
-            },
-          },
-          body: {
-            id: "panelsStayOpen-collapseTwo",
-            class: "accordion-collapse collapse",
-            ariaLabelledby: "panelsStayOpen-headingTwo",
-          },
-        },
-        question: "Q. Is there study material provided for the CDS 2024 offline course?",
-        answer:
-          "Yes, comprehensive study materials are provided, covering all subjects and topics relevant to the CDS exam.",
+        "question": "Q.Who are the instructors for the SI Police 2024 offline course?",
+        "answer": "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for SI Police aspirants."
       },
       {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingThree",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseThree",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseThree",
-            },
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
           },
-          body: {
-            id: "panelsStayOpen-collapseThree",
-            class: "accordion-collapse collapse",
-            ariaLabelledby: "panelsStayOpen-headingThree",
-          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
         },
-        question: "Q.What is the fee structure for the NDA 2024 Mastery Program offline?",
-        answer:
-          "Contact us for detailed fee information and special offers available for a limited time.",
+        "question": "Q.Is there study material provided for the SI Police 2024 offline course?",
+        "answer": "Yes, comprehensive study materials are provided, covering all subjects and topics relevant to the SI Police exam."
       },
       {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingFour",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseFour",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseFour",
-            },
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
           },
-          body: {
-            id: "panelsStayOpen-collapseFour",
-            class: "accordion-collapse collapse",
-            ariaLabelledby: "panelsStayOpen-headingFour",
-          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
         },
-        question: "Q. How are the classes scheduled for the CDS 2024 course?",
-        answer:
-          "Choose from morning, afternoon, or evening batches to accommodate your schedule and ensure convenient access to training.",
+        "question": "Q.What is the fee structure for the SI Police 2024 Mastery Program offline?",
+        "answer": "Contact us for detailed fee information and special offers available for a limited time."
       },
       {
-        accordion: {
-          head: {
-            id: "panelsStayOpen-headingFive",
-            button: {
-              class: "accordion-button",
-              dataBsTarget: "#panelsStayOpen-collapseFive",
-              ariaExpanded: "false",
-              ariaControls: "panelsStayOpen-collapseFive",
-            },
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
           },
-          body: {
-            id: "panelsStayOpen-collapseFive",
-            class: "accordion-collapse collapse",
-            ariaLabelledby: "panelsStayOpen-headingFive",
-          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
         },
-        question: "Q.What sets Education Academy apart in CDS offline preparation?",
-        answer:
-          "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for CDS preparation. Join us to excel in CDS 2024 and serve the nation with pride!",
-      },
-    ],
+        "question": "Q.What sets Education Academy apart in SI Police offline preparation?",
+        "answer": "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for SI Police preparation. Join us to excel in SI Police 2024 and serve the community with dedication!"
+      }
+    ]
   },
-
-  buyCard: {
-    imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
-    title: "Special Discount Price",
-    prices: {
-      discountedPrice: "RS 2449",
-      regularPrice: "RS 2999",
-      discountPercentage: "17% OFF",
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
     },
-    button: {
-      link: "#",
-      buttonText: "Buy Now",
-    },
-  },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
 },
+
+//Bank PO
+{
+  "courseId": "bank-po-offline",
+  "title": "Bank PO 2024 Mastery Program (Offline)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+    "Limited Seats - Enroll Today!",
+
+    "Join our Bank PO 2024 Mastery Program at Education Academy and pave the way for a successful career in banking. Tailored specifically for the Bank Probationary Officer (PO) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and secure a prestigious position in the banking sector.",
+    
+    "Comprehensive Learning: Delve into the Bank PO 2024 syllabus, covering Quantitative Aptitude, Reasoning Ability, English Language, General Awareness, and Computer Knowledge.",
+    
+    "Experienced Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation.",
+    
+    "Interactive Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises to enhance your understanding and boost confidence.",
+    
+    "Mock Tests: Regular mock tests simulate Bank PO exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+    
+    "Personalized Support: Benefit from small class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+    
+    "Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the Bank PO exam and updated according to the latest exam patterns.",
+    
+    "Focus on Time Management: Emphasis on developing time management skills to effectively tackle the Bank PO examination within the stipulated time frame.",
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the Bank PO 2024 offline course?",
+        "answer": "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for Bank PO aspirants."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.Is there study material provided for the Bank PO 2024 offline course?",
+        "answer": "Yes, comprehensive study materials are provided, covering all subjects and topics relevant to the Bank PO exam."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.What is the fee structure for the Bank PO 2024 Mastery Program offline?",
+        "answer": "Contact us for detailed fee information and special offers available for a limited time."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are the classes scheduled for the Bank PO 2024 course?",
+        "answer": "Choose from morning, afternoon, or evening batches to accommodate your schedule and ensure convenient access to training."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in Bank PO offline preparation?",
+        "answer": "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for Bank PO preparation. Join us to excel in Bank PO 2024 and kickstart your career in banking!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+{
+  "courseId": "bank-po-online",
+  "title": "Bank PO 2024 Mastery Program (Online)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+    "Limited Online Slots - Secure Your Enrollment Now!",
+
+    "Embark on the journey towards a successful career in banking with our Bank PO 2024 Mastery Program online at Education Academy. Tailored specifically for the Bank Probationary Officer (PO) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and secure a prestigious position in the banking sector.",
+    
+    "Comprehensive Online Learning: Delve into the Bank PO 2024 syllabus online, covering Quantitative Aptitude, Reasoning Ability, English Language, General Awareness, and Computer Knowledge.",
+    
+    "Experienced Online Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation in the online learning environment.",
+    
+    "Interactive Online Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises online to enhance your understanding and boost confidence.",
+    
+    "Online Mock Tests: Regular online mock tests simulate Bank PO exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+    
+    "Personalized Online Support: Benefit from small online class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+    
+    "Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the Bank PO exam and updated according to the latest exam patterns.",
+    
+    "Focus on Time Management: Emphasis on developing time management skills to effectively tackle the Bank PO examination within the stipulated time frame.",
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the Bank PO 2024 online course?",
+        "answer": "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for Bank PO aspirants in the online format."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.Is there study material provided for the Bank PO 2024 online course?",
+        "answer": "Yes, comprehensive online study materials are provided, covering all subjects and topics relevant to the Bank PO exam."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.What is the fee structure for the Bank PO 2024 Mastery Program online?",
+        "answer": "Contact us for detailed fee information and special offers available for a limited time."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are the online classes scheduled for the Bank PO 2024 course?",
+        "answer": "Choose from morning, afternoon, or evening sessions to accommodate your schedule and ensure convenient access to training."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in Bank PO online preparation?",
+        "answer": "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for Bank PO preparation. Join us to excel in Bank PO 2024 and embark on a successful career in banking!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+
+//UPSC
+{
+  "courseId": "upsc-online",
+  "title": "Bank PO 2024 Mastery Program (Online)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+    "UPSC 2024 Mastery Program (Online)",
+
+    "Limited Online Slots - Reserve Your Seat Today!",
+    
+    "Embark on the journey towards a prestigious career in civil services with our UPSC 2024 Mastery Program online at Education Academy. Tailored specifically for the Union Public Service Commission (UPSC) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the nation with distinction.",
+      
+    "Comprehensive Online Learning: Delve into the UPSC 2024 syllabus online, covering General Studies, Optional Subjects, Essay Writing, and Current Affairs.",
+    
+    "Expert Online Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation in the online learning environment.",
+    
+    "Interactive Online Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises online to enhance your understanding and boost confidence.",
+    
+    "Online Mock Tests: Regular online mock tests simulate UPSC exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+    
+    "Personalized Online Support: Benefit from small online class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+    
+    "Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the UPSC exam and updated according to the latest exam patterns.",
+    
+    "Focus on Essay Writing and Interview Preparation: Specialized training in essay writing and interview preparation to excel in the written and personality assessment stages of the UPSC examination.",
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the UPSC 2024 online course?",
+        "answer": "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for UPSC aspirants in the online format."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.Is there study material provided for the UPSC 2024 online course?",
+        "answer": "Yes, comprehensive online study materials are provided, covering all subjects and topics relevant to the UPSC exam."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.What is the fee structure for the UPSC 2024 Mastery Program online?",
+        "answer": "Contact us for detailed fee information and special offers available for a limited time."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are the online classes scheduled for the UPSC 2024 course?",
+        "answer": "Choose from morning, afternoon, or evening sessions to accommodate your schedule and ensure convenient access to training."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in UPSC online preparation?",
+        "answer": "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for UPSC preparation. Join us to excel in UPSC 2024 and serve the nation with distinction!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+{
+  "courseId": "upsc-offline",
+  "title": "UPSC 2024 Mastery Program (Offline)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+"Limited Seats - Enroll Now!",
+
+"Join our UPSC 2024 Mastery Program at Education Academy and embark on the path to a prestigious career in civil services. Tailored specifically for the Union Public Service Commission (UPSC) examination, this program equips aspirants with the knowledge and skills necessary to excel in the examination and serve the nation with distinction.",
+
+"Comprehensive Learning: Delve into the UPSC 2024 syllabus, covering General Studies, Optional Subjects, Essay Writing, and Current Affairs.",
+
+"Experienced Instructors: Learn from seasoned educators who specialize in their subjects, providing expert guidance and strategies for effective preparation.",
+
+"Interactive Sessions: Engage in live discussions, interactive sessions, and problem-solving exercises to enhance your understanding and boost confidence.",
+
+"Mock Tests: Regular mock tests simulate UPSC exam conditions, helping you assess your progress, identify areas of improvement, and refine exam strategies.",
+
+"Personalized Support: Benefit from small class sizes for personalized attention and guidance from instructors, ensuring effective exam preparation.",
+
+"Comprehensive Study Materials: Receive comprehensive study materials meticulously curated by our expert faculty, covering all aspects of the UPSC exam and updated according to the latest exam patterns.",
+
+"Focus on Essay Writing and Interview Preparation: Specialized training in essay writing and interview preparation to excel in the written and personality assessment stages of the UPSC examination.",
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the UPSC 2024 offline course?",
+        "answer": "Our experienced instructors are seasoned professionals dedicated to providing high-quality training for UPSC aspirants."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.Is there study material provided for the UPSC 2024 offline course?",
+        "answer": "Yes, comprehensive study materials are provided, covering all subjects and topics relevant to the UPSC exam."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.What is the fee structure for the UPSC 2024 Mastery Program offline?",
+        "answer": "Contact us for detailed fee information and special offers available for a limited time."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are the classes scheduled for the UPSC 2024 course?",
+        "answer": "Choose from morning, afternoon, or evening batches to accommodate your schedule and ensure convenient access to training."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in UPSC offline preparation?",
+        "answer": "Our experienced instructors, interactive learning approach, personalized support, and comprehensive curriculum make us the preferred choice for UPSC preparation. Join us to excel in UPSC 2024 and serve the nation with distinction!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+
+//Base(class 6 to 10)
+{
+  "courseId": "base-online",
+  "title": "Base (Class 6 to 10) Mastery Program (Online)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+"Limited Online Slots - Secure Your Enrollment Now!",
+
+"Unlock the path to academic excellence with our Base (Class 6 to 10) Mastery Program online at Education Academy. Tailored to cater to the diverse needs of students in classes 6 to 10, this program offers comprehensive support to enhance their learning experience and excel in their academic pursuits.",
+
+"Comprehensive Online Learning: Dive into the core subjects of Mathematics, Science, English, Social Studies, and Languages through engaging online lessons designed to strengthen fundamental concepts.",
+
+"Expert Online Instructors: Learn from experienced educators who specialize in their subjects, providing clear explanations, practical examples, and personalized guidance to foster effective learning.",
+
+"Interactive Online Sessions: Participate in live interactive sessions, group discussions, and problem-solving exercises to deepen understanding, boost confidence, and encourage active learning.",
+
+"Adaptive Learning Resources: Access a wealth of online resources, including video lectures, e-books, practice quizzes, and interactive learning modules, to cater to individual learning styles and pace.",
+
+"Regular Assessments and Feedback: Measure progress through regular online assessments and receive constructive feedback from instructors to identify areas for improvement and track academic growth.",
+
+"Personalized Academic Support: Benefit from personalized academic support and guidance from instructors to address doubts, clarify concepts, and develop effective study strategies.",
+
+"Holistic Development: Foster holistic development through a balanced curriculum that integrates academics with critical thinking, problem-solving, and life skills development.",
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the Base (Class 6 to 10) online program?",
+        "answer": "Our instructors are experienced educators with expertise in their respective subjects, dedicated to providing high-quality online education to students."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.What subjects are covered in the Base (Class 6 to 10) online program?",
+        "answer": "The program covers core subjects including Mathematics, Science, English, Social Studies, and Languages."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.Is there flexibility in the online class schedule for different grade levels?",
+        "answer": "Yes, the class schedule is designed to accommodate the needs of students across different grade levels, with separate sessions for classes 6 to 8 and classes 9 and 10."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are online assessments conducted in the Base (Class 6 to 10) program?",
+        "answer": "Online assessments are conducted regularly using our learning management system, allowing students to complete quizzes, assignments, and tests online, with feedback provided by instructors."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in online education for Base (Class 6 to 10) students?",
+        "answer": "Our commitment to providing high-quality education, experienced instructors, interactive learning environment, personalized support, and comprehensive curriculum make us the preferred choice for students aiming to excel in their academic journey from classes 6 to 10. Join us to unlock your potential and achieve academic success!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+{
+  "courseId": "base-offline",
+  "title": "Base (Class 6 to 10) Mastery Program (Offline)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+    "Limited Seats - Enroll Today!",
+
+    "Join our Base (Class 6 to 10) Mastery Program at Education Academy and embark on a journey of academic excellence. Tailored to cater to the diverse needs of students in classes 6 to 10, this program offers comprehensive support to strengthen foundational knowledge and foster holistic development.",
+    
+    "Comprehensive Learning: Delve into core subjects including Mathematics, Science, English, Social Studies, and Languages with our meticulously designed offline curriculum.",
+    
+    "Experienced Instructors: Learn from dedicated educators with expertise in their subjects, providing clear explanations, practical examples, and personalized guidance to nurture a deep understanding of concepts.",
+    
+    "Interactive Classroom Sessions: Engage in interactive classroom sessions, group discussions, and hands-on activities to encourage active learning, critical thinking, and problem-solving skills development.",
+    
+    "Regular Assessments: Measure progress through regular offline assessments, quizzes, and tests designed to evaluate understanding and track academic growth.",
+    
+    "Personalized Academic Support: Receive personalized attention and academic support from instructors to address individual learning needs, clarify doubts, and reinforce learning objectives.",
+    
+    "Comprehensive Study Materials: Access comprehensive offline study materials, including textbooks, workbooks, and supplementary resources, curated to align with curriculum requirements and enhance learning outcomes.",
+    
+    "Holistic Development: Foster holistic development through a balanced curriculum that integrates academics with co-curricular activities, character building, and life skills development.",
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the Base (Class 6 to 10) offline program?",
+        "answer": "Our instructors are experienced educators committed to providing high-quality offline education and nurturing the academic growth of students."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.What subjects are covered in the Base (Class 6 to 10) offline program?",
+        "answer": "The program covers core subjects including Mathematics, Science, English, Social Studies, and Languages."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.Is there flexibility in the offline class schedule for different grade levels?",
+        "answer": "Yes, the class schedule is designed to accommodate the needs of students across different grade levels, with separate sessions for classes 6 to 8 and classes 9 and 10."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are assessments conducted in the Base (Class 6 to 10) offline program?",
+        "answer": "Assessments are conducted regularly through offline tests, quizzes, and assignments administered in the classroom, with feedback provided by instructors to aid in understanding and improvement."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in offline education for Base (Class 6 to 10) students?",
+        "answer": "Our commitment to providing comprehensive offline education, experienced instructors, interactive classroom environment, personalized support, and holistic approach to learning make us the preferred choice for students seeking to excel academically. Join us to unlock your potential and achieve academic success!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+
+//Science Stream(class 11 - 12)
+{
+  "courseId": "science-stream-online",
+  "title": "Science Stream 2024 Mastery Program (Online)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+    "Limited Online Slots - Enroll Now!",
+
+    "Prepare for a successful future in science with our Science Stream 2024 Mastery Program online at Education Academy. Tailored specifically for students pursuing science in classes 11 and 12, this program offers comprehensive support to excel in academic studies, entrance exams, and beyond.",
+    
+    "Comprehensive Online Learning: Dive deep into core science subjects including Physics, Chemistry, Biology, and Mathematics through engaging online lessons designed to strengthen foundational concepts and advanced topics.",
+    
+    "Expert Online Instructors: Learn from experienced educators who specialize in their subjects, providing clear explanations, practical examples, and personalized guidance to foster a deep understanding of complex concepts.",
+    
+    "Interactive Online Sessions: Participate in live interactive sessions, group discussions, and problem-solving exercises to enhance comprehension, critical thinking, and analytical skills.",
+    
+    "Regular Assessments and Feedback: Gauge progress through regular online assessments, quizzes, and tests designed to evaluate understanding and track academic growth, with personalized feedback provided by instructors.",
+    
+    "Exam Preparation: Receive specialized training and resources to excel in competitive entrance exams such as JEE, NEET, and other relevant examinations, including comprehensive study materials, mock tests, and exam strategies.",
+    
+    "Personalized Academic Support: Benefit from personalized attention and academic support from instructors to address individual learning needs, clarify doubts, and reinforce learning objectives.",
+    
+    "Holistic Development: Foster holistic development through a balanced curriculum that integrates academics with co-curricular activities, research projects, and career guidance to prepare students for future endeavors in science and technology."
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the Science Stream 2024 online program?",
+        "answer": "Our instructors are experienced educators with expertise in their respective subjects, dedicated to providing high-quality online education and nurturing the academic growth of students."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.What subjects are covered in the Science Stream 2024 online program?",
+        "answer": "The program covers core science subjects including Physics, Chemistry, Biology, and Mathematics."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.Is there flexibility in the online class schedule for different grade levels?",
+        "answer": "Yes, the class schedule is designed to accommodate the needs of students in classes 11 and 12, with separate sessions tailored to each grade level."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are assessments conducted in the Science Stream 2024 online program?",
+        "answer": "Assessments are conducted regularly through online tests, quizzes, and assignments administered through our learning management system, with feedback provided by instructors to aid in understanding and improvement."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in online education for Science Stream students?",
+        "answer": "Our commitment to providing comprehensive online education, experienced instructors, interactive learning environment, personalized support, and holistic approach to learning make us the preferred choice for students seeking to excel in science. Join us to unlock your potential and achieve academic success!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+{
+  "courseId": "science-stream-offline",
+  "title": "Science Stream 2024 Mastery Program (Offline)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+"Limited Seats - Enroll Now!",
+
+"Embark on a journey of scientific discovery and academic excellence with our Science Stream 2024 Mastery Program offline at Education Academy. Designed for students in classes 11 and 12 pursuing science, this program provides comprehensive support to excel in academics, competitive exams, and beyond.",
+
+"Comprehensive Learning: Dive deep into core science subjects including Physics, Chemistry, Biology, and Mathematics with our meticulously designed offline curriculum that covers foundational concepts and advanced topics.",
+
+"Experienced Instructors: Learn from dedicated educators who are experts in their respective fields, providing clear explanations, practical examples, and personalized guidance to nurture a deep understanding of complex concepts.",
+
+"Interactive Classroom Sessions: Engage in interactive classroom sessions, group discussions, and hands-on experiments to enhance comprehension, critical thinking, and analytical skills.",
+
+"Regular Assessments: Measure progress through regular offline assessments, quizzes, and tests administered in the classroom to evaluate understanding and track academic growth, with personalized feedback provided by instructors.",
+
+"Exam Preparation: Receive specialized training and resources to excel in competitive entrance exams such as JEE, NEET, and other relevant examinations, including comprehensive study materials, mock tests, and exam strategies.",
+
+"Personalized Academic Support: Benefit from personalized attention and academic support from instructors to address individual learning needs, clarify doubts, and reinforce learning objectives.",
+
+"Holistic Development: Foster holistic development through a balanced curriculum that integrates academics with co-curricular activities, research projects, and career guidance to prepare students for future endeavors in science and technology."
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the Science Stream 2024 offline program?",
+        "answer": "Our instructors are experienced educators with expertise in their respective subjects, dedicated to providing high-quality offline education and nurturing the academic growth of students."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.What subjects are covered in the Science Stream 2024 offline program?",
+        "answer": "The program covers core science subjects including Physics, Chemistry, Biology, and Mathematics."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.Is there flexibility in the offline class schedule for different grade levels?",
+        "answer": "Yes, the class schedule is designed to accommodate the needs of students in classes 11 and 12, with separate sessions tailored to each grade level."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are assessments conducted in the Science Stream 2024 offline program?",
+        "answer": "Assessments are conducted regularly through offline tests, quizzes, and assignments administered in the classroom, with feedback provided by instructors to aid in understanding and improvement."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in offline education for Science Stream students?",
+        "answer": "Our commitment to providing comprehensive offline education, experienced instructors, interactive classroom environment, personalized support, and holistic approach to learning make us the preferred choice for students seeking to excel in science. Join us to unlock your potential and achieve academic success!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+
+//Commerce Stream(class 11 - 12)
+{
+  "courseId": "commerce-stream-online",
+  "title": "Commerce Stream 2024 Mastery Program (Online)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+    "Commerce Stream 2024 Mastery Program (Online)",
+
+    "Limited Online Slots - Enroll Now!",
+    
+    "Embark on a journey towards a successful career in commerce with our Commerce Stream 2024 Mastery Program online at Education Academy. Specifically tailored for students in classes 11 and 12 pursuing commerce, this program offers comprehensive support to excel in academics, competitive exams, and beyond.",
+    
+    "Comprehensive Online Learning: Delve into core commerce subjects including Accountancy, Business Studies, Economics, and Mathematics through engaging online lessons designed to strengthen foundational concepts and advanced topics.",
+    
+    "Expert Online Instructors: Learn from experienced educators who specialize in commerce subjects, providing clear explanations, practical examples, and personalized guidance to foster a deep understanding of complex concepts.",
+    
+    "Interactive Online Sessions: Participate in live interactive sessions, group discussions, and case studies to enhance comprehension, critical thinking, and analytical skills relevant to commerce studies.",
+    
+    "Regular Assessments and Feedback: Gauge progress through regular online assessments, quizzes, and tests administered through our learning management system, with personalized feedback provided by instructors to aid in understanding and improvement.",
+    
+    "Exam Preparation: Receive specialized training and resources to excel in competitive entrance exams such as CA Foundation, CMA Foundation, and other relevant examinations, including comprehensive study materials, mock tests, and exam strategies.",
+    
+    "Personalized Academic Support: Benefit from personalized attention and academic support from instructors to address individual learning needs, clarify doubts, and reinforce learning objectives.",
+    
+    "Holistic Development: Foster holistic development through a balanced curriculum that integrates academics with co-curricular activities, projects, and career guidance to prepare students for future endeavors in commerce and finance.",
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the Commerce Stream 2024 online program?",
+        "answer": "Our instructors are experienced educators with expertise in commerce subjects, dedicated to providing high-quality online education and nurturing the academic growth of students."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.What subjects are covered in the Commerce Stream 2024 online program?",
+        "answer": "The program covers core commerce subjects including Accountancy, Business Studies, Economics, and Mathematics."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.Is there flexibility in the online class schedule for different grade levels?",
+        "answer": "Yes, the class schedule is designed to accommodate the needs of students in classes 11 and 12, with separate sessions tailored to each grade level."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are assessments conducted in the Commerce Stream 2024 online program?",
+        "answer": "Assessments are conducted regularly through online tests, quizzes, and assignments administered through our learning management system, with feedback provided by instructors to aid in understanding and improvement."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in online education for Commerce Stream students?",
+        "answer": "Our commitment to providing comprehensive online education, experienced instructors, interactive learning environment, personalized support, and holistic approach to learning make us the preferred choice for students seeking to excel in commerce. Join us to unlock your potential and achieve academic success!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+{
+  "courseId": "commerce-stream-offline",
+  "title": "Commerce Stream 2024 Mastery Program (Offline)",
+  "discountText": "Special Discounted Price",
+  "price": {
+    "discountedPrice": "RS 2449",
+    "regularPrice": "RS 2999",
+    "discountPercentage": "(17% OFF)"
+  },
+  "content": [
+    "Limited Seats - Enroll Today!",
+
+    "Embark on a journey of academic excellence and professional success with our Commerce Stream 2024 Mastery Program offline at Education Academy. Tailored for students in classes 11 and 12 pursuing commerce, this program provides comprehensive support to excel in academic studies, competitive exams, and future endeavors in the dynamic field of commerce.",
+    
+    "Comprehensive Learning: Explore core commerce subjects including Accountancy, Business Studies, Economics, and Mathematics with our meticulously designed offline curriculum, covering foundational concepts and advanced topics.",
+    
+    "Experienced Instructors: Learn from dedicated educators who specialize in commerce subjects, providing clear explanations, practical examples, and personalized guidance to nurture a deep understanding of complex concepts.",
+    
+    "Interactive Classroom Sessions: Engage in interactive classroom sessions, group discussions, and case studies to enhance comprehension, critical thinking, and problem-solving skills relevant to real-world business scenarios.",
+    
+    "Regular Assessments: Assess progress through regular offline assessments, quizzes, and tests administered in the classroom to evaluate understanding and track academic growth, with personalized feedback provided by instructors to aid in understanding and improvement.",
+    
+    "Exam Preparation: Receive specialized training and resources to excel in competitive entrance exams such as CA Foundation, CMA Foundation, and other relevant examinations, including comprehensive study materials, mock tests, and exam strategies.",
+    
+    "Personalized Academic Support: Benefit from personalized attention and academic support from instructors to address individual learning needs, clarify doubts, and reinforce learning objectives.",
+    
+    "Holistic Development: Foster holistic development through a balanced curriculum that integrates academics with co-curricular activities, practical projects, and career guidance to prepare students for success in the dynamic field of commerce."
+  ],
+  "batchDetails": {
+    "title": "Batch Details",
+    "items": [
+      { "count": "Morning Batch", "description": "9:00 AM to 12:00 PM" },
+      { "count": "Afternoon Batch", "description": "12:00 PM to 3:00 PM" },
+      { "count": "Evening Batch", "description": "4:00 PM to 7:00 PM" }
+    ]
+  },
+  "faculty": {
+    "title": "Our Faculties",
+    "items": [
+      {
+        "name": "Ram Singh",
+        "qualification": "MSc in Biochemistry",
+        "experience": "13 Years",
+        "imageSrc": "/assets/img/5.course-view/1.faculty.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingOne",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseOne",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseOne"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseOne",
+            "class": "accordion-collapse collapse show",
+            "ariaLabelledby": "panelsStayOpen-headingOne"
+          }
+        },
+        "question": "Q.Who are the instructors for the Commerce Stream 2024 offline program?",
+        "answer": "Our instructors are experienced educators with expertise in commerce subjects, dedicated to providing high-quality offline education and nurturing the academic growth of students."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingTwo",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseTwo",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseTwo"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseTwo",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingTwo"
+          }
+        },
+        "question": "Q.What subjects are covered in the Commerce Stream 2024 offline program?",
+        "answer": "The program covers core commerce subjects including Accountancy, Business Studies, Economics, and Mathematics."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingThree",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseThree",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseThree"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseThree",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingThree"
+          }
+        },
+        "question": "Q.Is there flexibility in the offline class schedule for different grade levels?",
+        "answer": "Yes, the class schedule is designed to accommodate the needs of students in classes 11 and 12, with separate sessions tailored to each grade level."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFour",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFour",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFour"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFour"
+          }
+        },
+        "question": "Q.How are assessments conducted in the Commerce Stream 2024 offline program?",
+        "answer": "Assessments are conducted regularly through offline tests, quizzes, and assignments administered in the classroom, with feedback provided by instructors to aid in understanding and improvement."
+      },
+      {
+        "accordion": {
+          "head": {
+            "id": "panelsStayOpen-headingFive",
+            "button": {
+              "class": "accordion-button",
+              "dataBsTarget": "#panelsStayOpen-collapseFive",
+              "ariaExpanded": "false",
+              "ariaControls": "panelsStayOpen-collapseFive"
+            }
+          },
+          "body": {
+            "id": "panelsStayOpen-collapseFour",
+            "class": "accordion-collapse collapse",
+            "ariaLabelledby": "panelsStayOpen-headingFive"
+          }
+        },
+        "question": "Q.What sets Education Academy apart in offline education for Commerce Stream students?",
+        "answer": "Our commitment to providing comprehensive offline education, experienced instructors, interactive classroom environment, personalized support, and holistic approach to learning make us the preferred choice for students seeking to excel in commerce. Join us to unlock your potential and achieve academic success!"
+      }
+    ]
+  },
+  "buyCard": {
+    "imageSrc": "/assets/img/5.course-view/cta-card.jpeg",
+    "title": "Special Discount Price",
+    "prices": {
+      "discountedPrice": "RS 2449",
+      "regularPrice": "RS 2999",
+      "discountPercentage": "17% OFF"
+    },
+    "button": {
+      "link": "#",
+      "buttonText": "Enroll Now"
+    }
+  }
+},
+
 
 
 
@@ -4390,13 +6017,13 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         {
           id: "supertet-online",
           text: "Online",
-          link: "courseView.html"
+          link: "super-tet-online"
         },
         {
-          id: "tet-offline",
+          id: "supertet-offline",
           id: "supertet-offline",
           text: "Offline",
-          link: "courseView.html"
+          link: "super-tet-offline"
         }
       ]
     },
@@ -4411,13 +6038,13 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         {
           id: "nda-online",
           text: "Online",
-          link: "courseView.html"
+          link: "nda-online"
         },
         {
           id: "super-tet-offline",
           id: "nda-offline",
           text: "Offline",
-          link: "courseView.html"
+          link: "nda-offline"
         }
       ]
     },
@@ -4431,12 +6058,12 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         {
           id: "cds-online",
           text: "Online",
-          link: "courseView.html"
+          link: "cds-online"
         },
         {
           id: "cds-offline",
           text: "Offline",
-          link: "courseView.html"
+          link: "cds-offline"
         }
       ]
     },
@@ -4450,12 +6077,12 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         {
           id: "si-police-online",
           text: "Online",
-          link: "courseView.html"
+          link: "si-police-online"
         },
         {
           id: "si-police-offline",
           text: "Offline",
-          link: "courseView.html"
+          link: "si-police-offline"
         }
       ]
     },
@@ -4469,12 +6096,12 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         {
           id: "bank-po-online",
           text: "Online",
-          link: "courseView.html"
+          link: "bank-po-online"
         },
         {
           id: "bank-po-offline",
           text: "Offline",
-          link: "courseView.html"
+          link: "bank-po-offline"
         }
       ]
     },
@@ -4488,43 +6115,84 @@ submenu:[  { id: "online-iit", text: "Online", link: "NEET-2024-Online" },
         {
           id: "upsc-online",
           text: "Online",
-          link: "courseView.html"
+          link: "upsc-online"
         },
         {
           id: "upsc-offline",
           text: "Offline",
-          link: "courseView.html"
+          link: "upsc-offline"
         }
       ]
     }
     
   ]
 },
-
 {
   id: "school",
   text: "SCHOOL",
   link: "course-view.html",
   submenu: [
+    //base(class 6 to 10)
     {
-      id: "class-9th",
-      text: "Class 9th",
+      id: "base-menu",
+      text: "Base(Class 6 to 10)",
       link: "courseView.html",
       submenu2: [
         {
-          id: "class-9th-online",
+          id: "base-online",
           text: "Online",
-          link: "courseView.html"
+          link: "base-online"
         },
         {
-          id: "class-9th-offline",
+          id: "base-offline",
           text: "Offline",
-          link: "courseView.html"
+          link: "base-offline"
         }
       ]
-    }
+    },
+
+    //science stream
+    {
+      id: "science-stream-menu",
+      text: "Sciecne Stream",
+      link: "courseView.html",
+      submenu2: [
+        {
+          id: "science-stream-online",
+          text: "Online",
+          link: "science-stream-online"
+        },
+        {
+          id: "science-stream-offline",
+          text: "Offline",
+          link: "science-stream-offline"
+        }
+      ]
+    },
+
+    //
+    {
+      id: "commerce-stream-menu",
+      text: "Commerce Stream",
+      link: "courseView.html",
+      submenu2: [
+        {
+          id: "science-stream-online",
+          text: "Online",
+          link: "commerce-stream-online"
+        },
+        {
+          id: "science-stream-offline",
+          text: "Offline",
+          link: "commerce-stream-online"
+        }
+      ]
+    },
   ]
+  
 }
+
+
 
 ];
 

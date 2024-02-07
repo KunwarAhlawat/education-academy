@@ -3,6 +3,16 @@
 background-color: $primary-color;
      .hero-text{
 color: $text-light;
+
+h2{
+    max-width: 100%;
+}
+/* Media query for viewport width above a certain size */
+@media screen and (min-width: 768px) {
+    h2 {
+        max-width: 60%; /* Set max-width to 60% for viewport widths above 768px */
+    }
+}
 p{
     margin: 20px 0px 0px 0px;
     font-weight: $bold;
