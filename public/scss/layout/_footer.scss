@@ -23,6 +23,7 @@ ul {
 .cta-text {
   padding-left: 15px;
   display: inline-block;
+
 }
 .cta-text h4 {
   color: #fff;
@@ -65,9 +66,16 @@ ul {
 
 .footer-text p {
   margin-bottom: 14px;
-  font-size: 14px;
+  font-size: $small-font;
       color: #7e7e7e;
-  line-height: 28px;
+  line-height: 150%;
+  max-width: 100%;
+}
+/* Media query for viewport width above a certain size */
+@media screen and (min-width: 768px) {
+  .footer-text p {
+      max-width: 70%; /* Set max-width to 60% for viewport widths above 768px */
+  }
 }
 .footer-social-icon span {
   color: #fff;
