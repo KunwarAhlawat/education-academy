@@ -341,7 +341,7 @@ const Data = {
       },
 
       buyCard: {
-        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        imageSrc: "/assets/img/5.course-view/cta-card.png",
         title: "Special Discount Price",
         prices: {
           discountedPrice: "RS 2449",
@@ -674,7 +674,7 @@ const Data = {
       },
 
       buyCard: {
-        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        imageSrc: "/assets/img/5.course-view/cta-card.png",
         title: "Special Discount Price",
         prices: {
           discountedPrice: "RS 2449",
@@ -840,7 +840,7 @@ const Data = {
       },
 
       buyCard: {
-        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        imageSrc: "/assets/img/5.course-view/cta-card.png",
         title: "Special Discount Price",
         prices: {
           discountedPrice: "RS 2449",

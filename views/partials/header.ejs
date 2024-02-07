@@ -121,11 +121,11 @@
                                                     <span><%= subItem.text %></span>
                                                     <% subItem.submenu2.forEach((subItem2, subIndex2) => { %>
                                                     <div class="m-menu-item-2">
-                                                        <a href="course-view.html"><%= subItem2.text %></a>
+                                                        <a href="/courseview/<%= subItem2.link %>"><%= subItem2.text %></a>
                                                     </div>
                                                     <% }); %>
                                                     <% } else{ %>
-                                                    <a href="course-view.html"><%= subItem.text %></a>
+                                                        <a href="/courseview/<%= subItem.link %>"><%= subItem.text %></a>
                                                     <% } %>
                                                 </div>
                                             </div>
