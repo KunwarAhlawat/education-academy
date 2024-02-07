@@ -27,9 +27,10 @@
             <div class="col">
                 <div class="hero-text">
                     <h2><%= courseViewData.title %></h2>
-                     
+                    <p><strong>Duration:- </strong> <%= courseViewData.duration %> </p>
                     <p><%= courseViewData.discountText %></p>
                     <div class="hero-price-area">
+                        
                         <span><%= courseViewData.price.discountedPrice %></span>
                         <span><%= courseViewData.price.regularPrice %></span>
                         <span><%= courseViewData.price.discountPercentage %></span>
