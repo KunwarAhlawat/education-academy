@@ -2,9 +2,9 @@ const Data = {
   courseList: [
     // neet
     {
-      id: "NEET-2024-Offline",
+      id: "NEET-2024-online",
       onlineCourse: {
-        imgSrc2: "/assets/img/onlineCourseList/1.png",
+        imgSrc2: "/assets/img/4.course-list/neet-online-h.webp",
         title2: "NEET 2024 Preparation Online Program",
         details2: "Course Details:",
         includedText: {
@@ -18,9 +18,9 @@ const Data = {
           ],
         },
         price: {
-          regularPrice: "Rs 499/-",
-          discountedPrice: "Rs 2999/-",
-          discountPercentage: "28% OFF",
+          regularPrice: "Rs 10K /-",
+          discountedPrice: "Rs 20K /-",
+          discountPercentage: "50% OFF",
         },
         links: {
           explore: "NEET-2024-Online", // Add the appropriate URL
@@ -29,7 +29,7 @@ const Data = {
       },
 
       courseListPage: {
-        imgSrc2: "/assets/img/4.course-list/3.png",
+        imgSrc2: "/assets/img/4.course-list/neet-offline-h.webp",
         title2: "NEET 2024 Preparation  Offline Course",
         details2: "Course Details:",
         includedText: {
@@ -43,9 +43,9 @@ const Data = {
           ],
         },
         price: {
-          regularPrice: "Rs 499/-",
-          discountedPrice: "Rs 2999/-",
-          discountPercentage: "28% OFF",
+          regularPrice: "Rs 105K /-",
+          discountedPrice: "Rs 210K /-",
+          discountPercentage: "50% OFF",
         },
         links: {
           explore: "/courseview/NEET-2024-Offline", // Add the appropriate URL
@@ -56,9 +56,9 @@ const Data = {
 
     // iit
     {
-      id: "IIT-JEE-2024-Offline",
+      id: "IIT-JEE-2024-online",
       onlineCourse: {
-        imgSrc2: "/assets/img/onlineCourseList/3.png",
+        imgSrc2: "/assets/img/4.course-list/iit-online-h.webp",
         title2: "IIT-JEE 2024 Preparation Online Program",
         details2: "Course Details:",
         includedText: {
@@ -72,9 +72,9 @@ const Data = {
           ],
         },
         price: {
-          regularPrice: "Rs 499/-",
-          discountedPrice: "Rs 2999/-",
-          discountPercentage: "28% OFF",
+          regularPrice: "Rs 10K /-",
+          discountedPrice: "Rs 20K /-",
+          discountPercentage: "50% OFF",
         },
         links: {
           explore: "NEET-2024-Online", // Add the appropriate URL
@@ -84,7 +84,7 @@ const Data = {
 
 
       courseListPage: {
-        imgSrc2: "/assets/img/4.course-list/1.png",
+        imgSrc2: "/assets/img/4.course-list/iit-offline-h.webp",
         title2: "IIT-JEE 2024 Preparation  Offline Course",
         details2: "Course Details:",
         includedText: {
@@ -98,9 +98,9 @@ const Data = {
           ],
         },
         price: {
-          regularPrice: "Rs 999/-",
-          discountedPrice: "Rs 4999/-",
-          discountPercentage: "28% OFF",
+          regularPrice: "Rs 105K /-",
+          discountedPrice: "Rs 210K/-",
+          discountPercentage: "50% OFF",
         },
         links: {
           explore: "courseview/NEET-2024-Offline", // Add the appropriate URL
@@ -113,12 +113,12 @@ const Data = {
     {
       id: "CAT-2024-Offline",
       onlineCourse: {
-        imgSrc2: "/assets/img/onlineCourseList/2.png",
+        imgSrc2: "/assets/img/4.course-list/cat-online-h.webp",
         title2: "CAT 2024 Preparation Online Program",
         details2: "Course Details:",
         includedText: {
           left: [
-            { icon: "bi bi-check-square", text: "1 year Duration" },
+            { icon: "bi bi-check-square", text: "6 Month Duration" },
             { icon: "bi bi-check-square", text: "100+ Lectures" },
           ],
           right: [
@@ -127,9 +127,9 @@ const Data = {
           ],
         },
         price: {
-          regularPrice: "Rs 499/-",
-          discountedPrice: "Rs 2999/-",
-          discountPercentage: "28% OFF",
+          regularPrice: "Rs 10K /-",
+          discountedPrice: "Rs 20K /-",
+          discountPercentage: "50% OFF",
         },
         links: {
           explore: "NEET-2024-Online", // Add the appropriate URL
@@ -139,12 +139,12 @@ const Data = {
 
 
       courseListPage: {
-        imgSrc2: "/assets/img/4.course-list/2.png",
+        imgSrc2: "/assets/img/4.course-list/cat-offline-h.webp",
         title2: "CAT 2024 Preparation Offline Program ",
         details2: "Course Details:",
         includedText: {
           left: [
-            { icon: "bi bi-check-square", text: "1 year Duration" },
+            { icon: "bi bi-check-square", text: "6 Month Duration" },
             { icon: "bi bi-check-square", text: "100+ Lectures" },
           ],
           right: [
@@ -153,9 +153,9 @@ const Data = {
           ],
         },
         price: {
-          regularPrice: "Rs 599/-",
-          discountedPrice: "Rs 5999/-",
-          discountPercentage: "28% OFF",
+          regularPrice: "Rs 55K /-",
+          discountedPrice: "Rs 110K /-",
+          discountPercentage: "50% OFF",
         },
         links: {
           explore: "courseview/CAT-2024-Offline", // Add the appropriate URL
@@ -347,7 +347,7 @@ const Data = {
       },
 
       buyCard: {
-        imageSrc: "/assets/img/5.course-view/cta-card.png",
+        imageSrc: "/assets/img/5.course-view/neet-offline.webp",
         title: "Special Discount Price",
         prices: {
           discountedPrice: "RS 2449",
@@ -516,7 +516,7 @@ const Data = {
       },
 
       buyCard: {
-        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        imageSrc: "/assets/img/5.course-view/neet-online.webp",
         title: "Special Discount Price",
         prices: {
           discountedPrice: "RS 2449",
@@ -682,7 +682,7 @@ const Data = {
       },
 
       buyCard: {
-        imageSrc: "/assets/img/5.course-view/cta-card.png",
+        imageSrc: "/assets/img/5.course-view/iit-offline.webp",
         title: "Special Discount Price",
         prices: {
           discountedPrice: "RS 2449",
@@ -849,7 +849,7 @@ const Data = {
       },
 
       buyCard: {
-        imageSrc: "/assets/img/5.course-view/cta-card.png",
+        imageSrc: "/assets/img/5.course-view/iit-online.webp",
         title: "Special Discount Price",
         prices: {
           discountedPrice: "RS 2449",
@@ -1015,7 +1015,7 @@ const Data = {
       },
 
       buyCard: {
-        imageSrc: "/assets/img/5.course-view/cta-card.jpeg",
+        imageSrc: "/assets/img/5.course-view/cat-offline.webp",
         title: "Special Discount Price",
         prices: {
           discountedPrice: "RS 2449",
