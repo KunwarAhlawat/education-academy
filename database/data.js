@@ -2,7 +2,7 @@ const Data = {
   courseList: [
     // neet
     {
-      id: "NEET-2024-online",
+      id: "NEET-2024-Online",
       onlineCourse: {
         imgSrc2: "/assets/img/4.course-list/neet-online-h.webp",
         title2: "NEET 2024 Preparation Online Program",
