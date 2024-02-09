@@ -1,0 +1,30 @@
+.counseling-area{
+    .counseling-course-info{
+     li{
+        display: block;
+        span{
+           margin: 0px 10px;
+            &:nth-child(2){
+               font-size: 1.25rem;
+               font-weight: $bold;
+               color: $accent;
+            }
+            &:nth-child(3){
+                font-size: $small-font;
+                font-weight: $bold;
+               text-decoration: line-through;
+            }
+            &:nth-child(4){
+                padding: 4px 8px;
+              background-color: $accent;
+              color: $light;
+            }
+           
+        }
+     }
+    }
+
+    .counselling-form{
+        margin-top:50px
+    }
+}
