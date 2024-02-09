@@ -18,12 +18,12 @@ router.get('/getStudentsTableData', adminContl.getStudentsTableData);
 
 
 // ============================== counselling form ============================
-// const cousnellingContl = require("../controller/counsellingController")
+const cousnellingContl = require("../controller/counsellingController")
 
-// const { counsellingValidationRules, counsellingValidate } = require('../middlewares/counselling/counsellingValidateMiddleware');
+const { counsellingValidationRules, counsellingValidate } = require('../middlewares/counselling/counsellingValidateMiddleware');
 
 
-// router.post('/counselling', counsellingValidationRules() , counsellingValidate ,cousnellingContl.counsellingFormCtrl);
+router.post('/counselling', counsellingValidationRules() , counsellingValidate ,cousnellingContl.counsellingFormCtrl);
 
 
 

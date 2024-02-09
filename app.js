@@ -30,12 +30,19 @@ const indexRoute = require("./routes/indexRoute")
 const courseRoute = require("./routes/courseRoute")
 const courseViewRoute = require("./routes/courseViewRoute")
 const adminRoute = require('./routes/adminRoute');
+const counselingRoute = require('./routes/counselingRoute');
 
 const contactRoute = require("./routes/contactRoute")
 const aboutRoute = require("./routes/aboutRoute")
 const loginRoute = require('./routes/loginRoute');
 const facultyRoute = require('./routes/facultyRoute');
+
+
+
+// admin routes
+const courseAdminRoute = require('./routes/admin/course');
 const notFoundRoute = require("./routes/notFoundRoute")
+
 
 
 app.use("/" , indexRoute)
@@ -45,7 +52,11 @@ app.use('/', facultyRoute);
 app.use('/', adminRoute);
 app.use('/', aboutRoute);
 app.use('/', loginRoute);
+app.use('/', counselingRoute);
+app.use('/admin', courseAdminRoute);
+
 app.use('/', contactRoute);
+
 app.use("/" , notFoundRoute)
 
 const port = 3000

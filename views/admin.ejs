@@ -47,18 +47,32 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" integrity="sha512-hUhvpC5f8cgc04OZb55j0KNGh4eh7dLxd/dPSJ5VyzqDWxsayYbojWyl5Tkcgrmb/RVKCRJI1jNlRbVP4WWC4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js" integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
   $(document).ready(function() {
     $.ajax({
       type: 'get',
       url: '/getStudentsTableData',
       success: function(data) {
-        console.log(data);
+        //console.log(data);
 
         if (data.length > 0) {
           // Assuming data is an array of objects, use the keys of the first object as columns
-          var columns = Object.keys(data[0]).map(function(key) {
-            return { data: key, title: key };
+          let columns = Object.keys(data[0]).map(function(key) {
+            console.log(key);
+            let columnName ;
+            switch (key) {
+            case "mobileNum":
+                columnName = "CONTACT";
+                break;
+            case "createdAt":
+                columnName = "DATE";
+                break;
+            default:
+                columnName = key;
+        }
+            return { data: key, title: columnName.toUpperCase() }; // title for column name 
           });
 
        
@@ -66,7 +80,7 @@
         columns.unshift({
         data: null,
         className: 'select-checkbox',
-        orderable: false,
+        // orderable: true,
         targets: 0,
         render: function() {
           return ''; // Placeholder for the checkbox
@@ -74,27 +88,75 @@
       });
 
           // Initialize DataTable with dynamically generated columns
-          $('#myTable').DataTable({
+          let table =  $('#myTable').DataTable({
             dom: "Bfrtip",
             data: data,
-            destroy: true,
-            orderCellsTop: true,
+            // destroy: true,
+        
             fixedHeader: true,
             columns: columns,
+            order: [[7, 'desc']],
             select: {
               style: 'os',
               selector: 'td:first-child',
               style: 'multi'
           },
           // order: [[1, 'asc']],
-          order: [[0, 'asc'], [1, 'asc']], // Order by row_order first, then by the second column (change as needed)
-
+          // order: [[0, 'asc'], [1, 'asc']], // Order by row_order first, then by the second column (change as needed)
+          columnDefs: [
+            {
+                targets: 7, // Assuming 'createdAt' is the first column
+                render: function(data, type, row) {
+                    // Format the date using moment.js or other date formatting libraries
+                    //console.log("datatable data" , data)
+                  return  moment(data).format("YYYY-MM-DD HH:mm:ss");
+                    // return moment(data).format('DD/MM/YYYY');
+                }
+            }
+        ],
           pageLength: 20,
           scrollY: 500,
           dom: 'Bfrtip',
+          // buttons: [
+          //     'copy', 'csv', 'excel', 'pdf', 'print'
+          // ],
           buttons: [
-              'copy', 'csv', 'excel', 'pdf', 'print'
-          ],
+            {
+                extend: 'copy',
+                title: 'Registered Students List',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'csv',
+                title: 'Registered Students List',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'excel',
+                title: 'Registered Students List',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'pdf',
+                title: 'Registered Students List',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'print',
+                title: 'Registered Students List',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            }
+        ],
           searching: false,
           initComplete: function() {
               var api = this.api();
@@ -137,6 +199,12 @@
               });
           },
           });
+
+
+              // To show
+table.column(1).visible(false)
+ 
+table.column(8).visible(false)
         } else {
           // Handle case when there is no data
           console.log("No data available");
