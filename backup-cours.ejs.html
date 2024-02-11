@@ -1,0 +1,59 @@
+<form action="/admin/course" method="POST" id="addCourseForm" class="w-25">
+  <!-- title -->
+<div class="mb-3">
+<label for="title" class="form-label">Course Title</label>
+<input type="text" name="title" class="form-control" id="title" >
+</div>
+
+   <!-- description -->
+<div class="mb-3">
+  <label for="description" class="form-label">Description</label>
+  <input type="text" name="description" class="form-control" id="description" >
+ </div>
+
+     <!-- Duration -->
+<div class="mb-3">
+  <label for="duration" class="form-label">Course Duration</label>
+  <input type="number" name="duration" class="form-control" id="duration" >
+ </div>
+
+     <!-- Regular Price -->
+  <div class="mb-3">
+      <label for="regularPrice" class="form-label">Regular Price</label>
+      <input type="number" name="regularPrice" class="form-control" id="regularPrice" >
+  </div>
+
+  <!-- Discounted Price -->
+  <div class="mb-3">
+      <label for="discountedPrice" class="form-label">Discounted Price</label>
+      <input type="number" name="discountedPrice" class="form-control" id="discountedPrice" >
+  </div>
+
+  <!-- lecture  Count -->
+  <div class="mb-3">
+      <label for="lectureCount" class="form-label">Lecture Count</label>
+      <input type="number" name="lectureCount" class="form-control" id="lectureCount" >
+  </div>
+
+   <!-- study  mode -->
+   <div class="mb-3">
+      <label for="studyMode" class="form-label">Study Mode</label>
+
+      <!-- online -->
+      <label for="online" class="form-check-label">online</label>
+      <input type="radio" name="studyMode" class="form-check-input" value="online" id="online" >
+      
+     <!-- offline -->
+     <label for="offline" class="form-check-label">offline</label>
+     <input type="radio" name="studyMode" class="form-check-input" value="offline" id="offline" >
+
+  </div>
+
+  <!-- image -->
+  <div class="mb-3">
+      <label for="courseImage" class="form-label">Course Image</label>
+      <input class="form-control" name="imageSrc" type="file" id="courseImage">
+    </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

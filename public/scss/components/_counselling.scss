@@ -1,0 +1,67 @@
+.counseling-area{
+    .counseling-course-info{
+     li{
+        display: block;
+        span{
+           margin: 0px 10px;
+            &:nth-child(2){
+               font-size: 1.25rem;
+               font-weight: $bold;
+               color: $accent;
+            }
+            &:nth-child(3){
+                font-size: $small-font;
+                font-weight: $bold;
+               text-decoration: line-through;
+            }
+            &:nth-child(4){
+                padding: 4px 8px;
+              background-color: $accent;
+              color: $light;
+            }
+           
+        }
+     }
+    }
+
+    .counselling-form{
+        margin-top:50px;
+        .personal-area{
+          margin: 30px 0px;
+        }
+        .guardian-area{
+            margin: 30px 0px;
+        }
+        .academic-profile-area{
+            margin: 30px 0px;
+        }
+        .declaration{
+            margin: 30px 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            p{
+                margin-left: 10px;
+            }
+        }
+        .counselling-form-button{
+            margin: 20px 0px;
+        }
+
+        .form-field{
+            padding: 10px 0px;
+            .gender{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    li{
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
+                }
+               
+            }
+        }
+    }
+}

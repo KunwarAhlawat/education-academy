@@ -1,419 +1,316 @@
 <%- include('partials/header') %>
   <!-- counseling hero section start -->
-  <section class="course-view-hero-area section-padding">
+  <section class="counseling-area section-padding">
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="hero-text">
-            <h2>
-              <%= courseViewData.title %>
-            </h2>
-            <p><strong>Duration:- </strong>
-              <%= courseViewData.duration %>
-            </p>
-            <p>
-              <%= courseViewData.discountText %>
-            </p>
-            <div class="hero-price-area">
-
-              <span>
-                <%= courseViewData.price.discountedPrice %>
-              </span>
-              <span>
-                <%= courseViewData.price.regularPrice %>
-              </span>
-              <span>
-                <%= courseViewData.price.discountPercentage %>
-              </span>
+    
+        <div class="row">
+          <div class="col">
+            <div class="counseling-course-info">
+             <ul>
+              <li><h2><%= courseViewData.title %></h2></li>
+              <li><Strong>Duration -</Strong> <%= courseViewData.duration %></li>
+              <!-- <li><%= courseViewData.discountText %></li> -->
+              <li><strong>Course Price -</strong><span><%= courseViewData.price.discountedPrice %></span> 
+                <span><%= courseViewData.price.regularPrice %></span>
+                <span><%= courseViewData.price.discountPercentage %></span>
+              </li>
+             </ul>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <div class="container-fluid">
-    <div class="row">
+        <!-- form area start -->
+         <div class="row">
+          <div class="col">
+            <form class="counselling-form" autocomplete="on" id="counselling-form">
+             
+              <!-- personal details area start -->
+              <section class="personal-area">
+               <div class="row">
+                  <div class="col">
+                      <h4>Please take a moment to fill out this form accurately.</h4>
+                      <hr>
+                  </div>
+               </div>
+              
+              <!-- first and last name area -->
+               <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <div class="filedForm">
+                          <label for="FirstName">First Name</label> <br />
+                          <input id="FirstName" name="firstName" class="form-control" placeholder="Insert your First Name"
+                              type="text" autocomplete="given-name">
+                      </div>
+                    </div>  
+                  </div>
 
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <div class="LastName">
+                          <label for="LastName">Last Name</label> <br />
+                          <input id="LastName" name="lastName" class="form-control" placeholder="Insert your Last Name"
+                              type="text" autocomplete="family-name">
+                      </div>
+                    </div>
+                  </div>
+               
+               </div>
 
-
-      <div class="col-md-8">
-
-
-        <div id="counselling" style="background-color: #F7F7F7;">
-
-
-
-          <!-- about hero section end -->
-
-          <section>
-            <div class="container">
-
+              <!-- mobile no , email and dob area -->
+               <div class="row">
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="mobileNo">Mobile No</label> <br>
+                      <input id="mobileNo" name="mobileNo" class="form-control" placeholder="Insert your Mobile Number"
+                          type="tel" autocomplete="tel">
+                    </div>
+                  </div>
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="email">Email</label> <br>
+                      <input id="email" name="email" class="form-control" type="email" placeholder="Insert your Email"
+                          autocomplete="email">
+                    </div>
+                  </div>
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="Dob">DOB</label> <br>
+                      <input id="Dob" name="dateOfBirth" class="form-control" type="date"
+                          placeholder="Select DOB" autocomplete="bday">
+                  </div>
+              </div>
+              </div>
+             
+              <!-- gender and need hostel area -->
               <div class="row">
-                <div class="col">
-                  <div class="counsellingForm shadow ">
-
-                    <form id="addCounsellingForm">
-
-                      <div class="head">
-                        <h2 class="bold">Education Studies</h2>
-                        <hr>
-                        <h4 class="bold ">REGISTRATION FORM</h4>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col">
-                          <h4>Personal Profile :-</h4>
-                          <hr>
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <div class="filedForm">
-                            <label for="FirstName">First Name :</label> <br />
-                            <input id="FirstName" name="firstName" placeholder="Enter First Name" type="text" />
-                          </div>
-                        </div>
-
-                        <div class="col-md-6">
-                          <div class="LastName">
-                            <label for="LastName">Last Name :</label> <br />
-                            <input id="LastName" name="lastName" placeholder="Enter Last Name" type="text" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <label for="mobileNo">Mobile No :</label> <br>
-                          <input id="mobileNo" name="mobileNo" placeholder="Enter Mobile No" type="number">
-                        </div>
-                        <div class="col-md-6">
-                          <label for="email">Email :</label> <br>
-                          <input id="email" name="email" type="email" placeholder="email">
-                        </div>
-                        <div class="col-md-6 mt-3">
-                          <label for="Dob">DOB :</label> <br>
-                          <input id="Dob" name="dateOfBirth" type="date" placeholder="Select Date">
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <div id="gender" class="gender">
-                            <label for="sex">Sex :</label>
-                            <ul>
-                              <li>
+                 <div class="col-md-6 mt-3 mt-md-0" >
+                  <div class="form-field">
+                    <div id="gender" class="gender">
+                        <label for="sex">Sex</label>
+                        <ul>
+                            <li>
                                 <input name="gender" id="male" type="radio" value="Male">
                                 <label for="male">Male</label>
-                              </li>
-                              <li>
+                            </li>
+                            <li>
                                 <input name="gender" id="Female" type="radio" value="Female">
                                 <label for="Female">Female</label>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div id="hostel" class="gender">
-                            <label for="hostel">Hostel :</label>
-                            <ul>
-                              <li>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                <div class="form-field">
+                    <div id="hostel" class="gender">
+                        <label for="hostel">Need Hostel ?</label>
+                        <ul>
+                            <li>
                                 <input name="hostel" id="yes" type="radio" value="yes">
                                 <label for="yes">Yes</label>
-                              </li>
-                              <li>
+                            </li>
+                            <li>
                                 <input name="hostel" id="no" type="radio" value="no">
                                 <label for="no">No</label>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <label for="fatherName">Father's Name :</label> <br>
-                          <input id="fatherName" name="fatherName" placeholder="Enter Father's Name" type="text">
-                        </div>
-
-                        <div class="col-md-6">
-                          <label for="motherName">Mother's Name :</label> <br>
-                          <input id="motherName" name="motherName" placeholder="Enter Mother's Name" type="text">
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <label for="bloodGroup">Blood Group</label> <br>
-                          <select id="bloodGroup" name="bloodGroup">
-                            <option value="A+">A+</option>
-                            <option value="A-">A-</option>
-                            <option value="B+">B+</option>
-                            <option value="B-">B-</option>
-                            <option value="AB+">AB+</option>
-                            <option value="AB-">AB-</option>
-                            <option value="O+">O+</option>
-                            <option value="O-">O-</option>
-                          </select>
-                        </div>
-
-                        <div class="col-md-6">
-                          <label for="parentNo">Parent's No :</label> <br>
-                          <input id="parentNo" name="parentNo" placeholder="Enter Parent's No" type="number">
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-6">
-                          <label for="permanentAddress">Permanent Address</label> <br>
-                          <textarea id="permanentAddress" name="permanentAddress" placeholder="Enter Address" rows="4"
-                            cols="50"></textarea>
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col">
-                          <h4>Local Guardian :-</h4>
-                          <hr>
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <label for="guardian">Guardian Name :</label> <br>
-                          <input id="guardian" name="guardian" placeholder="Enter Guardian Name" type="text">
-                        </div>
-                        <div class="col-md-6">
-                          <label for="relationship">Relationship :</label> <br>
-                          <input id="relationship" name="relationship" placeholder="Enter Relationship" type="text">
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <label for="guardianMobile">Mobile :</label> <br>
-                          <input id="guardianMobile" name="guardianMobile" placeholder="Enter Mobile" type="text">
-                        </div>
-                        <div class="col-md-6">
-                          <label for="guardianAddress">Address :</label> <br>
-                          <input id="guardianAddress" name="guardianAddress" placeholder="Enter Address" type="text">
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col">
-                          <h4>Academic Profile :-</h4>
-                          <hr>
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <label for="programApplied">Program Applied For :</label> <br>
-                          <input id="programApplied" name="programApplied" placeholder="Enter Program" type="text">
-                        </div>
-
-                        <div class="col-md-6">
-                          <label for="entranceApplied">Entrance Exam Date :</label> <br>
-                          <input id="entranceApplied" name="entranceApplied" type="date">
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <label for="subjectApplied">Subject Applied For :</label> <br>
-                          <input id="subjectApplied" name="subjectApplied" placeholder="Enter Subjects" type="text">
-                        </div>
-
-                        <div class="col-md-6">
-                          <label for="reference">Reference :</label> <br>
-                          <input id="reference" name="reference" placeholder="Enter Reference" type="text">
-                        </div>
-                      </div>
-
-                      <div class="row formField">
-                        <div class="col-md-6">
-                          <label for="submitDate">Date :</label> <br>
-                          <input id="submitDate" name="submitDate" type="date">
-                        </div>
-                      </div>
-
-                      <div class="row my-5 ">
-                        <div id="declaration" class="col-12 d-flex align-items-start ">
-                          <input class="mt-2" name="declaration" type="checkbox">
-                          <p class="semibold ms-3 "><strong>Deceleration:</strong> By submitting this form, I declare
-                            that the
-                            provided information is accurate and has been provided by me.</p>
-                        </div>
-                      </div>
-
-                      <div class="row mt-4 ">
-                        <div class="col-12">
-                          <button type="submit">Submit</button>
-                        </div>
-                      </div>
-                    </form>
-
+                            </li>
+                        </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
+           
 
-          <!--  
-    <section class="container-fluid counseling-section">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-lg-6 col-md-12 mt-3 p-5">
-                    <h2>How Our Counseling Works</h2>
-                    <div class="counseling-work-box">
-                        <div class="counseling-no-box">
-                            <span>1</span>
-                        </div>
-                        <div class="counseling-work-content">
-                            <h4>Submission of Form</h4>
-                            <p>Fill out our counseling form with essential details.</p>
-                        </div>
+              <!-- father and monter name area -->
+               <div class="row">
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="fatherName">Father's Name :</label> <br>
+                      <input id="fatherName" name="fatherName" class="form-control"
+                          placeholder="Enter Father's Name" type="text">
                     </div>
-                    <div class="counseling-work-box">
-                        <div class="counseling-no-box">
-                            <span>2</span>
-                        </div>
-                        <div class="counseling-work-content">
-                            <h4>Personal Consultation</h4>
-                            <p>Our counselors will reach out to you for a one-on-one consultation.</p>
-                        </div>
-                    </div>
-                    <div class="counseling-work-box">
-                        <div class="counseling-no-box">
-                            <span>3</span>
-                        </div>
-                        <div class="counseling-work-content">
-                            <h4>Guidance and Recommendations</h4>
-                            <p>Receive personalized guidance and recommendations based on your academic and career
-                                goals.</p>
-                        </div>
-                    </div>
-                    <div class="counseling-work-box">
-                        <div class="counseling-no-box">
-                            <span>4</span>
-                        </div>
-                        <div class="counseling-work-content">
-                            <h4>Follow-Up Support</h4>
-                            <p>We stay connected with you throughout the application and admission process, offering
-                                ongoing
-                                support.</p>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="col-lg-6 col-md-12 mt-3 p-5">
+
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="motherName">Mother's Name :</label> <br>
+                      <input id="motherName" name="motherName" class="form-control"
+                          placeholder="Enter Mother's Name" type="text">
+                  </div>
+                </div>
+               </div>
+
+              <!-- blood group and parent number area -->
+               <div class="row">
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="bloodGroup">Blood Group</label> <br>
+                      <select id="bloodGroup" name="bloodGroup" class="form-select">
+                          <option value="A+">A+</option>
+                          <option value="A-">A-</option>
+                          <option value="B+">B+</option>
+                          <option value="B-">B-</option>
+                          <option value="AB+">AB+</option>
+                          <option value="AB-">AB-</option>
+                          <option value="O+">O+</option>
+                          <option value="O-">O-</option>
+                      </select>
+                  </div>
+                </div>
+
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                    <label for="parentNo">Parent's No :</label> <br>
+                    <input id="parentNo" name="parentNo" class="form-control" placeholder="Enter Parent's No" type="tel" autocomplete="tel">
+                  </div>
+                </div>
+               </div>
          
-                    <h2 class="mx-0">What to Expect from Us</h2>
-                    <div class="counseling-content-box">
-                        <h4>Personalized Guidance</h4>
-                        <p> Our expert counselors provide personalized guidance tailored to your academic and career
-                            aspirations.</p>
-                    </div>
-                    <div class="counseling-content-box">
-                        <h4>Streamlined Process</h4>
-                        <p> We understand that navigating educational choices can be overwhelming. Our counselors
-                            streamline the process, ensuring a clear
-                            and concise path to your desired educational destination.</p>
-                    </div>
-                    <div class="counseling-content-box">
-                        <h4>Comprehensive Support</h4>
-                        <p>From choosing the right program to understanding admission requirements, our counselors offer
-                            comprehensive support at
-                            every stage of your educational journey.</p>
-                    </div>
-                    <div class="counseling-content-box">
-                        <h4>Career Counseling</h4>
-                        <p>We go beyond academic advice to provide insights into potential career paths associated with
-                            your chosen field of study.</p>
-                    </div>
-                    <div class="counseling-content-box">
-                        <h4>Flexible Communication</h4>
-                        <p>Connect with our counselors through your preferred mode of communication—be it email, phone,
-                            or WhatsApp.</p>
-                    </div>
 
+              <!-- address area -->
+              <div class="row">
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="permanentAddress">Permanent Address</label> <br>
+                      <textarea id="permanentAddress" name="permanentAddress" class="form-control"
+                          placeholder="Enter Address" rows="4" cols="50"></textarea>
+                  </div>
                 </div>
-
-            </div>
-        </div>
-    </section>
-   
-
-   
-    <section class="contianer-fluid counseling-form">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2>Fill Form for Counseling</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 mt-3">
-                    <form>
-                        <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
-                </div>
-            </div>
-        </div>
-    </section>
- -->
-        </div>
-      </div>
-      <!-- sidebar area start -->
-      <div class="col-md-4">
-        <section class="course-view-sidebar-area">
-
-          <div class="row">
-            <div class="col">
-              <div id="fixedDiv" class="sidebar-cta-card shadow buy-card-fix">
-                <img src="<%= courseViewData.buyCard.imageSrc %>" alt="" class="img-fluid">
-                <h6>
-                  <%= courseViewData.buyCard.title %>
-                </h6>
-                <ul>
-                  <li>
-                    <%= courseViewData.buyCard.prices.discountedPrice %>
-                  </li>
-                  <li>
-                    <%= courseViewData.buyCard.prices.regularPrice %>
-                  </li>
-                  <li>
-                    <%= courseViewData.buyCard.prices.discountPercentage %>
-                  </li>
-                </ul>
-                <a href="/order/<%= courseViewData.courseId  %>"><button class="secondary-button">
-                    <%= courseViewData.buyCard.button.buttonText %>
-                  </button></a>
               </div>
-            </div>
-          </div>
+            </section>
+              <!-- personal details area end -->
+            
+            
+            <!-- local guardian area srart -->
+            <section class="guardian-area">
+              <div class="row">
+                  <div class="col">
+                      <h4>Local Guardian :-</h4>
+                      <hr>
+                  </div>
+              </div>
 
-        </section>
-      </div>
+              <!-- guardian name relationship area -->
+              <div class="row">
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="guardian">Guardian Name :</label> <br>
+                      <input id="guardian" name="guardian" class="form-control"
+                          placeholder="Enter Guardian Name" type="text">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="relationship">Relationship :</label> <br>
+                      <input id="relationship" name="relationship" class="form-control"
+                          placeholder="Enter Relationship" type="text">
+                    </div>
+                  </div>
+              </div>
+
+
+              <!-- guardian mobile no and address area -->
+              <div class="row ">
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="guardianMobile">Mobile :</label> <br>
+                      <input id="guardianMobile" name="guardianMobile" class="form-control"
+                          placeholder="Enter Mobile" type="tel">
+                    </div>
+                  </div>
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="guardianAddress">Address :</label> <br>
+                      <input id="guardianAddress" name="guardianAddress" class="form-control"
+                          placeholder="Enter Address" type="text">
+                    </div>
+                  </div>
+              </div>
+            </section>
+             <!-- local guardian area end
+             -->
+            
+
+             <!-- academic profile area start -->
+             <section class="academic-profile-area">
+              <div class="row">
+                  <div class="col">
+                      <h4>Academic Profile</h4>
+                      <hr>
+                  </div>
+              </div>
+
+              <!-- program and entrance exam area -->
+              <div class="row formField">
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="programApplied">Program Applied For :</label> <br>
+                      <input id="programApplied" name="programApplied" class="form-control"
+                          placeholder="Enter Program" type="text">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="entranceApplied">Entrance Exam Date :</label> <br>
+                      <input id="entranceApplied" name="entranceApplied" class="form-control" type="date">
+                    </div>
+                  </div>
+              </div>
+
+              <!-- subject applied for and reference area -->
+              <div class="row">
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="subjectApplied">Subject Applied For :</label> <br>
+                      <input id="subjectApplied" name="subjectApplied" class="form-control"
+                          placeholder="Enter Subjects" type="text">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="form-field">
+                      <label for="reference">Reference :</label> <br>
+                      <input id="reference" name="reference" class="form-control"
+                          placeholder="Enter Reference" type="text">
+                    </div>
+                  </div>
+              </div>
+            </section>
+              <!-- <div class="row formField">
+                  <div class="col-md-6">
+                      <label for="submitDate">Date :</label> <br>
+                      <input id="submitDate" name="submitDate" class="form-control" type="date">
+                  </div>
+              </div> -->
+              
+              <!-- declaration area start -->
+              <div class="row" >
+                  <div id="declaration" class="col-12 mt-3 mt-md-0 declaration">
+                      <input name="declaration" type="checkbox">
+                      <p>By submitting this form, I
+                          declare that the provided information is accurate and has been provided by me.</p>
+                  </div>
+              </div>
+              <!-- academic profile area end -->
+
+
+              <!-- form submit or pay now button area  -->
+              <div class="row ">
+                  <div class="col-12">
+                    <div class="counselling-form-button">
+                      <button type="submit" class="btn buyNow">Pay Now</button>
+                    </div>
+                  </div>
+              </div>
+          </form>
+          </div>
+         </div>
+        <!-- form area end -->
     </div>
-  </div>
+  </section>
+
   <script src="/assets/vendor/js/jquery-3.7.1.min.js"></script>
 
   <script src="/assets/vendor/js/bootstrap.bundle.min.js"></script>
@@ -440,7 +337,7 @@
         return this.optional(element) || /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);
       }, "Please enter a valid email address");
 
-      $("#addCounsellingForm").validate({
+      $("#counselling-form").validate({
         rules: {
           firstName: {
             required: true,
