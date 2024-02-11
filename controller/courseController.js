@@ -1,37 +1,59 @@
 const courseModel = require("../modal/CourseModal");
 const { v4: uuidv4 } = require('uuid');
+const path = require('path');
+const { validationResult } = require('express-validator');
 
-async function courseCreate(req, res) {
+  function courseCreate(req, res) {
   try {
-    const data = req.body;
-    console.log("courseData" , data)
-    console.log("uuid" , uuidv4())
-    const result = await courseModel.create({
- 
-      courseId: uuidv4(),
-      title: data.title,
-      duration: data.duration,
-      discountedPrice: data.discountedPrice,
-      regularPrice: data.regularPrice,
-      content: data.description,
-      studyMode: data.studyMode,
-      imgSrc: data.imgSrc,
-      lecturesCount: data.lectureCount,
-    });
-
-    if (result) {
-      res.status(201).send({ result, msg: "Registration successful" });
-      console.log("New course created");
+    // Validate the request using express-validator
+    const errors = validationResult(req);
+    console.log(req.body)
+    console.log(req.file)
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
     }
-  } catch (err) {
-    console.error(err);
-    // Handle error appropriately, e.g., send an error response
-    res.status(500).send("Internal Server Error");
+
+    // Check if the file is available in the request
+    if (!req.file) {
+      return res.status(400).json({ error: 'No file uploaded.' });
+    }
+
+    // Assuming that the file path is saved in req.file.path
+    const relativeFilePath = req.file.path;
+
+    // Assuming your server is running on http://localhost:3000
+    const baseURL = 'http://localhost:3000';
+
+    // Use the path.join() method to create a complete URL for the file
+    const fileURL = path.join(baseURL, 'assets/img', path.basename(relativeFilePath));
+
+    // Replace backslashes with forward slashes in the URL
+    const normalizedFileURL = fileURL.replace(/\\/g, '/');
+
+    // Save the file URL to the database or perform other operations
+    // ...
+
+    // Log the relative file path and normalized file URL
+    console.log('Relative File Path:', relativeFilePath);
+    console.log('Normalized File URL:', normalizedFileURL);
+
+    // Send the normalized file URL in the response
+    res.send({ message: 'File uploaded successfully!' });
+
+  } catch (error) {
+    // Log the error for debugging purposes
+    console.error('Error:', error);
+
+    // Handle different types of errors with appropriate status codes
+    if (error instanceof multer.MulterError) {
+      // Multer error (e.g., file size exceeded)
+      return res.status(400).json({ error: error.message });
+    } else {
+      // Other unexpected errors
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
   }
 }
-
- 
-
 
 function getStudents(req, res) {
   if (req.session.isLoggedIn) {

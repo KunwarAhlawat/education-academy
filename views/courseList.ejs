@@ -72,8 +72,9 @@
                 <hr>
                 <div class="course-item-button">
                <a href="/courseview/<%= course.id %>">  <button class="outline-button">Explore</button></a> 
-                <a href="<%= course.courseListPage.links.buyNow %>">  <button class="cta-button">Buy Now</button></a>
-
+               
+               <a href="/order/<%= course.courseview.courseId  %>">  <button class="cta-button">Buy Now</button></a>
+               <!-- <a href="<%= course.courseListPage.links.buyNow %>">  <button class="cta-button">Buy Now</button></a> -->
                 </div>
 
               </div>
