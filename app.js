@@ -41,7 +41,14 @@ const facultyRoute = require('./routes/facultyRoute');
 
 // admin routes
 const courseAdminRoute = require('./routes/admin/course');
-const notFoundRoute = require("./routes/notFoundRoute")
+ const dashboardAdminRoute = require('./routes/admin/dashboard');
+const facultyAdminRoute = require('./routes/admin/faculty');
+const faqAdminRoute = require('./routes/admin/faq');
+const leadAdminRoute = require('./routes/admin/lead');
+const purchaseAdminRoute = require('./routes/admin/purchase');
+const studentAdminRoute = require('./routes/admin/student');
+const batchAdminRoute = require('./routes/admin/batch');
+ const notFoundRoute = require("./routes/notFoundRoute")
 
 
 
@@ -53,7 +60,16 @@ app.use('/', adminRoute);
 app.use('/', aboutRoute);
 app.use('/', loginRoute);
 app.use('/', counselingRoute);
+
+// admin routes
 app.use('/admin', courseAdminRoute);
+app.use('/admin', dashboardAdminRoute);
+app.use('/admin', facultyAdminRoute);
+app.use('/admin', faqAdminRoute);
+app.use('/admin', leadAdminRoute);
+app.use('/admin', purchaseAdminRoute);
+app.use('/admin', studentAdminRoute);
+app.use('/admin', batchAdminRoute);
 
 app.use('/', contactRoute);
 
