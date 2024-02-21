@@ -1,204 +1,403 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <link rel="stylesheet" href="/css/style.css">
-   <!-- Option 1: Include in HTML -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  </head>
 
-  <body>
-<main class="container-xxl admin-area">
-  <div class="row g-0">
-        
-    <%- include('partials/sidebar.ejs')%>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+  
+</head>
 
- <div class="col">
-   <%- include('partials/nav.ejs')%>
-      
-    
-        <!-- add course detail form -->
-        <section class="form-area">
-          <div class="row">
-            <div class="col-12">
-              <div class="form-header">
-              <div class="form-title">
-                <h2>Add New Course Here</h2>
-                <!-- <p>Make Sure cross check all Details carefully Before Press Add Button</p> -->
-                </div>
-              <div class="form-submit">
-                  <button type="submit" class="btn btn-primary">Add Course</button>
-                </div>
-              </div>
-             
-            </div>
-            <div class="col-12">
-              <form action="" method="POST" class="custom-form" >
-                <!-- form main area -->
-                <div class="row">
-                <div class="col-md-8">
-                <div class="form-main">
-                <!-- course title  -->
-                <div class="mb-3">
-                  <label for="name" class="form-label">Add Course Title</label>
-                  <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <!-- course description -->
-                <div class="mb-3">
-                  <label for="message" class="form-label">Course Content</label>
-                  <textarea class="form-control" id="message" name="message" rows="40"></textarea>
-                </div>
-              </div>
-            </div>
-            <!-- course title -->
-              
-              <!-- form side bar area -->
-              <div class="col-md-4">
-                <div class="form-sidebar">
-            
-                <!-- select mode -->
-                <div class="mb-3">
-                  <label class="form-label">Select Mode</label>
-                  <div class="d-flex">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="mode" id="onlineMode" value="Online" checked>
-                    <label class="form-check-label" for="onlineMode">
-                      Online
-                    </label>
-                  </div>
-                  <div class="form-check ms-3">
-                    <input class="form-check-input" type="radio" name="mode" id="offlineMode" value="Offline">
-                    <label class="form-check-label" for="offlineMode">
-                      Offline
-                    </label>
-                  </div>
-                </div>
-                </div>
-  
-             <!-- course duration -->
-                <div class="mb-3">
-                  <label for="course-duration" class="form-label">Course Duration *</label>
-                  <input type="text" class="form-control" id="course-duration" name="course-duration" required>
-                </div>
-  
-               <!-- no of lecture Include -->
-                <div class="mb-3">
-                  <label for="lecture-count" class="form-label">Lecture Count *</label>
-                  <input type="number" class="form-control" id="lecture-count" name="lecture-count" required>
-                </div>
-                 <!-- price included -->
-                 <div class="mb-3">
-                  <label for="regular-price" class="form-label">Regular Price *</label>
-                  <input type="number" class="form-control" id="regular-price" name="regular-price" required>
-                </div>
-                  <!-- any discount -->
-                  <div class="mb-3">
-                    <label for="discount" class="form-label">Any Discount?</label>
-                    <input type="number" class="form-control" id="discount" name="discount" >
-                  </div>
-            </div>
-            <div class="form-sidebar mt-4">
-                 <!-- select batches -->
-                 <div class="mb-3 custom-checkbox">
-                  <label for="batches" class="form-label">Select Batches</label>
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      Select Batches
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
-                      <li>
-                        <input class="form-check-input" type="checkbox" value="Morning Batch" id="morningBatch" name="batches[]">
-                        <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to 12:00)</label>
-                      </li>
-                      <li>
-                        <input class="form-check-input" type="checkbox" value="Afternoon Batch" id="afternoonBatch" name="batches[]">
-                        <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to 3:00PM)</label>
-                      </li>
-                      <li>
-                        <input class="form-check-input" type="checkbox" value="Evening Batch" id="eveningBatch" name="batches[]">
-                        <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to 7:00PM)</label>
-                      </li>
-                    </ul>
-                  </div>
-                 </div>
-                  
-                 <!-- select faculty -->
-                  <div class="mb-3 custom-checkbox">
-                    <label for="batches" class="form-label">Select Faculty</label>
-                    <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select Faculty
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
-                        <li>
-                          <input class="form-check-input" type="checkbox" value="Morning Batch" id="morningBatch" name="batches[]">
-                          <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to 12:00)</label>
-                        </li>
-                        <li>
-                          <input class="form-check-input" type="checkbox" value="Afternoon Batch" id="afternoonBatch" name="batches[]">
-                          <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to 3:00PM)</label>
-                        </li>
-                        <li>
-                          <input class="form-check-input" type="checkbox" value="Evening Batch" id="eveningBatch" name="batches[]">
-                          <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to 7:00PM)</label>
-                        </li>
-                      </ul>
+<body>
+
+      <main class="admin-area">
+        <div class="row g-0">
+          <div class="col-3">
+          <%- include('partials/sidebar.ejs')%>
+        </div>
+       <div class="col-9">
+         <%- include('partials/nav.ejs')%>
+          <!-- add course detail form -->
+          <section class="form-area">
+            <div class="row">
+              <div class="col-12">
+                <form id="addCourseForm" class="form-body">
+                  <!-- form main area -->
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="form-main">
+                        <!-- course title  -->
+                        <!-- <div class="mb-3">
+                          <label for="name" class="form-label">Add Course Title</label>
+                          <input type="text" class="form-control" id="name" name="name" required>
+                        </div> -->
+                        <div class="mb-3">
+                          <label for="title" class="form-label">Course Title</label>
+                          <input type="text" name="title" class="form-control" id="title" required>
+                        </div>
+
+                        <!-- course description -->
+                        <div class="mb-3">
+                          <label for="message" class="form-label">Course Content</label>
+                          <!-- <textarea class="form-control" id="message" name="message" rows="40"></textarea> -->
+                       
+                       
+                       <!-- content -->
+                       <div id="summernote" class="w-100"></div>
+                        </div>
+
+                         
+                      </div>
+                    </div>
+                    <!-- course title -->
+
+                    <!-- form side bar area -->
+                    <div class="col-md-4">
+                      <div class="form-sidebar">
+
+                        <!-- select mode -->
+                        <div class="mb-3">
+                          <label class="form-label">Select Mode</label>
+                          <div class="d-flex">
+                            <div class="form-check">
+                              <input class="form-check-input" name="studyMode" type="radio" id="onlineMode" value="Online"
+                                checked>
+                              <label class="form-check-label" for="onlineMode">
+                                Online
+                              </label>
+                            </div>
+                            <div class="form-check ms-3">
+                              <input class="form-check-input" name="studyMode" type="radio" id="offlineMode"
+                                value="Offline">
+                              <label class="form-check-label" for="offlineMode">
+                                Offline
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- course duration -->
+                        <div class="mb-3">
+                          <label for="course-duration" class="form-label">Course Duration *</label>
+                          <input type="text" class="form-control" id="course-duration" name="duration"
+                            required>
+                        </div>
+
+                        <!-- no of lecture Include -->
+                        <div class="mb-3">
+                          <label for="lecture-count" class="form-label">Lecture Count *</label>
+                          <input type="number" class="form-control" id="lecture-count" name="lectureCount" required>
+                        </div>
+                        <!-- price included -->
+                        <div class="mb-3">
+                          <label for="regular-price" class="form-label">Regular Price *</label>
+                          <input type="number" class="form-control" id="regular-price" name="regularPrice" required>
+                        </div>
+                        <!-- any discount -->
+                        <div class="mb-3">
+                          <label for="discount" class="form-label">Any Discount?</label>
+                          <input type="number" class="form-control" id="discount" name="discountedPrice">
+                        </div>
+                      </div>
+                      <div class="form-sidebar mt-4">
+                        <!-- select batches -->
+                        <!-- <div class="mb-3 custom-checkbox">
+                          <label for="batches" class="form-label">Select Batches</label>
+                          <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Select Batches
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
+                              <li>
+                                <input class="form-check-input" type="checkbox" value="Morning Batch"
+                                  id="morningBatch" name="batches[]">
+                                <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to
+                                  12:00)</label>
+                              </li>
+                              <li>
+                                <input class="form-check-input" type="checkbox" value="Afternoon Batch"
+                                  id="afternoonBatch" name="batches[]">
+                                <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to
+                                  3:00PM)</label>
+                              </li>
+                              <li>
+                                <input class="form-check-input" type="checkbox" value="Evening Batch"
+                                  id="eveningBatch" name="batches[]">
+                                <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to
+                                  7:00PM)</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div> -->
+
+                        <!-- select faculty -->
+                        <!-- <div class="mb-3 custom-checkbox">
+                          <label for="batches" class="form-label">Select Faculty</label>
+                          <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Select Faculty
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
+                              <li>
+                                <input class="form-check-input" type="checkbox" value="Morning Batch"
+                                  id="morningBatch" name="batches[]">
+                                <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to
+                                  12:00)</label>
+                              </li>
+                              <li>
+                                <input class="form-check-input" type="checkbox" value="Afternoon Batch"
+                                  id="afternoonBatch" name="batches[]">
+                                <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to
+                                  3:00PM)</label>
+                              </li>
+                              <li>
+                                <input class="form-check-input" type="checkbox" value="Evening Batch"
+                                  id="eveningBatch" name="batches[]">
+                                <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to
+                                  7:00PM)</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div> -->
+
+                        <!-- select faqs -->
+                        <!-- <div class="mb-3 custom-checkbox">
+                          <label for="batches" class="form-label">Select Faq</label>
+                          <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Select FAQ
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
+                              <li>
+                                <input class="form-check-input" type="checkbox" value="Morning Batch"
+                                  id="morningBatch" name="batches[]">
+                                <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to
+                                  12:00)</label>
+                              </li>
+                              <li>
+                                <input class="form-check-input" type="checkbox" value="Afternoon Batch"
+                                  id="afternoonBatch" name="batches[]">
+                                <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to
+                                  3:00PM)</label>
+                              </li>
+                              <li>
+                                <input class="form-check-input" type="checkbox" value="Evening Batch"
+                                  id="eveningBatch" name="batches[]">
+                                <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to
+                                  7:00PM)</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div> -->
+
+                        <!-- add Image -->
+                        <div class="mb-3">
+                          <label for="file" class="form-label">Upload Image</label>
+                          <input class="" type="file" id="file" name="file">
+                        </div>
+
+                      </div>
                     </div>
                   </div>
-                   
-                  <!-- select faqs -->
-                   <div class="mb-3 custom-checkbox">
-                    <label for="batches" class="form-label">Select Faq</label>
-                    <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select FAQ
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
-                        <li>
-                          <input class="form-check-input" type="checkbox" value="Morning Batch" id="morningBatch" name="batches[]">
-                          <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to 12:00)</label>
-                        </li>
-                        <li>
-                          <input class="form-check-input" type="checkbox" value="Afternoon Batch" id="afternoonBatch" name="batches[]">
-                          <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to 3:00PM)</label>
-                        </li>
-                        <li>
-                          <input class="form-check-input" type="checkbox" value="Evening Batch" id="eveningBatch" name="batches[]">
-                          <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to 7:00PM)</label>
-                        </li>
-                      </ul>
-                    </div>
+
+                  <div class="form-submit">
+                    <button type="submit" class="btn btn-primary">Add Course</button>
                   </div>
-                  
-                  <!-- add Image -->
-                  <div class="mb-3">
-                    <label for="image" class="form-label">Upload Image</label>
-                    <input class="" type="file" id="image" name="image">
-                  </div>
-                                     
+
+                </form>
               </div>
             </div>
-            </div>
-              
-              </form>
-            </div>
-          </div>
-        
-        </section>
-      
-    
-      
-     
-    </div>
-  </div>
-  </main>
 
-  
+          </section>
+        </div>
+        </main>
+      
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+  <script>
+
+
+
+    $(document).ready(function () {
+      $('#summernote').summernote({
+        tabsize: 2,
+        height: 400,
+        fontNames: ['Arial', 'Arial Black', 'Courier New', 'Times New Roman', 'Verdana'],
+
+        toolbar: [
+          // Font Style
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+
+          // Font
+          ['font', ['strikethrough', 'superscript', 'subscript', 'fontsize', 'color']],
+
+          // Lists
+          ['para', ['ul', 'ol', 'paragraph']],
+
+          // Insert
+          ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+
+          // Formatting
+          ['format', ['normal', 'blockquote', 'code']],
+
+          // Font Family (custom option)
+          ['fontfamily', ['fontname']],
+
+          // Misc
+          ['height', ['height']],
+
+          // Special Characters
+          ['insert', ['symbol', 'emoji']],
+
+          // View
+          ['view', ['fullscreen', 'codeview', 'help']],
+        ],
+
+      });
+
+
+      $("#addCourseForm").validate({
+        rules: {
+          title: {
+            required: true,
+            minlength: 2,
+            maxlength: 50,
+          },
+
+          duration: {
+            required: true,
+            number: true,
+          },
+          regularPrice: {
+            required: true,
+            number: true,
+          },
+          discountedPrice: {
+            required: true,
+            number: true,
+          },
+          lectureCount: {
+            required: true,
+            number: true,
+          },
+          studyMode: {
+            required: true,
+          }
+
+        },
+        messages: {
+          // Messages for each field if validation fails
+          title: {
+            required: "Please enter the course title",
+            minlength: "Title must be at least 2 characters",
+            maxlength: "Title must not exceed 50 characters",
+          },
+
+          duration: {
+            required: "Please enter the course duration",
+            number: "Please enter a valid number",
+          },
+          regularPrice: {
+            required: "Please enter the regular price",
+            number: "Please enter a valid number",
+          },
+          discountedPrice: {
+            required: "Please enter the discounted price",
+            number: "Please enter a valid number",
+          },
+          lectureCount: {
+            required: "Please enter the lecture count",
+            number: "Please enter a valid number",
+          },
+          studyMode: {
+            required: "Please select the study mode"
+
+          }
+        },
+        submitHandler: function (form, event) {
+          event.preventDefault();
+          alert("hi");
+
+          let formData = new FormData();
+          let form_data = $("form").serializeArray();
+
+          let content = $('#summernote').summernote('code');
+
+          formData.append("content", content);
+          console.log("dddd", content)
+          $.each(form_data, function (key, input) {
+
+            formData.append(input.name, input.value);
+
+          });
+          console.log($("#file")[0])
+          let files = $("#file")[0].files;  // Use [0] to get the DOM element from jQuery object
+
+          if (files.length > 0) {
+            for (let i = 0; i < files.length; i++) {
+
+
+              formData.append('file', files[i]);
+            }
+          }
+
+          // The rest of your code for AJAX submission
+          console.log("file ", file);
+          console.log("foromdata", form_data);
+          console.log("data", formData);
+          // The rest of your code for AJAX submission
+
+          let formData1 = new FormData();
+          formData1.append('title', 'dasfasdfasd');
+
+          console.log("formData1", formData1)
+          $.ajax({
+            url: '/admin/course',
+            type: 'POST',
+            data: formData,
+            contentType: false,   // Don't set contentType
+            processData: false,  // Don't process the data
+            success: function (response) {
+              console.log('Success:', response);
+            },
+            error: function (error) {
+              console.error('Error:', error);
+            }
+          });
+
+        }
+      });
+
+
+
+
+
+    });
+
+
+    // summernote
+
+
+  </script>
+
+
+</body>
+
 </html>
-    

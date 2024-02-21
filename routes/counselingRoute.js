@@ -1,21 +1,21 @@
 const express = require('express');
 const router = express.Router();
-
+const courseModal = require("../modal/CourseModal")
 // Your other routes
 
 // Route for handling 404 errors
-router.get('/order/:id', (req, res) => {
+router.get('/order/:id', async (req, res) => {
   const params = req.params.id
-  const courseData = res.locals.commonData.Data;
+  
 
-  const courseViewData =  courseData.courseView.find(course => course.courseId === params)
+  const courseViewData = await courseModal.findOne({where : { courseId  :params  }})
 
   if(courseViewData.length === 0){
     return  res.render("notfound")
   } 
 
-
-  res.render('counseling', { courseViewData })
+  console.log("coursedata1 ============" , courseViewData)
+  res.render('counselling', { courseViewData })
 });
 
 module.exports = router;

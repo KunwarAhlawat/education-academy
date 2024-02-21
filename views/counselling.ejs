@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/vendor/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/vendor/css/owl.theme.default.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Education Academy</title>
+
+    <style>
+     /* Loading spinner styles */
+     .loading-spinner {
+      display: none;
+      width: 30px;
+      height: 30px;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      border-top: 4px solid #3498db;
+      animation: spin 1s linear infinite;
+    }
+
+    /* Animation for the loading spinner */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!--desktop menu area start -->
+    <section class="nav-section  d-lg-flex  d-none ">
+        <div class="logo">
+            <a href="/"><img src="/assets/img/1.logo/ea-logo.png" alt=""></a>
+            <a href="/"><span>Education Academy</span></a>
+        </div>
+        <div class="rightItems">
+
+       
+        <div class="nav-menu">
+            <% commonData.menuItems.forEach(item=> { %>
+                <div class="nav-menu-item">
+                    <span>
+                        <p>
+                            <%= item.text %>
+                        </p>
+                        <% if (item.submenu && item.submenu.length> 0) { %>
+                            &nbsp; <i class="bi bi-caret-down-fill"></i>
+                            <% } %>
+                    </span>
+    
+                    <div class=" d-dropdown-item">
+                        <% if (item.submenu && item.submenu.length> 0) { %>
+                            <% item.submenu.forEach(subItem=> { %>
+    
+    
+                                <% if (subItem.submenu2 && subItem.submenu2.length> 0) { %>
+                                    <div class="secondMenu">
+                                        <span>
+                                            <%= subItem.text %>
+                                        </span>
+                                        <div class="d-dropdown-item-1">
+                                            <% subItem.submenu2.forEach(subItem2=> { %>
+                                                <a href="/courseview/<%= subItem2.link %>">
+                                                    <%= subItem2.text %>
+                                                </a>
+                                                <% }); %>
+                                        </div>
+                                    </div>
+                                    <% } else { %>
+    
+                                        <a href="/courseview/<%= subItem.link %>">
+                                            <%= subItem.text %>
+                                        </a>
+                                        <% } %>
+    
+    
+                                            <% }); %>
+                                                <% } %>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+        <Button class="secondary-button " data-bs-toggle="modal" data-bs-target="#leadModal"><i
+                class="bi bi-telephone-fill"></i> &nbsp; Call Back
+        </Button>
+    </div>
+    </section>
+    <!--desktop menu area end -->
+
+    <!--mobile menu area start -->
+    <section class="mobile-menu-area d-lg-none d-block ">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="mobile-menu">
+                        <div class="mobile-logo">
+                            <a href="/"><img src="/assets/img/1.logo/ea-logo.png" alt=""></a>
+                            <a href="/"><span>Education Academy</span></a>
+                        </div>
+                        <div class="mobile-menu-icon">
+                            <i class="bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                                aria-controls="offcanvasExample"></i>
+                        </div>
+                        <div class="offcanvas offcanvas-custom offcanvas-start" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header offcanvas-custom-header">
+                            <a href="index.html"><span class="offcanvas-title" id="offcanvasExampleLabel">Education
+                                    Academy</span></a>
+                            <i class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="mobile-menu-items">
+                                <% commonData.menuItems.forEach((item, index) => { %>
+                                <div class="accordion" id="accordionExample<%= index %>">
+                                    <div class="accordion-item custom-accordion-item">
+                                        <h2 class="accordion-header custom-accordion-header" id="heading<%= index %>">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse<%= index %>" aria-expanded="true"
+                                                aria-controls="collapse<%= index %>">
+                                                <span><%= item.text %></span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse<%= index %>" class="accordion-collapse collapse"
+                                            aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample<%= index %>">
+                                            <% if (item.submenu && item.submenu.length > 0) { %>
+                                            <% item.submenu.forEach((subItem, subIndex) => { %>
+                                            <div class="accordion-body custom-accordion-body">
+                                                <div class="m-menu-item-1">
+                                                    <% if(subItem.submenu2 && subItem.submenu2.length > 0){ %>
+                                                    <span><%= subItem.text %></span>
+                                                    <div class="m-menu-item-2">
+                                                    <% subItem.submenu2.forEach((subItem2, subIndex2) => { %>
+                                                        
+                                                        <a href="/courseview/<%= subItem2.link %>"><i class="bi bi-arrow-down-right-square-fill"></i> &nbsp;<%= subItem2.text %></a>
+                                                    
+                                                    <% }); %>
+                                                    </div>
+                                                    <% } else{ %>
+                                                        
+                                                        <a href="/courseview/<%= subItem.link %>"><%= subItem.text %></a>
+                                                    <% } %>
+                                                </div>
+                                            </div>
+                                            <% }); %>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }); %>
+                                <button class="cta-button" data-bs-toggle="modal" data-bs-target="#leadModal">Join US</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--mobile menu area end -->
+
+    <!-- <form id="myForm" onsubmit="submitForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+    
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+    
+      <button type="submit" id="submitBtn">Submit  </button>
+    </form> -->
+
+  <!-- counseling hero section start -->
+  <section class="counseling-area section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="counseling-course-info">
+            <ul>
+              <li>
+                <h2>
+                  <%= courseViewData.title %>
+                </h2>
+              </li>
+              <li><Strong>Duration -</Strong>
+                <%= courseViewData.duration %>
+              </li>
+              <!-- <li><%= courseViewData.discountText %></li> -->
+              <li><strong>Course Price -</strong> 
+                <span>
+                <strong>  <%= courseViewData.regularPrice %></strong>
+                </span>
+              
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- form area start -->
+      <div class="row">
+        <div class="col">
+          <form class="counselling-form" autocomplete="on" id="counselling-form">
+
+
+            <!-- <h2>Selected Course Details</h2>
+              <label for="courseTitle">Title</label>
+              <input type="text" name="courseTitle" id="courseTitle" class="w-100" disabled value="<%= courseViewData.title %>"> -->
+            <!-- personal details area start -->
+            <section class="personal-area">
+              <div class="row">
+                <div class="col">
+                  <h4>Please take a moment to fill out this form accurately.</h4>
+                  <hr>
+                </div>
+              </div>
+
+              <!-- first and last name area -->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-field">
+                    <div class="filedForm">
+                      <label for="FirstName">First Name</label> <br />
+                      <input id="FirstName" name="firstName" class="form-control" placeholder="Insert your First Name"
+                        type="text" autocomplete="given-name">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <div class="LastName">
+                      <label for="LastName">Last Name</label> <br />
+                      <input id="LastName" name="lastName" class="form-control" placeholder="Insert your Last Name"
+                        type="text" autocomplete="family-name">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- mobile no , email and dob area -->
+              <div class="row">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="mobileNo">Mobile No</label> <br>
+                    <input id="mobileNo" name="mobileNo" class="form-control" placeholder="Insert your Mobile Number"
+                      type="tel" autocomplete="tel">
+                  </div>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="email">Email</label> <br>
+                    <input id="email" name="email" class="form-control" type="email" placeholder="Insert your Email"
+                      autocomplete="email">
+                  </div>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="Dob">DOB</label> <br>
+                    <input id="Dob" name="dateOfBirth" class="form-control" type="date" placeholder="Select DOB"
+                      autocomplete="bday">
+                  </div>
+                </div>
+              </div>
+
+              <!-- gender and need hostel area -->
+              <div class="row">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <div id="gender" class="gender">
+                      <label for="sex">Sex</label>
+                      <ul>
+                        <li>
+                          <input name="gender" id="male" type="radio" value="Male">
+                          <label for="male">Male</label>
+                        </li>
+                        <li>
+                          <input name="gender" id="Female" type="radio" value="Female">
+                          <label for="Female">Female</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <div id="hostel" class="gender">
+                      <label for="hostel">Need Hostel ?</label>
+                      <ul>
+                        <li>
+                          <input name="hostel" id="yes" type="radio" value="yes">
+                          <label for="yes">Yes</label>
+                        </li>
+                        <li>
+                          <input name="hostel" id="no" type="radio" value="no">
+                          <label for="no">No</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- father and monter name area -->
+              <div class="row">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="fatherName">Father's Name :</label> <br>
+                    <input id="fatherName" name="fatherName" class="form-control" placeholder="Enter Father's Name"
+                      type="text">
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="motherName">Mother's Name :</label> <br>
+                    <input id="motherName" name="motherName" class="form-control" placeholder="Enter Mother's Name"
+                      type="text">
+                  </div>
+                </div>
+              </div>
+
+              <!-- blood group and parent number area -->
+              <div class="row">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="bloodGroup">Blood Group</label> <br>
+                    <select id="bloodGroup" name="bloodGroup" class="form-select">
+                      <option value="A+">A+</option>
+                      <option value="A-">A-</option>
+                      <option value="B+">B+</option>
+                      <option value="B-">B-</option>
+                      <option value="AB+">AB+</option>
+                      <option value="AB-">AB-</option>
+                      <option value="O+">O+</option>
+                      <option value="O-">O-</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="parentNo">Parent's No :</label> <br>
+                    <input id="parentNo" name="parentNo" class="form-control" placeholder="Enter Parent's No" type="tel"
+                      autocomplete="tel">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- address area -->
+              <div class="row">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="permanentAddress">Permanent Address</label> <br>
+                    <textarea id="permanentAddress" name="permanentAddress" class="form-control"
+                      placeholder="Enter Address" rows="4" cols="50"></textarea>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- personal details area end -->
+
+
+            <!-- local guardian area srart -->
+            <section class="guardian-area">
+              <div class="row">
+                <div class="col">
+                  <h4>Local Guardian :-</h4>
+                  <hr>
+                </div>
+              </div>
+
+              <!-- guardian name relationship area -->
+              <div class="row">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="guardian">Guardian Name :</label> <br>
+                    <input id="guardian" name="guardian" class="form-control" placeholder="Enter Guardian Name"
+                      type="text">
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="relationship">Relationship :</label> <br>
+                    <input id="relationship" name="relationship" class="form-control" placeholder="Enter Relationship"
+                      type="text">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- guardian mobile no and address area -->
+              <div class="row ">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="guardianMobile">Mobile :</label> <br>
+                    <input id="guardianMobile" name="guardianMobile" class="form-control" placeholder="Enter Mobile"
+                      type="tel">
+                  </div>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="guardianAddress">Address :</label> <br>
+                    <input id="guardianAddress" name="guardianAddress" class="form-control" placeholder="Enter Address"
+                      type="text">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- local guardian area end
+             -->
+
+
+            <!-- academic profile area start -->
+            <section class="academic-profile-area">
+              <div class="row">
+                <div class="col">
+                  <h4>Academic Profile</h4>
+                  <hr>
+                </div>
+              </div>
+
+              <!-- program and entrance exam area -->
+              <div class="row formField">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="programApplied">Program Applied For :</label> <br>
+                    <input id="programApplied" name="programApplied" class="form-control" placeholder="Enter Program"
+                      type="text">
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="entranceApplied">Entrance Exam Date :</label> <br>
+                    <input id="entranceApplied" name="entranceApplied" class="form-control" type="date">
+                  </div>
+                </div>
+              </div>
+
+              <!-- subject applied for and reference area -->
+              <div class="row">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="subjectApplied">Subject Applied For :</label> <br>
+                    <input id="subjectApplied" name="subjectApplied" class="form-control" placeholder="Enter Subjects"
+                      type="text">
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="form-field">
+                    <label for="reference">Reference :</label> <br>
+                    <input id="reference" name="reference" class="form-control" placeholder="Enter Reference"
+                      type="text">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="row formField">
+              <div class="col-md-6">
+                <label for="submitDate">Date :</label> <br>
+                <input id="submitDate" name="submitDate" class="form-control" type="date">
+              </div>
+            </div>
+
+            <!-- declaration area start -->
+            <div class="row">
+              <div id="declaration" class="col-12 mt-3 mt-md-0 declaration">
+                <input name="declaration" type="checkbox">
+                <p>By submitting this form, I
+                  declare that the provided information is accurate and has been provided by me.</p>
+              </div>
+            </div>
+            <!-- academic profile area end -->
+
+
+            <!-- form submit or pay now button area  -->
+            <div class="row ">
+              <div class="col-12">
+                <div class="counselling-form-button">
+                  <button type="submit" class="btn buyNow">Pay Now <div class="loading-spinner"></div></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- form area end -->
+    </div>
+  </section>
+
+
+ 
+
+  
+  <script src="/assets/vendor/js/jquery-3.7.1.min.js"></script>
+
+  <script src="/assets/vendor/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/js/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+    integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+
+ 
+
+
+  <script>
+
+ 
+    const validationData = "../middlewares/counselling/clientValidation.js"
+    $(document).ready(function () {
+      // Custom email validation using regex
+      $.validator.addMethod("customEmail", function (value, element) {
+        // Modify the regular expression according to your needs
+        return this.optional(element) || /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);
+      }, "Please enter a valid email address");
+
+      $("#counselling-form").validate({
+        // rules: {
+        //   firstName: {
+        //     required: true,
+        //     minlength: 2, // Minimum length of 2 characters
+        //     maxlength: 50, // Maximum length of 50 characters
+        //   },
+        //   lastName: {
+        //     required: true,
+        //     minlength: 2,
+        //     maxlength: 50,
+        //   },
+        //   email: {
+        //     required: true,
+        //     customEmail: true
+        //   },
+        //   mobileNo: {
+        //     required: true,
+        //     number: true,
+        //     minlength: 10,
+        //     maxlength: 10,
+        //   },
+        //   dateOfBirth: {
+        //     required: true,
+        //     date: true,
+        //   },
+        //   gender: "required",
+        //   hostel: "required",
+        //   fatherName: {
+        //     required: true,
+        //     minlength: 2,
+        //     maxlength: 50,
+        //   },
+        //   motherName: {
+        //     required: true,
+        //     minlength: 2,
+        //     maxlength: 50,
+        //   },
+        //   bloodGroup: "required",
+        //   parentNo: {
+        //     required: true,
+        //     number: true,
+        //     minlength: 10,
+        //     maxlength: 10,
+        //   },
+        //   permanentAddress: "required",
+        //   guardian: {
+        //     required: true,
+        //     minlength: 2,
+        //     maxlength: 50,
+        //   },
+        //   relationship: {
+        //     required: true,
+        //     minlength: 2,
+        //     maxlength: 50,
+        //   },
+        //   guardianMobile: {
+        //     required: true,
+        //     number: true,
+        //     minlength: 10,
+        //     maxlength: 10,
+        //   },
+        //   guardianAddress: "required",
+        //   programApplied: {
+        //     required: true,
+        //     minlength: 2,
+        //     maxlength: 50,
+        //   },
+        //   entranceApplied: "required",
+        //   subjectApplied: {
+        //     required: true,
+        //     minlength: 2,
+        //     maxlength: 50,
+        //   },
+        //   reference: {
+        //     required: true,
+        //     minlength: 2,
+        //     maxlength: 50,
+        //   },
+        //   submitDate: "required",
+        //   declaration: "required",
+        // },
+        // messages: {
+        //   firstName: {
+        //     required: "Please enter your first name",
+        //     minlength: "First name must be at least 2 characters",
+        //     maxlength: "First name must not exceed 50 characters",
+        //   },
+        //   lastName: {
+        //     required: "Please enter your last name",
+        //     minlength: "Last name must be at least 2 characters",
+        //     maxlength: "Last name must not exceed 50 characters",
+        //   },
+        //   email: {
+        //     required: "Please enter your email address"
+        //   },
+        //   mobileNo: {
+        //     required: "Please enter your mobile number",
+        //     number: "Please enter a valid number",
+        //     minlength: "Mobile number must be 10 digits",
+        //     maxlength: "Mobile number must be 10 digits",
+        //   },
+        //   dateOfBirth: {
+        //     required: "Please enter your date of birth",
+        //     date: "Please enter a valid date",
+        //   },
+        //   gender: "Please select your gender",
+        //   hostel: "Please select whether you need hostel accommodation",
+        //   fatherName: {
+        //     required: "Please enter your father's name",
+        //     minlength: "Father's name must be at least 2 characters",
+        //     maxlength: "Father's name must not exceed 50 characters",
+        //   },
+        //   motherName: {
+        //     required: "Please enter your mother's name",
+        //     minlength: "Mother's name must be at least 2 characters",
+        //     maxlength: "Mother's name must not exceed 50 characters",
+        //   },
+        //   bloodGroup: "Please select your blood group",
+        //   parentNo: {
+        //     required: "Please enter your parent's mobile number",
+        //     number: "Please enter a valid number",
+        //     minlength: "Parent's mobile number must be 10 digits",
+        //     maxlength: "Parent's mobile number must be 10 digits",
+        //   },
+        //   permanentAddress: "Please enter your permanent address",
+        //   guardian: {
+        //     required: "Please enter your guardian's name",
+        //     minlength: "Guardian's name must be at least 2 characters",
+        //     maxlength: "Guardian's name must not exceed 50 characters",
+        //   },
+        //   relationship: {
+        //     required: "Please enter your relationship with the guardian",
+        //     minlength: "Relationship must be at least 2 characters",
+        //     maxlength: "Relationship must not exceed 50 characters",
+        //   },
+        //   guardianMobile: {
+        //     required: "Please enter your guardian's mobile number",
+        //     number: "Please enter a valid number",
+        //     minlength: "Guardian's mobile number must be 10 digits",
+        //     maxlength: "Guardian's mobile number must be 10 digits",
+        //   },
+        //   guardianAddress: "Please enter your guardian's address",
+        //   programApplied: {
+        //     required: "Please enter the program you are applying for",
+        //     minlength: "Program name must be at least 2 characters",
+        //     maxlength: "Program name must not exceed 50 characters",
+        //   },
+        //   entranceApplied: "Please enter the entrance exam date",
+        //   subjectApplied: {
+        //     required: "Please enter the subjects you are applying for",
+        //     minlength: "Subjects must be at least 2 characters",
+        //     maxlength: "Subjects must not exceed 50 characters",
+        //   },
+        //   reference: {
+        //     required: "Please enter the reference information",
+        //     minlength: "Reference must be at least 2 characters",
+        //     maxlength: "Reference must not exceed 50 characters",
+        //   },
+        //   submitDate: "Please enter the submission date",
+        //   declaration: "Please agree to the declaration",
+        // },
+
+        errorPlacement: function (error, element) {
+          // Check if error message has already been displayed for this field
+          if (!element.data('error-shown')) {
+            // Set a data attribute to mark that the error message has been displayed
+            element.data('error-shown', true);
+
+            // Customize error placement if needed
+            // Custom position: gender
+            if (element.attr("name") === "gender") {
+              $("#gender").after('<div class="error-message fs-4 fw">' + error.text() + '</div>');
+            }
+            // Custom position: hostel
+            else if (element.attr("name") === "hostel") {
+              $("#hostel").after('<div class="error-message fs-4 fw">' + error.text() + '</div>');
+            }
+            // Custom position: declaration
+            else if (element.attr("name") === "declaration") {
+              $("#declaration").after('<div class="error-message fs-4 fw">' + error.text() + '</div>');
+            }
+            // Default position: if no match is met (other fields)
+            else {
+              $('<div class="error-message fs-4 fw">' + error.text() + '</div>').insertAfter(element);
+            }
+          }
+        },
+
+
+        submitHandler: function (form, event) {
+          // alert("hi")
+          event.preventDefault()
+          $(".loading-spinner").show();
+          // console.log($(form).serialize())
+          // $.ajax({
+          //   type: "POST",
+          //   url: "/counselling",
+          //   data: $(form).serialize(),
+          //   success: function (data, status) {
+          //     console.log("DataReturn:", data);
+          //     console.log("Status:", status);
+
+          //     // Remove previous error messages
+          //     $('.error-message').remove();
+          //     $('.success').remove();
+
+          //     if (data.errors) {
+          //       data.errors.forEach(err => {
+          //         var inputName = err.path;
+          //         var errorMessage = err.msg;
+          //         $('[name="' + inputName + '"]').after('<div class="error-message">' + errorMessage + '</div>');
+          //       });
+          //     }
+
+          //     if (data.msg && status === "success") {
+          //       const message = data.msg;
+
+          //       // Check for specific messages related to email and phone duplication
+          //       if (message === "Email already exists") {
+          //         $('#counselling-form').append('<div class="error-message fs-4 fw-bold">' + message + '</div>');
+          //       } else if (message === "Mobile number already exists") {
+          //         $('#counselling-form').append('<div class="error-message fs-4 fw-bold">' + message + '</div>');
+          //       } else if (message === "Email and Mobile number already exist") {
+          //         // Handle the case where both email and mobile are duplicated
+          //         $('#counselling-form').append('<div class="error-message fs-4 fw-bold">' + message + '</div>');
+          //       } else {
+          //         // Display success message for other cases
+          //         $('#counselling-form').append('<h4 class="success">' + message + '</h4>');
+          //       }
+          //     }
+          //   },
+          //   error: function (xhr, status, error) {
+          //     console.error("Error:", error);
+          //   }
+          // });
+
+
+          // 
+          let courseViewData = <%- JSON.stringify(courseViewData) %>;
+          console.log(courseViewData);
+
+          let formData = $(form).serialize();
+          console.log(formData);
+
+          // Append courseId to the formData string
+          formData += '&courseId=' + courseViewData.courseId;
+
+          console.log("combinedData", formData);
+
+          $.ajax({
+            type: "POST",
+            url: "/admin/order",
+            data: formData,
+            success: function (data, status) {
+              console.log("DataReturn:", data);
+              console.log("Status:", status);
+
+              // Remove previous error messages
+              $('.error-message').remove();
+              $('.success').remove();
+
+              console.log("data.success1:", data.success);
+              console.log("data.success1:", data);
+
+              if (data.errors) {
+                data.errors.forEach(err => {
+                  var inputName = err.path;
+                  var errorMessage = err.msg;
+                  $('[name="' + inputName + '"]').after('<div class="error-message">' + errorMessage + '</div>');
+                });
+              }
+
+              console.log("data.success2:", data.success);
+              if (data.msg && status === "success") {
+                const message = data.msg;
+
+                // Check for specific messages related to email and phone duplication
+                if (message === "Email already exists" || message === "Mobile number already exists" || message === "Email and Mobile number already exist") {
+                  $('#counselling-form').append('<div class="error-message fs-4 fw-bold">' + message + '</div>');
+                } else {
+                  // Display success message for other cases
+                  $('#counselling-form').append('<h4 class="success">' + message + '</h4>');
+                }
+              }
+              console.log("data.success3:", data.success);
+
+              // Handle Razorpay integration
+              if (data.success) {
+                // alert("working");
+                const options = {
+                  key: data.key_id,
+                  amount: data.amount,
+                  currency: "INR",
+                  order_id: data.orderId,
+                  payment_capture: 1,
+                  handler: function (response) {
+                     // Extract payment method details
+                   
+              
+                    // alert("Payment successful");
+                    //  alert(response.razorpay_payment_id);
+                    // alert(response.razorpay_order_id);
+                    // alert(response.razorpay_signature)
+                    // console.log(typeof response.razorpay_payment_id )
+                    // console.log(response.razorpay_payment_id , response.razorpay_order_id ,response.razorpay_signature)
+                    // getPyamentData(response.razorpay_payment_id , response.razorpay_order_id )
+                    updatePaymentOnServer(
+                      response.razorpay_payment_id,
+                      response.razorpay_order_id,
+                      response.razorpay_signature,
+                      "paid" 
+                    
+                    )
+                    Swal.fire({
+                        position: "center-center",
+                        icon: "success",
+                        title: "Payment Success",
+                        showConfirmButton: false,
+                        timer: 2000
+                      });
+                      $(".loading-spinner").hide();
+                   },
+                  modal: {
+                    ondismiss: function (response) {
+                      // alert("Payment dismissed");
+                      // console.log("response2" , response)
+                      $(".loading-spinner").hide();
+                    }
+                  }
+                };
+
+                // console.log("options", options);
+                let razorpayObject = new Razorpay(options);
+                razorpayObject.open();
+
+                rzp1.on('payment.failed', function (response){
+                // alert(response.error.code);
+                // alert(response.error.description);
+                // alert(response.error.source);
+                // alert(response.error.step);
+                // alert(response.error.reason);
+                // alert(response.error.metadata.order_id);
+                // alert(response.error.metadata.payment_id);
+                 Swal.fire({
+                    title: "Payment Failed!",
+                    text: "Payment Not Completed",
+                    icon: "error"
+                  });
+                  $(".loading-spinner").hide();
+                });
+              }
+              // console.log("data.success4:", data.success);
+
+             
+            },
+            error: function (xhr, status, error) {
+              // console.error("Error:", error);
+              $(".loading-spinner").hide();
+            }
+          });
+
+
+
+          //  $.ajax({
+          //   type: "POST",
+          //   url: "/admin/order",
+          //   data:formData,
+          //   success: function (data, status) {
+          //     console.log("DataReturn:", data);
+          //     console.log("Status:", status);
+
+          //     // Remove previous error messages
+          //     $('.error-message').remove();
+          //     $('.success').remove();
+
+          //     if (data.errors) {
+          //       data.errors.forEach(err => {
+          //         var inputName = err.path;
+          //         var errorMessage = err.msg;
+          //         $('[name="' + inputName + '"]').after('<div class="error-message">' + errorMessage + '</div>');
+          //       });
+          //     }
+
+          //     if (data.msg && status === "success") {
+          //       const message = data.msg;
+
+          //       // Check for specific messages related to email and phone duplication
+          //       if (message === "Email already exists") {
+          //         $('#counselling-form').append('<div class="error-message fs-4 fw-bold">' + message + '</div>');
+          //       } else if (message === "Mobile number already exists") {
+          //         $('#counselling-form').append('<div class="error-message fs-4 fw-bold">' + message + '</div>');
+          //       } else if (message === "Email and Mobile number already exist") {
+          //         // Handle the case where both email and mobile are duplicated
+          //         $('#counselling-form').append('<div class="error-message fs-4 fw-bold">' + message + '</div>');
+          //       } else {
+          //         // Display success message for other cases
+          //         $('#counselling-form').append('<h4 class="success">' + message + '</h4>');
+          //       }
+          //     }
+
+
+
+          //     // razor pay 
+          //      // Handle Razorpay integration
+          //         if (data.success) {
+          //           alert("working")
+          //             const options = {
+          //                 key: data.key_id,
+          //                 amount: data.amount,
+          //                 currency: "INR",
+          //                 order_id: data.order_id,
+          //                 handler: function (response) {
+          //                     alert("Payment successful");
+          //                 },
+          //                 modal: {
+          //                     ondismiss: function () {
+          //                         alert("Payment dismissed");
+          //                     }
+          //                 }
+          //             };
+
+          //             console.log("options", options)
+          //             var razorpayObject = new Razorpay(options);
+          //             razorpayObject.open();
+          //         }
+          //   },
+          //   error: function (xhr, status, error) {
+          //     console.error("Error:", error);
+          //   }
+          // });
+        }
+      });
+
+
+function updatePaymentOnServer(payment_id , order_id ,signature, status , paymentMethod , paymentDate){
+  
+  $.ajax({
+            type: "POST",
+            url: "/admin/update_order",
+            data: JSON.stringify({
+              payment_id,
+              order_id, 
+              signature,
+              status 
+            }),
+            contentType : "application/json",
+            type : "post",
+            dataType : "json",
+            success : function(response){
+              // alert("payment successfull")
+                 // Assuming the response contains a 'redirect' property with the URL to redirect to
+                 console.log("response" , response)
+
+                
+              if (response.redirect) {
+                setTimeout(function(){
+                  window.location.href = response.redirect;
+                }, 2000)
+              } else {
+                // Handle other success scenarios if needed
+                // alert("Payment successful");
+              }
+            },
+            error : function(error){
+              // console.log("payment error" , error)
+            }
+  })
+  
+}
+
+async function getPaymentData(paymentId) {
+    try {
+        const response = await fetch(`https://api.razorpay.com/v1/payments/${paymentId}`, {
+            method: "GET",
+            headers: {
+                // Include any necessary headers (e.g., Authorization) for authentication
+                // Be cautious about exposing sensitive information in client-side code
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        console.log("Response:", data);
+        return data;
+    } catch (error) {
+        console.error("Error fetching payment data:", error.message);
+        throw error;
+    }
+}
+                  
+    });
+
+
+  </script>
+
+  </body>
+
+  </html>

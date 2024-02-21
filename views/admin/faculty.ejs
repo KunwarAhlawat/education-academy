@@ -1,213 +1,896 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <link rel="stylesheet" href="/css/style.css">
-   <!-- Option 1: Include in HTML -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  </head>
 
-  <body>
-<main class="container-xxl admin-area">
-  <div class="row g-0">
-        
-    <%- include('partials/sidebar.ejs')%>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
 
- <div class="col">
-   <%- include('partials/nav.ejs')%>
-      
-     <!-- add faculty detail form -->
-     <section class="form-area">
-      <div class="row">
-        <div class="col-12">
-          <div class="form-header">
-          <div class="form-title">
-            <h2>Add Faculty Here</h2>
-            <!-- <p>Make Sure cross check all Details carefully Before Press Add Button</p> -->
-            </div>
-          <div class="form-submit">
-              <button type="submit" class="btn btn-primary">Add Faculty</button>
-            </div>
-          </div>
-         
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css">
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css"><!-- <link rel="stylesheet" href="/css/style.css"> -->
+
+ 
+
+</head>
+
+<body>
+  <main class="admin-area">
+    <div class="row g-0">
+      <div class="col-2">
+      <%- include('partials/sidebar.ejs')%>
+    </div>
+   <div class="col-10">
+     <%- include('partials/nav.ejs')%>
+
+     <!--  faculty detail area start -->
+        <section class="form-area">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-header">
+                    <div class="form-title">
+                      <h2>Faculty Detail</h2>
+                      <!-- <p>Make Sure cross check all Details carefully Before Press Add Button</p> -->
+                    </div>
+                    <div class="form-submit">
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#addFaculty">Add Faculty</button>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-12">
+
+                  <!-- Add a loader element -->
+                  <div id="loader" class="loader">Loading...</div>
+
+                  <!-- Add a table container with an ID -->
+                  <table id="myTable" class="table table-striped table-hover "></table>
+
+
+                  <!-- Add a message container -->
+                  <div id="noDataMessage" class="no-data-message">No Data Found</div>
+
+                  <!-- add course  modal -->
+                  <div class="modal" id="addFaculty">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Add Faculty</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                          <div class="col-12">
+                            <form id="addFacultyForm" class="custom-form" enctype="multipart/form-data">
+                              <!-- form main area -->
+                              <div class="row">
+                                <div class="col-md-8">
+                                  <div class="form-main">
+                                    <!-- <div class="faculty-img">
+                                        <img src="/assets/img/7.admin-panel/1.faculty/faculty-placeholder.jpg" alt="">
+                                    </div> -->
+                                    <!-- <div class="faculty-hover"> -->
+                                    <div>
+
+                                      <label for="faculty_image" class="form-label">Upload Image</label>
+                                      <input class="" type="file" id="faculty_image" name="image">
+                                    </div>
+
+                                    <!-- faculty name -->
+                                    <div class="mb-3 mt-5">
+                                      <label for="facultyName" class="form-label">Faculty Name</label>
+                                      <input type="text" class="form-control" id="facultyName" name="name" required>
+                                    </div>
+
+                                    <!-- faculty email -->
+                                    <div class="mb-3">
+                                      <label for="email" class="form-label">Email</label>
+                                      <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+
+                                    <!-- faculty contact number -->
+                                    <div class="mb-3">
+                                      <label for="contactNumber" class="form-label">Contact Number</label>
+                                      <input type="tel" class="form-control" id="contactNumber" name="contact" required>
+                                    </div>
+
+                                    <!-- dob date -->
+                                    <div class="mb-3">
+                                      <label for="dob" class="form-label">DOB</label>
+                                      <input type="date" class="form-control" id="dob" name="dob" required>
+                                    </div>
+                                    <!-- faculty specialization -->
+                                    <div class="mb-3">
+                                      <label for="specialization" class="form-label">Specialization</label>
+                                      <input type="text" class="form-control" id="specialization" name="specialization"
+                                        required>
+                                    </div>
+
+                                    <!-- faculty qualification -->
+                                    <div class="mb-3">
+                                      <label for="qualification" class="form-label">Qualification</label>
+                                      <textarea class="form-control" id="qualification" name="qualification"
+                                        required></textarea>
+                                    </div>
+
+                                    <!-- faculty experience -->
+                                    <div class="mb-3">
+                                      <label for="experience" class="form-label">Experience (in years)</label>
+                                      <input type="text" class="form-control" id="experience" name="experience"
+                                        required>
+                                    </div>
+
+
+
+                                    <!-- joining date -->
+                                    <div class="mb-3">
+                                      <label for="startDate" class="form-label">Joining Date</label>
+                                      <input type="date" class="form-control" id="startDate" name="joiningDate"
+                                        required>
+                                    </div>
+
+                                    <!-- faculty salary -->
+                                    <div class="mb-3">
+                                      <label for="student-count" class="form-label">Salary</label>
+                                      <input type="text" class="form-control" id="student-count" name="salary" required>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- form side bar area -->
+                                <div class="col-md-4">
+                                  <div class="form-sidebar my-3">
+                                    <!-- select mode -->
+                                    <div class="mb-3">
+                                      <label class="form-label">Select Mode</label>
+                                      <div class="d-flex">
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="mode" id="onlineMode"
+                                            value="Online">
+                                          <label class="form-check-label" for="onlineMode">Online</label>
+                                        </div>
+                                        <div class="form-check ms-3">
+                                          <input class="form-check-input" type="radio" name="mode" id="offlineMode"
+                                            value="Offline">
+                                          <label class="form-check-label" for="offlineMode">Offline</label>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Status   -->
+                                    <div class="mb-3">
+                                      <label class="form-label">Status</label>
+                                      <div class="d-flex">
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="status" id="active"
+                                            value="Active">
+                                          <label class="form-check-label" for="active">Active</label>
+                                        </div>
+                                        <div class="form-check ms-3">
+                                          <input class="form-check-input" type="radio" name="status" id="inActive"
+                                            value="Inactive">
+                                          <label class="form-check-label" for="inActive">Inactive</label>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- select courses -->
+                                    <div class="mb-3 custom-checkbox">
+
+                                    </div>
+
+                                    <!-- resume -->
+                                    <div class="mb-3">
+                                      <label for="resume" class="form-label">Upload Resume</label>
+                                      <input class="" type="file" id="resume" name="resume">
+                                    </div>
+                                  </div>
+
+                                  <div class="form-sidebar">
+                                    <!-- Address  -->
+                                    <div class="mb-3">
+                                      <label for="address" class="form-label">Address</label>
+                                      <textarea class="form-control" type="text" id="address" name="address"></textarea>
+                                    </div>
+
+                                    <!-- state   -->
+                                    <div class="mb-3">
+                                      <label for="state" class="form-label">Status</label>
+                                      <input class="form-control" type="text" id="state" name="state">
+
+                                    </div>
+
+                                    <!-- zip code -->
+                                    <div class="mb-3 custom-checkbox">
+                                      <label for="zipcode" class="form-label">Zip Code</label>
+                                      <input class="form-control" type="number" id="zipcode" name="zipcode" </div>
+
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-submit">
+                                  <button type="submit" class="btn btn-primary">Add</button>
+                                </div>
+                            </form>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Modal Footer -->
+                      <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div> -->
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </section>
         </div>
-        <div class="col-12">
-          <form action="" method="POST" class="custom-form" >
-            <!-- form main area -->
-            <div class="row">
-            <div class="col-md-8">
-            <div class="form-main">
-            
-              <div class="faculty-img">
-                <img src="/assets/img/7.admin-panel/1.faculty/faculty-placeholder.jpg" alt="">
-              </div>
-              <div class="faculty-hover">
-                <label for="image" class="form-label">Upload Image</label>
-                <input class="" type="file" id="image" name="image">
-              </div>
-         
-              <!-- faculty name  -->
-            <div class="mb-3 mt-5">
-              <label for="facultyName" class="form-label">Faculty Name</label>
-              <input type="text" class="form-control" id="facultyName" name="facultyName" required>
-            </div>
+   </main>
+      
 
-            <!-- faculty specialization -->
-            <div class="mb-3">
-              <label for="specialization" class="form-label">Specialization</label>
-              <input type="text" class="form-control" id="specialization" name="specialization" required>
-            </div>
 
-            <!-- faculty qualification -->
-            <div class="mb-3">
-              <label for="qualification" class="form-label">Qualification</label>
-              <input type="text" class="form-control" id="qualification" name="qualification" required>
-            </div>
+  <!-- Faculty Edit Modal -->
+  <div class="modal" id="editFaculty">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
 
-            
-            <!-- faculty qualification -->
-            <div class="mb-3">
-              <label for="qualification" class="form-label">Qualification</label>
-              <input type="text" class="form-control" id="qualification" name="qualification" required>
-            </div>
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Edit Faculty</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
 
-            <!-- faculty experience -->
-            <div class="mb-3">
-              <label for="experience" class="form-label">Experience (in years)</label>
-              <input type="number" class="form-control" id="experience" name="experience" required>
-            </div>
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <div class="col-12">
+            <form id="editFacultyForm" class="custom-form" enctype="multipart/form-data">
+              <!-- form main area -->
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-main">
+                    <!-- <div class="faculty-img">
+                        <img src="/assets/img/7.admin-panel/1.faculty/faculty-placeholder.jpg" alt="">
+                    </div> -->
+                    <!-- <div class="faculty-hover"> -->
+                    <div>
+                      <img width="100" id="imageSrc1" alt="">
 
-            <!-- faculty eamil -->
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
+                      <label for="faculty_image1" class="form-label">Upload Image</label>
+                      <input class="" type="file" id="faculty_image1" name="image1">
+                    </div>
 
-            <!-- faculty contact number -->
-            <div class="mb-3">
-              <label for="contactNumber" class="form-label">Contact Number</label>
-              <input type="tel" class="form-control" id="contactNumber" name="contactNumber" required>
-            </div>
+                    <!--  faculty id -->
+                    <div class="mb-3 mt-5">
 
-               <!-- joining date -->
-                <div class="mb-3">
-                  <label for="startDate" class="form-label">Joining Date</label>
-                  <input type="date" class="form-control" id="startDate" name="startDate" required>
+                      <label for="id1" class="form-label">ID</label>
+                      <input type="text" class="form-control" id="id1" name="id1" required>
+                    </div>
+                    <!-- faculty name -->
+                    <div class="mb-3 mt-5">
+
+                      <label for="facultyName1" class="form-label">Faculty Name</label>
+                      <input type="text" class="form-control" id="facultyName1" name="name1" required>
+                    </div>
+
+                    <!-- faculty email -->
+                    <div class="mb-3">
+                      <label for="email1" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email1" name="email1" required>
+                    </div>
+
+                    <!-- faculty contact number -->
+                    <div class="mb-3">
+                      <label for="contactNumber1" class="form-label">Contact Number</label>
+                      <input type="tel" class="form-control" id="contactNumber1" name="contact1" required>
+                    </div>
+
+                    <!-- dob date -->
+                    <div class="mb-3">
+                      <label for="dob1" class="form-label">DOB</label>
+                      <input type="date" class="form-control" id="dob1" name="dob1" required>
+                    </div>
+                    <!-- faculty specialization -->
+                    <div class="mb-3">
+                      <label for="specialization1" class="form-label">Specialization</label>
+                      <input type="text" class="form-control" id="specialization1" name="specialization1" required>
+                    </div>
+
+                    <!-- faculty qualification -->
+                    <div class="mb-3">
+                      <label for="qualification1" class="form-label">Qualification</label>
+                      <textarea class="form-control" id="qualification1" name="qualification1" required></textarea>
+                    </div>
+
+                    <!-- faculty experience -->
+                    <div class="mb-3">
+                      <label for="experience1" class="form-label">Experience (in years)</label>
+                      <input type="text" class="form-control" id="experience1" name="experience1" required>
+                    </div>
+
+
+
+                    <!-- joining date -->
+                    <div class="mb-3">
+                      <label for="joiningDate1" class="form-label">Joining Date</label>
+                      <input type="date" class="form-control" id="joiningDate1" name="joiningDate1" required>
+                    </div>
+
+                    <!-- faculty salary -->
+                    <div class="mb-3">
+                      <label for="student-count1" class="form-label">Salary</label>
+                      <input type="text" class="form-control" id="student-count1" name="salary1" required>
+                    </div>
+                  </div>
                 </div>
 
+                <!-- form side bar area -->
+                <div class="col-md-4">
+                  <div class="form-sidebar my-3">
+                    <!-- select mode -->
+                    <div class="mb-3">
+                      <label class="form-label">Select Mode</label>
+                      <div class="d-flex">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="mode1" id="onlineMode1" value="Online"
+                            checked>
+                          <label class="form-check-label" for="onlineMode1">Online</label>
+                        </div>
+                        <div class="form-check ms-3">
+                          <input class="form-check-input" type="radio" name="mode1" id="offlineMode1" value="Offline">
+                          <label class="form-check-label" for="offlineMode1">Offline</label>
+                        </div>
+                      </div>
+                    </div>
 
-              <!-- faculty salary -->
-              <div class="mb-3">
-                <label for="student-count" class="form-label">Salary </label>
-                <input type="number" class="form-control" id="student-count" name="student-count" required>
-              </div>
-              
-          
+                    <!-- Status   -->
+                    <div class="mb-3">
+                      <label class="form-label">Status</label>
+                      <div class="d-flex">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="status1" id="active1" value="Active"
+                            checked>
+                          <label class="form-check-label" for="active1">Active</label>
+                        </div>
+                        <div class="form-check ms-3">
+                          <input class="form-check-input" type="radio" name="status1" id="inActive1" value="Inactive">
+                          <label class="form-check-label" for="inActive1">Inactive</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- select courses -->
+                    <div class="mb-3 custom-checkbox">
+
+                    </div>
+
+                    <!-- resume -->
+                    <div class="mb-3">
+                      <!-- <img width="100" id="resumeSrc1"  > -->
+                      <label for="resume1" class="form-label">Upload Resume</label>
+                      <input class="" type="file" id="resume1" name="resume1">
+                      <p id="resumeLabel1"></p>
+                    </div>
+                  </div>
+
+                  <div class="form-sidebar">
+                    <!-- Address  -->
+                    <div class="mb-3">
+                      <label for="address1" class="form-label">Address</label>
+                      <textarea class="form-control" type="text" id="address1" name="address1"></textarea>
+                    </div>
+
+                    <!-- state   -->
+                    <div class="mb-3">
+                      <label for="state1" class="form-label">State</label>
+                      <input class="form-control" type="text" id="state1" name="state1">
+
+                    </div>
+
+                    <!-- zip code -->
+                    <div class="mb-3 custom-checkbox">
+                      <label for="zipcode1" class="form-label">Zip Code</label>
+                      <input class="form-control" type="number" id="zipcode1" name="zipcode1" </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-submit">
+                  <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+
           </div>
         </div>
-          
-          <!-- form side bar area -->
-          <div class="col-md-4">
-            <div class="form-sidebar">
-        
-            <!-- select mode -->
-            <div class="mb-3">
-              <label class="form-label">Select Mode</label>
-              <div class="d-flex">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="mode" id="onlineMode" value="Online" checked>
-                <label class="form-check-label" for="onlineMode">
-                  Online
-                </label>
-              </div>
-              <div class="form-check ms-3">
-                <input class="form-check-input" type="radio" name="mode" id="offlineMode" value="Offline">
-                <label class="form-check-label" for="offlineMode">
-                  Offline
-                </label>
-              </div>
-            </div>
-            </div>
-
-          <!-- alot courses -->
-          <div class="mb-3 custom-checkbox">
-            <label for="batches" class="form-label">Select Courses</label>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                Select Courses
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
-                <li>
-                  <input class="form-check-input" type="checkbox" value="Morning Batch" id="morningBatch" name="batches[]">
-                  <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to 12:00)</label>
-                </li>
-                <li>
-                  <input class="form-check-input" type="checkbox" value="Afternoon Batch" id="afternoonBatch" name="batches[]">
-                  <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to 3:00PM)</label>
-                </li>
-                <li>
-                  <input class="form-check-input" type="checkbox" value="Evening Batch" id="eveningBatch" name="batches[]">
-                  <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to 7:00PM)</label>
-                </li>
-              </ul>
-            </div>
-           </div>
-
-            <!-- alot batches -->
-          <div class="mb-3 custom-checkbox">
-            <label for="batches" class="form-label">Select Batches</label>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                Select Batches
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
-                <li>
-                  <input class="form-check-input" type="checkbox" value="Morning Batch" id="morningBatch" name="batches[]">
-                  <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to 12:00)</label>
-                </li>
-                <li>
-                  <input class="form-check-input" type="checkbox" value="Afternoon Batch" id="afternoonBatch" name="batches[]">
-                  <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to 3:00PM)</label>
-                </li>
-                <li>
-                  <input class="form-check-input" type="checkbox" value="Evening Batch" id="eveningBatch" name="batches[]">
-                  <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to 7:00PM)</label>
-                </li>
-              </ul>
-            </div>
-           </div>
-
-             <!-- add Image -->
-             <div class="mb-3">
-              <label for="resume" class="form-label">Upload Resume</label>
-              <input class="" type="file" id="resume" name="resume">
-            </div>
-
-        </div>
-      
-        </div>
-        </div>
-          
-          </form>
-        </div>
       </div>
-    
-    </section>
 
- 
- 
-      
-     
+      <!-- Modal Footer -->
+      <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div> -->
+
     </div>
   </div>
-  </main>
 
-  
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Include DataTables -->
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"
+    integrity="sha512-hUhvpC5f8cgc04OZb55j0KNGh4eh7dLxd/dPSJ5VyzqDWxsayYbojWyl5Tkcgrmb/RVKCRJI1jNlRbVP4WWC4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js"
+    integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+  <script>
+    //  edit faculty table
+    function editModal(id) {
+
+      // Ajax request to fetch course data
+      $.ajax({
+        url: `/admin/faculty/${id}`, // Assuming this route exists on your server
+        type: "GET",
+        success: function (data, status) {
+          console.log("faculty Data:", data);
+
+
+
+
+          $('[name="id1"]').val(data.facultyId);
+          $('[name="name1"]').val(data.name);
+          $('[name="email1"]').val(data.email);
+          $('[name="contact1"]').val(data.contact);
+
+          $('[name="specialization1"]').val(data.specialization);
+          $('[name="qualification1"]').val(data.qualification);
+          $('[name="experience1"]').val(data.experience);
+
+          $('[name="salary1"]').val(data.salary);
+
+          $('[name="address1"]').val(data.address);
+          $('[name="state1"]').val(data.state);
+          $('[name="zipcode1"]').val(data.zipcode);
+
+          // Display existing image
+          $("#imageSrc1").attr("src", data.image);
+          $('#imageLabel1').text(data.image); // Display existing file name for image
+
+          // Display existing resume
+          $("#resumeSrc1").attr("src", data.resume);
+          $('#resumeLabel1').text(data.resume);
+
+          // date 
+          let joiningDate = new Date(data.joiningDate);
+          let formattedjoiningDate = joiningDate.toISOString().split('T')[0];
+
+          $('[name="joiningDate1"]').val(formattedjoiningDate);
+
+          let dob = new Date(data.dob);
+          let formatteddob = dob.toISOString().split('T')[0];
+          $('[name="dob1"]').val(formatteddob);
+          // radio buton
+
+          if (data.status === 'Active') {
+            $('#active1').prop('checked', true);
+          } else if (data.status === 'Inactive') {
+
+            $("#inActive1").prop("checked", true);
+
+          }
+
+
+          if (data.mode === 'Online') {
+            $('#onlineMode1').prop('checked', true);
+          } else if (data.mode === 'Offline') {
+
+            $("#offlineMode1").prop("checked", true);
+
+          }
+
+          const myModal = new bootstrap.Modal(document.getElementById('editFaculty'));
+          myModal.show();
+
+        },
+        error: function (error) {
+          console.log(error)
+        }
+      })
+
+    }
+
+
+    // delete faculty
+    async function deleteFaculty(id) {
+      const confirmed = await Swal.fire({
+        title: 'Are you sure?',
+        text: 'You will not be able to recover this Faculty!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, delete it!'
+      });
+
+      if (confirmed.isConfirmed) {
+        try {
+          const response = await $.ajax({
+            url: `/admin/faculty_delete/${id}`,
+            type: 'DELETE'
+          });
+
+          console.log('Faculty Data:', response);
+
+          await Swal.fire({
+            title: 'Deleted!',
+            text: 'The Faculty has been deleted.',
+            icon: 'success'
+          });
+
+          // Reload the page after a successful request
+          window.location.reload();
+        } catch (error) {
+          console.error('Error:', error);
+
+          await Swal.fire({
+            title: 'Error!',
+            text: 'An error occurred while deleting the Faculty.',
+            icon: 'error'
+          });
+        }
+      }
+    }
+
+
+  </script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      // table
+      $.ajax({
+        url: '/admin/feculties',
+        method: 'GET',
+        beforeSend: function () {
+          // Show loader before making the AJAX request
+          $('#loader').show();
+          // Hide the message container
+          $('#noDataMessage').hide();
+        },
+        success: function (data) {
+          // Hide loader after successful data retrieval
+          $('#loader').hide();
+          console.log("Data", data)
+          if (data.length > 0) {
+            // Show the DataTable only if there is data
+            $('#myTable').DataTable({
+              data: data,
+              columns: [
+                // { data: 'facultyId', title: '  ID' },
+                {
+                  data: 'name', title: 'Title',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'specialization', title: 'specialization',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'qualification', title: '  qualification',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'experience', title: 'experience',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'email', title: 'email',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'mode', title: 'mode',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'contact', title: 'contact',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'joiningDate', title: 'joiningDate',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'salary', title: 'salary',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'status', title: 'status',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'address', title: 'address',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'dob', title: 'dob',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'state', title: 'state',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: 'zipcode', title: 'zipcode',
+                  render: function (data, type, row) {
+                    // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                    return data ? data : 'N/A';
+                  }
+                },
+                {
+                  data: null,
+                  title: 'Actions',
+                  render: function (data, type, row) {
+                    // Customize this part to add edit and delete buttons
+                    return '<button onclick="editModal(\'' + data.facultyId + '\')"   class="btn btn-primary">Edit</button> <button onclick="deleteFaculty(\'' + data.facultyId + '\')" class="btn btn-danger delete-btn">Delete</button>';
+                    // return `<button onclick="createModal('${encodeURIComponent(JSON.stringify(data))}')" class="btn btn-primary">Edit</button> <button class="btn btn-danger delete-btn">Delete</button>`;
+                    // return '<button onclick="createModal(' + JSON.stringify(data) + ')" class="btn btn-primary">Edit</button> <button class="btn btn-danger delete-btn">Delete</button>';
+
+                  }
+                }
+                // Add more columns as needed
+              ]
+            });
+          } else {
+            // If no data is found, display the message container
+            $('#noDataMessage').show();
+          }
+        },
+        error: function () {
+          // Hide loader and display an error message if the request fails
+          $('#loader').hide();
+          $('#noDataMessage').text('Error fetching data. Please try again later.').show();
+        }
+
+      });
+
+
+
+      // ==============================================================  new 
+
+      $("#addFacultyForm").validate({
+        submitHandler: async function (form, event) {
+          event.preventDefault();
+
+          let formData = new FormData();
+          let form_data = $("#addFacultyForm").serializeArray();
+
+
+          console.log(form_data)
+
+          $.each(form_data, function (key, input) {
+            formData.append(input.name, input.value);
+          });
+
+          // faculty avatar
+          let faculty_imageFiles = $("#faculty_image")[0].files;
+
+          console.log("faculty_imageFiles", faculty_imageFiles)
+
+          if (faculty_imageFiles.length > 0) {
+            for (let i = 0; i < faculty_imageFiles.length; i++) {
+              formData.append('image', faculty_imageFiles[i]); // Use a different field name for avatar
+            }
+          }
+
+          // faculty resume
+          let resumeFiles = $("#resume")[0].files;
+
+          if (resumeFiles.length > 0) {
+            for (let i = 0; i < resumeFiles.length; i++) {
+              formData.append('resume', resumeFiles[i]); // Use a different field name for resume
+            }
+          }
+
+          console.log("resumeFiles ", resumeFiles)
+          console.log(formData)
+          console.log(form_data)
+          try {
+            const response = await $.ajax({
+              url: '/admin/faculty',
+              type: 'POST',
+              data: formData,
+              contentType: false,
+              processData: false,
+            });
+
+            // If the request is successful, show a success message
+            await Swal.fire({
+              title: 'Success',
+              text: 'Faculty added successfully!',
+              icon: 'success',
+            });
+
+            // You can perform additional actions here if needed
+            window.location.reload();
+            console.log('Success:', response);
+          } catch (error) {
+            // If the request fails, show an error message
+            await Swal.fire({
+              title: 'Error',
+              text: 'An error occurred while adding the Faculty.',
+              icon: 'error',
+            });
+
+            console.error('Error:', error);
+          }
+        }
+      });
+
+
+
+      // =================================================================== edit
+      $("#editFacultyForm").validate({
+        submitHandler: async function (form, event) {
+          event.preventDefault();
+
+          let formData = new FormData();
+          let form_data = $("#editFacultyForm").serializeArray();
+
+          $.each(form_data, function (key, input) {
+            if (input.name !== 'mode1' && input.name !== 'status1') {
+              formData.append(input.name, input.value);
+            }
+          });
+
+          // Manually add mode1 and status1 values to the FormData
+          // let mode1 = $('input[name="mode1"]:checked').val();
+          let mode1 = $('input[name="mode1"]:checked').val();
+          let status1 = $('input[name="status1"]:checked').val();
+          formData.append('mode1', mode1);
+          formData.append('status1', status1);
+          console.log(mode1, status1);
+          alert("mode1")
+          // Faculty avatar
+          let faculty_imageFiles = $("#faculty_image")[0].files;
+          if (faculty_imageFiles.length > 0) {
+            for (let i = 0; i < faculty_imageFiles.length; i++) {
+              formData.append('image', faculty_imageFiles[i]); // Use a different field name for avatar
+            }
+          }
+
+          // Faculty resume
+          let resumeFiles = $("#resume")[0].files;
+          if (resumeFiles.length > 0) {
+            for (let i = 0; i < resumeFiles.length; i++) {
+              formData.append('resume', resumeFiles[i]); // Use a different field name for resume
+            }
+          }
+
+          let id = $('[name="id1"]').val();
+          console.log(form_data)
+          console.log(formData)
+          try {
+            const response = await $.ajax({
+              url: `/admin/faculty_update/${id}`,
+              type: 'put',
+              data: formData,
+              contentType: false,
+              processData: false,
+            });
+
+            // If the request is successful, show a success message
+            await Swal.fire({
+              title: 'Success',
+              text: 'Faculty updated successfully!',
+              icon: 'success',
+            });
+
+            // You can perform additional actions here if needed
+            // window.location.reload();
+            console.log('Success:', response);
+          } catch (error) {
+            // If the request fails, show an error message
+            await Swal.fire({
+              title: 'Error',
+              text: 'An error occurred while updating the Faculty.',
+              icon: 'error',
+            });
+
+            console.error('Error:', error);
+          }
+        }
+      });
+
+
+    });
+
+
+
+
+
+
+  </script>
+
+
+
+</body>
+
 </html>
-    

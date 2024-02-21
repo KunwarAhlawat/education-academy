@@ -1,9 +1,12 @@
+const { v4: uuidv4 } = require('uuid');
+ 
 const Data = {
   courseList: [
     // neet 
     {
-      id: "NEET-2024-Online",
+      // id: "NEET-2024-Online",
       onlineCourse: {
+        onlineId : "NEET-2024-Online",
         imgSrc2: "/assets/img/4.course-list/neet-online-h.webp",
         title2: "NEET 2024 Preparation Online Program",
         details2: "Course Details:",
@@ -29,6 +32,8 @@ const Data = {
       },
 
       courseListPage: {
+        offlineId : "NEET-2024-Offline",
+
         imgSrc2: "/assets/img/4.course-list/neet-offline-h.webp",
         title2: "NEET 2024 Preparation  Offline Course",
         details2: "Course Details:",

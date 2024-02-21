@@ -1,4 +1,25 @@
-<%- include('partials/header') %>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css">
+   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+ 
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="/assets/vendor/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="/assets/vendor/css/owl.theme.default.cs">
+  <link rel="stylesheet" href="/css/style.css"><!-- <link rel="stylesheet" href="/css/style.css"> -->
+
   <style>
     .main{
         position: relative;
@@ -20,20 +41,162 @@
     bottom: 10%;
 }
   </style>
+</head>
+
+<body>
+      <!--desktop menu area start -->
+      <section class="nav-section  d-lg-flex  d-none ">
+        <div class="logo">
+            <a href="/"><img src="/assets/img/1.logo/ea-logo.png" alt=""></a>
+            <a href="/"><span>Education Academy</span></a>
+        </div>
+        <div class="rightItems">
+    
+       
+        <div class="nav-menu">
+            <% commonData.menuItems.forEach(item=> { %>
+                <div class="nav-menu-item">
+                    <span>
+                        <p>
+                            <%= item.text %>
+                        </p>
+                        <% if (item.submenu && item.submenu.length> 0) { %>
+                            &nbsp; <i class="bi bi-caret-down-fill"></i>
+                            <% } %>
+                    </span>
+    
+                    <div class=" d-dropdown-item">
+                        <% if (item.submenu && item.submenu.length> 0) { %>
+                            <% item.submenu.forEach(subItem=> { %>
+    
+    
+                                <% if (subItem.submenu2 && subItem.submenu2.length> 0) { %>
+                                    <div class="secondMenu">
+                                        <span>
+                                            <%= subItem.text %>
+                                        </span>
+                                        <div class="d-dropdown-item-1">
+                                            <% subItem.submenu2.forEach(subItem2=> { %>
+                                                <a href="/courseview/<%= subItem2.link %>">
+                                                    <%= subItem2.text %>
+                                                </a>
+                                                <% }); %>
+                                        </div>
+                                    </div>
+                                    <% } else { %>
+    
+                                        <a href="/courseview/<%= subItem.link %>">
+                                            <%= subItem.text %>
+                                        </a>
+                                        <% } %>
+    
+    
+                                            <% }); %>
+                                                <% } %>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+        <Button class="secondary-button " data-bs-toggle="modal" data-bs-target="#leadModal"><i
+                class="bi bi-telephone-fill"></i> &nbsp; Call Back
+        </Button>
+    </div>
+    </section>
+    <!--desktop menu area end -->
+    
+    <!--mobile menu area start -->
+    <section class="mobile-menu-area d-lg-none d-block ">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="mobile-menu">
+                        <div class="mobile-logo">
+                            <a href="/"><img src="/assets/img/1.logo/ea-logo.png" alt=""></a>
+                            <a href="/"><span>Education Academy</span></a>
+                        </div>
+                        <div class="mobile-menu-icon">
+                            <i class="bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                                aria-controls="offcanvasExample"></i>
+                        </div>
+                        <div class="offcanvas offcanvas-custom offcanvas-start" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header offcanvas-custom-header">
+                            <a href="index.html"><span class="offcanvas-title" id="offcanvasExampleLabel">Education
+                                    Academy</span></a>
+                            <i class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="mobile-menu-items">
+                                <% commonData.menuItems.forEach((item, index) => { %>
+                                <div class="accordion" id="accordionExample<%= index %>">
+                                    <div class="accordion-item custom-accordion-item">
+                                        <h2 class="accordion-header custom-accordion-header" id="heading<%= index %>">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse<%= index %>" aria-expanded="true"
+                                                aria-controls="collapse<%= index %>">
+                                                <span><%= item.text %></span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse<%= index %>" class="accordion-collapse collapse"
+                                            aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample<%= index %>">
+                                            <% if (item.submenu && item.submenu.length > 0) { %>
+                                            <% item.submenu.forEach((subItem, subIndex) => { %>
+                                            <div class="accordion-body custom-accordion-body">
+                                                <div class="m-menu-item-1">
+                                                    <% if(subItem.submenu2 && subItem.submenu2.length > 0){ %>
+                                                    <span><%= subItem.text %></span>
+                                                    <div class="m-menu-item-2">
+                                                    <% subItem.submenu2.forEach((subItem2, subIndex2) => { %>
+                                                        
+                                                        <a href="/courseview/<%= subItem2.link %>"><i class="bi bi-arrow-down-right-square-fill"></i> &nbsp;<%= subItem2.text %></a>
+                                                    
+                                                    <% }); %>
+                                                    </div>
+                                                    <% } else{ %>
+                                                        
+                                                        <a href="/courseview/<%= subItem.link %>"><%= subItem.text %></a>
+                                                    <% } %>
+                                                </div>
+                                            </div>
+                                            <% }); %>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }); %>
+                                <button class="cta-button" data-bs-toggle="modal" data-bs-target="#leadModal">Join US</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    <!--mobile menu area end -->
+    
+     
  <!-- hero area start -->
  <section class="course-view-hero-area section-padding">
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="hero-text">
-                    <h2><%= courseViewData.title %></h2>
-                    <p><strong>Duration:- </strong> <%= courseViewData.duration %> </p>
-                    <p><%= courseViewData.discountText %></p>
+                    <h2><%= courseData.course.title %></h2>
+                    <p><strong>Duration:- </strong> <%= courseData.course.duration %> </p>
+                    <p>Spacial DiscountedPrice Price</p>
                     <div class="hero-price-area">
                         
-                        <span><%= courseViewData.price.discountedPrice %></span>
-                        <span><%= courseViewData.price.regularPrice %></span>
-                        <span><%= courseViewData.price.discountPercentage %></span>
+                        <span><strong>Rs :</strong>   <%= courseData.course.regularPrice %> /-
+                        </span>
+                         <% if(courseData.course.discountedPrice !== undefined && courseData.course.discountedPrice !== null && parseInt(courseData.course.discountedPrice) !== 0) { %>
+                            <li class="badge text-bg-dark">
+                                  <strong>Rs :</strong> <%= courseData.course.discountedPrice %>  
+                                </li>
+                        <% } else { %>
+                            <div></div>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -55,12 +218,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="course-content">
-                            <ol>
-                                <% courseViewData.content.forEach(text => { %>
-                                    <li><%= text %> </li>
-                               <%  }) %> 
-                            </ol>
+                        <div id="course_content" class="course-content">
+                         
+                                
+                           
                         </div>
 
                     </div>
@@ -71,16 +232,19 @@
                 <section class="course-view-course-include-area">
                     <div class="row">
                         <div class="col">
-                            <h4><%= courseViewData.batchDetails.title %></h4>
+                            <h4> Batch :</h4>
                         </div>
                     </div>
                     <div class="row">
-                      
-                            <% courseViewData.batchDetails.items.forEach(text => { %>
+                             <% courseData.batches.forEach(batch => { %>
                                 <div class="col-md-4">
                                 <div class="course-include-item">
-                                    <span><%= text.count %></span>
-                                    <h6><%= text.description %></h6>
+                                     <% batch.forEach(childBatch => { %>
+                                        <span><%= childBatch.title %></span>
+                                        <h6><%= childBatch.startTime %> to <%= childBatch.endTime %></h6>
+                                        <%  }) %> 
+
+                                  
                                 </div>
                             </div>
                            <%  }) %> 
@@ -97,32 +261,66 @@
                 <section class="course-view-top-faculties-area">
                     <div class="row">
                         <div class="col">
-                            <h4><%= courseViewData.faculty.title %></h4>
+                            <h4>faculties</h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <div class="owl-carousel">
+                            <div class="owl-carousel owl-theme">
+                               
+                                <% courseData.faculties.forEach(faculty => { %>
+                                   
+                                         <% faculty.forEach(childFaculty => { %>
+                                            <div class="item"> 
 
+                                            <div class="col ">
+                                                <div class="course-include-item">
+                                            <a href="/faculty/<%= childFaculty.facultyId %>">
+                                                <div class="faculty-item">
+                                                    <div class="faculty-text">
+                                                        <h5><%= childFaculty.name %></h5>
+                                                        <span><%= childFaculty.qualification %></span>
+                                                        <ul>
+                                                            <li><%= childFaculty.experience %></li>
+                                                     
+                                                        </ul>
+                                                    </div>
+                                                    <div class="faculty-img">
+                                                        <img width="20" src="<%= childFaculty.image %>" alt="" class="img-fluid">
+                                                    </div>
+                                                </div>
+                                            
+                                            </a>
+                                                 
+                                    </div>
+                                </div>
+                            </div>
+                                            <%  }) %> 
+    
+                                 
+                               <%  }) %> 
+
+                           
                                 
-                            <% courseViewData.faculty.items.forEach(text => { %>
-                                <a href="/faculty/<%= text.facultyId %>">
+                            <!-- <% courseData.faculties.forEach(faculty => { %>
+                                <a href="/faculty/<%= faculty.facultyId %>">
                                 <div class="faculty-item">
                                     <div class="faculty-text">
-                                        <h5><%= text.name %></h5>
-                                        <span><%= text.qualification %></span>
+                                        <h5><%= faculty.name %></h5>
+                                        <span><%= faculty.qualification %></span>
                                         <ul>
-                                            <li><%= text.experience %></li>
+                                            <li><%= faculty.experience %></li>
                                      
                                         </ul>
                                     </div>
                                     <div class="faculty-img">
-                                        <img width="20" src="<%= text.imageSrc %>" alt="" class="img-fluid">
+                                        <img width="20" src="<%= faculty.image %>" alt="" class="img-fluid">
                                     </div>
                                 </div>
+                            
                             </a>
                            <%  }) %> 
- 
+  -->
                              
 
                             </div>
@@ -143,30 +341,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <div class="accordion" id="accordionPanelsStayOpenExample">
-                                <% courseViewData.faq.items.forEach(text => { %>
-                                  
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="<%= text.accordion.head.id %>">
-                                            <button class="<%= text.accordion.head.button.class %>" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="<%= text.accordion.head.button.dataBsTarget %>" aria-expanded="<%= text.accordion.head.button.ariaExpanded %>"
-                                                aria-controls="<%= text.accordion.head.button.ariaControls %>">
-                                                <%= text.question %>
-                                            </button>
-                                        </h2>
-                                        <div id="<%= text.accordion.body.id %>" class="<%= text.accordion.body.class %>"
-                                            aria-labelledby="<%= text.accordion.body.ariaLabelledby %>">
-                                            <div class="accordion-body">
-                                                <%= text.answer %>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                               <%  }) %> 
-
-                            
-
-                            </div>
+                            <div id="faq-accordion"></div>
 
                         </div>
                     </div>
@@ -175,6 +350,7 @@
                 <!-- course FAQ area start -->
             </div>
 
+         
             <!-- sidebar area start -->
             <div class="col-md-4">
                 <section class="course-view-sidebar-area">
@@ -182,14 +358,23 @@
                     <div class="row">
                         <div class="col">
                             <div id="fixedDiv" class="sidebar-cta-card shadow buy-card-fix">
-                                <img src="<%= courseViewData.buyCard.imageSrc %>" alt="" class="img-fluid">
-                                <h6><%= courseViewData.buyCard.title %></h6>
+                                <img src="<%= courseData.course.imageSrc %>" alt="" class="img-fluid">
+                                <h4 class="text-start ms-3 mt-3"><%= courseData.course.title %></h4>
                                 <ul>
-                                    <li><%= courseViewData.buyCard.prices.discountedPrice %></li>
-                                    <li><%= courseViewData.buyCard.prices.regularPrice %></li>
-                                    <li><%= courseViewData.buyCard.prices.discountPercentage %></li>
+                                    <li><strong>Rs :</strong>   <%= courseData.course.regularPrice %> /-
+                                    </li>
+                                     <% if(courseData.course.discountedPrice !== undefined && courseData.course.discountedPrice !== null && parseInt(courseData.course.discountedPrice) !== 0) { %>
+                                        <li class="badge text-bg-dark">
+                                              <strong>Rs :</strong> <%= courseData.course.discountedPrice %>  
+                                            </li>
+                                    <% } else { %>
+                                        <div></div>
+                                    <% } %>
+
+                                    <!-- <li><%= courseData.course.discountedPrice %></li>
+                                    <li><%= courseData.course.regularPrice %></li> -->
                                 </ul>
-                                <a href="/order/<%= courseViewData.courseId  %>"><button class="secondary-button"><%= courseViewData.buyCard.button.buttonText %></button></a>
+                                <a href="/order/<%= courseData.course.courseId  %>"><button class="secondary-button"> buy now</button></a>
                             </div>
                         </div>
                     </div>
@@ -219,7 +404,139 @@
         </div>
     </div>
 </section>
-<%- include("partials/footer.ejs")%>
+
+
+
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4><strong>Head Office-</strong></h4>
+                            <span> Paradise mall, 5, Baghpat Rd <br> Sabun Godam,
+                                Jwala Nagar,Naval Vihar, <br> Meerut, Uttar Pradesh
+                                250002</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4><strong>Corporate Office-</strong></h4>
+                            <span> Office No. 306, 3rd Floor, <br> H-140 BSI Building
+                                Sector-63,Noida</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-telephone-fill"></i> 
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>+91 8449511111</span>  <br>
+                            <span>info@educationacademy.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="/assets/img/1.logo/ea-logo.png" class="img-fluid" alt="logo"></a>
+                            <p>E. Academy</p>
+                        </div>
+                        <div class="footer-text">
+                            <p>Maximize your learning experience by choosing Education Academy committed to providing affordable and effective education.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg p-3"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg p-3"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg p-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-widget mt-4 mt-md-0">
+                        <div class="footer-widget-heading">
+                            <h3>Our Courses</h3>
+                        </div>
+                        <ul>
+                            <li><a href="/courseview/IIT-JEE-2024-Offline">IIT JEE</a></li>
+                            <li><a href="/courseview/NEET-2024-Offline">NEET</a></li>
+                            <li><a href="/courseview/UP-Police-2024-Offline">UP POLICE</a></li>
+                            <li><a href="/courseview/science-stream-Offline">SCIENCE STREAM</a></li>
+                            <li><a href="/courseview/commerce-stream-Offline">COMMERCE STREAM</a></li>
+                      
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="footer-widget mt-4 mt-md-0">
+                        <div class="footer-widget-heading">
+                            <h3>Quick Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class=" col text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2024, All Right Reserved  <a href="/"><strong>Education Academy</strong></a></p>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Include DataTables -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" integrity="sha512-hUhvpC5f8cgc04OZb55j0KNGh4eh7dLxd/dPSJ5VyzqDWxsayYbojWyl5Tkcgrmb/RVKCRJI1jNlRbVP4WWC4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js" integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+  <script src="/assets/vendor/js/owl.carousel.min.js"></script>
+
+
 <script>
     $('.owl-carousel').owlCarousel({
     loop:true,
@@ -237,6 +554,38 @@
         }
     }
 })
+</script>
+
+<script>
+     
+        let courseData = <%-JSON.stringify(courseData) %> 
+        $(document).ready(function() {
+
+         $("#course_content").append(courseData.course.content)
+
+
+  let accordion = $("#faq-accordion");
+  courseData.faqs.forEach(function(faq, index) {
+    let faqTemplate = `
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading${index}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
+            ${faq.question}
+          </button>
+        </h2>
+        <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#faq-accordion">
+          <div class="accordion-body">
+            ${faq.answer}
+          </div>
+        </div>
+      </div>
+    `;
+    accordion.append(faqTemplate);
+  });
+});
+
+ 
+
 </script>
  <script>
       function checkOffset() {
@@ -257,4 +606,7 @@
             checkOffset();
         });
 </script>
-<%- include("partials/copyright.ejs")%>
+  
+</body>
+
+</html>

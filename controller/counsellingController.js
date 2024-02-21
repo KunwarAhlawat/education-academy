@@ -1,4 +1,5 @@
-const cousnellingFormModal = require("../modal/cousnellingFormModal")
+const CounsellingModal = require("../modal/CounsellingModal")
+const { v4: uuidv4 } = require('uuid');
 
 async function counsellingFormCtrl(req, res) {
   try {
@@ -12,7 +13,7 @@ async function counsellingFormCtrl(req, res) {
       return res.status(422).json({ errors: data.errors });
     }
 
-    let emailDuplicate = false;
+    let emailDuplicate = false; 
     let mobileDuplicate = false;
 
     const emailResult = await cousnellingFormModal.findOne({ where: { email: data.email } });
@@ -35,7 +36,8 @@ async function counsellingFormCtrl(req, res) {
       return res.send({ msg: "Mobile number already exists" });
     }
 
-    const result = await cousnellingFormModal.create({
+    const result = await CounsellingModal.create({
+      id :  uuidv4(),
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,
@@ -59,7 +61,7 @@ async function counsellingFormCtrl(req, res) {
       submitDate: data.submitDate,
       declaration: data.declaration,
     });
-
+ 
     if (result) {
       console.log("New student created");
       return res.send({ result, msg: "Registration successful" });

@@ -117,11 +117,12 @@ margin: 50px;
         margin : 10px;
         margin-top: 60px;
         .course-item-img {
-
-            object-fit: contain;
-
+        // height: 140px;
+        overflow: hidden;
+                
             img {
                 border-radius: 5px;
+                object-fit: cover;
 
             }
 
@@ -134,12 +135,21 @@ margin: 50px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
-            h5 {
-                margin: 8px 0px;
-                color: $primary-color;
-                font-weight: $bold;
+            .course-title{
+                height: 80px;
+                h5 {
+                    margin: 8px 0px;
+                    max-height: 3em; /* Adjust this value based on the number of lines you want */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5; /* Adjust this value to control line height */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+                }  
             }
+            
+           
 
             p {
                 margin-top: 10px;
@@ -158,7 +168,7 @@ margin: 50px;
                         i {
                             color: $accent-color;
                             font-size: $small-font;
-                            margin-right: 8px;
+                            margin-right: 4px;
                         }
 
                         span {
@@ -174,7 +184,7 @@ margin: 50px;
                         i {
                             color: $accent-color;
                             font-size: $small-font;
-                            margin-right: 8px;
+                            margin-right: 4px;
                         }
 
                         span {

@@ -1,9 +1,8 @@
 .admin-header{
-    padding: 8px 20px;
+  padding: 4px 0px;
     box-shadow: $shadow-1;
     border: $border1;
-
-    height: max-content;
+    background-color: $light;
 
   .nav{
     align-items: center;
@@ -11,11 +10,13 @@
     .nav-item{
     display: inline-block;
      padding: 5px 10px;
+     span{
+      font-size: 2rem;
+      font-weight: $bold;
+     }
 
     }
     .header-profile{
-   
-        background-color: yellow;
         margin-left: auto;
     }
 }

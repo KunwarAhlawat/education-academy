@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include CSS for Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Include jQuery and Select2 JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+<body>
+    <select id="multipleBatches" multiple="multiple" style="width: 200px;">
+        <option value="Option1">Option 1</option>
+        <option value="Option2">Option 2</option>
+        <option value="Option3">Option 3</option>
+        <option value="Option4">Option 4</option>
+      </select>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#multipleBatches').select2();
+        });
+    </script>
+</body>
+</html>

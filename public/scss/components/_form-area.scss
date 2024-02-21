@@ -1,0 +1,90 @@
+.form-area{
+    padding: 20px;
+    .form-header{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        .form-title{
+            h2{
+                font-weight: $bold;
+            }
+        }
+    }
+    .form-body{
+        background-color: green;
+        .form-main{
+           
+        }
+        .form-sidebar{
+             
+        }
+    }
+    .form-label{}
+    .form-control{}
+  
+}
+
+
+// style for data table
+.dataTables_wrapper{
+    overflow-x: auto;
+    overflow-y: hidden;
+  margin-top:20px;
+  padding-bottom: 40px;
+   
+  .dataTables_length{
+    display: inline-block;
+    label{
+        font-size: $small-font;
+         font-weight: $bold;
+    }
+    }
+
+  .dataTables_filter{
+display: inline-block;
+margin-left: 50px;
+label{
+    font-size: $small-font;
+   font-weight: $bold;
+   input{
+    margin-left: 10px;
+   }
+}
+    }
+
+    table.dataTable {
+overflow-x: auto;
+background-color: gold;
+    }
+
+    .dataTables_info{
+        margin-top: 20px;
+font-size: $small-font;
+font-weight: $bold;
+text-align: center;
+    }
+
+
+.dataTables_paginate{
+    margin-top: 20px;
+    text-align: center;
+    .paginate_button{
+        padding: 10px 20px;
+        background-color: $primary-color;
+        color: $light;
+      margin: 0px 10px;
+    }
+    .current{
+ 
+        font-weight: $bold;
+        color: $dark;
+        background-color: transparent;
+        border: 1px solid #33333377;
+    }
+}
+
+
+
+}  
+
+

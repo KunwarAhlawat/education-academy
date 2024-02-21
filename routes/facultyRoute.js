@@ -1,14 +1,37 @@
 const express = require("express")
 const router = express.Router()
+const facultyContl = require("../controller/facultyController")
+
+ 
+const   upload_Multiple_Middleware  =  require("../middlewares/uploadMultipleMiddleware")
+
+router.get("/faculty" , (req, res)=>{
+     
+     res.render('admin/faculty' )
+})
+
+// create course
+router.post("/faculty" , upload_Multiple_Middleware  ,facultyContl.facultyCreate  )
+
+// update course
+router.put("/faculty_update/:id" , upload_Multiple_Middleware  , facultyContl.facultyUpdate  )
+
+
  
 
-router.get("/faculty/:id" , (req, res)=>{
-    const params = req.params.id
-    const facultyData = res.locals.commonData.Data.faculty;
+// get courses
+router.get("/feculties"  ,facultyContl.getAllfaculties  )
+ 
 
-    const faculty =  facultyData.find( faculty => faculty.facultyId === params)
+// get facuty by id 
+router.get("/faculty/:id"  , facultyContl.getFacultyById  )
 
-    res.render('faculty' , {faculty})
-})
+
+// delete faculty
+router.delete("/faculty_delete/:id"   ,facultyContl.deleteFaculty  )
+
+
+// faculty and course 
+router.get("/all_faculties"  , facultyContl.allFacultiesCourse)
 
 module.exports = router

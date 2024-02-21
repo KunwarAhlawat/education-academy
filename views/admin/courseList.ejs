@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css">
+   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+ 
+  <link rel="stylesheet" href="/css/style.css"><!-- <link rel="stylesheet" href="/css/style.css"> -->
+
+    <style>
+      .select2-container {
+    z-index: 11111;
+}
+      /* Add your custom styles here */
+      #myTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+      }
+    
+      #myTable th,
+      #myTable td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+    
+      #myTable th {
+        background-color: #f2f2f2;
+      }
+    
+      .select-checkbox {
+        width: 20px;
+      }
+    
+      .filters input {
+        width: 100%;
+        padding: 6px;
+        box-sizing: border-box;
+      }
+    
+      .dt-buttons {
+        margin-bottom: 20px;
+      }
+    
+      .buttons-copy,
+      .buttons-csv,
+      .buttons-excel,
+      .buttons-pdf,
+      .buttons-print {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+    </style>
+</head>
+
+<body>
+   
+    <main class="container-xxl admin-area">
+      <div class="row g-0">
+            <div class="col-2">
+
+              <%- include('partials/sidebar.ejs')%>
+            </div>
+    
+        <div class="col-10">
+          <%- include('partials/nav.ejs')%>
+    
+            <!-- add batch detail form -->
+      <section class="form-area">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-header">
+            <div class="form-title">
+              <h2>Add New Course</h2>
+              <!-- <p>Make Sure cross check all Details carefully Before Press Add Button</p> -->
+              </div>
+            <div class="form-submit">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourse">Add Course</button>
+            </div>
+            </div>
+           
+          </div>
+          <div class="col-12">
+
+    
+      
+          <!-- add batch detail form -->
+          <table id="myTable" class="table table-striped table-hover "></table>
+
+
+          <!-- edit modal -->
+          <div class="modal" id="myModal">
+           <div class="modal-dialog modal-xl">
+             <div class="modal-content">
+         
+               <!-- Modal Header -->
+               <div class="modal-header">
+                 <h4 class="modal-title">Edit Course</h4>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+               </div>
+         
+               <!-- Modal Body -->
+               <div id="myModalBody" class="modal-body">
+                 <div class="col-12">
+                   <form id="addCourseForm" class="custom-form">
+                     <!-- form main area -->
+                     <div class="row">
+                       <div class="col-md-8">
+                         <div class="form-main">
+                           <!-- course title  -->
+                           <!-- <div class="mb-3">
+                             <label for="name" class="form-label">Add Course Title</label>
+                             <input type="text" class="form-control" id="name" name="name" required>
+                           </div> -->
+         
+                           <div class="mb-3">
+                             <label for="id" class="form-label">Course id</label>
+                             <input type="text" name="id" class="form-control" id="id" required>
+                           </div>
+         
+                           <div class="mb-3">
+                             <label for="title" class="form-label">Course Title</label>
+                             <input type="text" name="title" class="form-control" id="title" required>
+                           </div>
+         
+                           <!-- course description -->
+                           <div class="mb-3">
+                             <label for="message" class="form-label">Course Content</label>
+                             <!-- <textarea class="form-control" id="message" name="message" rows="40"></textarea> -->
+                          
+                          
+                          <!-- content -->
+                          <div id="summernote" class="w-100"></div>
+                           </div>
+         
+                            
+                         </div>
+                       </div>
+                       <!-- course title -->
+         
+                       <!-- form side bar area -->
+                       <div class="col-md-4">
+                         <div class="form-sidebar">
+         
+                           <!-- select mode -->
+                           <!-- <div class="mb-3">
+                             <label class="form-label">Select Mode</label>
+                             <div class="d-flex">
+                               <div class="form-check">
+                                 <input class="form-check-input" name="studyMode" type="radio" id="onlineMode" value="Online"
+                                   checked>
+                                 <label class="form-check-label" for="onlineMode">
+                                   Online
+                                 </label>
+                               </div>
+                               <div class="form-check ms-3">
+                                 <input class="form-check-input" name="studyMode" type="radio" id="offlineMode"
+                                   value="Offline">
+                                 <label class="form-check-label" for="offlineMode">
+                                   Offline
+                                 </label>
+                               </div>
+                             </div>
+                           </div> -->
+                           <div class="mb-3">
+                            <label class="form-label">Select Mode</label>
+                            <div class="d-flex">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="studyMode" id="onlineMode" value="Online" checked>
+                                    <label class="form-check-label" for="onlineMode">Online</label>
+                                </div>
+                                <div class="form-check ms-3">
+                                    <input class="form-check-input" type="radio" name="studyMode" id="offlineMode" value="Offline">
+                                    <label class="form-check-label" for="offlineMode">Offline</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                           <!-- course duration -->
+                           <div class="mb-3">
+                             <label for="course-duration" class="form-label">Course Duration *</label>
+                             <input type="text" class="form-control" id="course-duration" name="duration"
+                               required>
+                           </div>
+         
+                           <!-- no of lecture Include -->
+                           <div class="mb-3">
+                             <label for="lecture-count" class="form-label">Lecture Count *</label>
+                             <input type="number" class="form-control" id="lecture-count" name="lectureCount" required>
+                           </div>
+                           <!-- price included -->
+                           <div class="mb-3">
+                             <label for="regular-price" class="form-label">Regular Price *</label>
+                             <input type="number" class="form-control" id="regular-price" name="regularPrice" required>
+                           </div>
+                           <!-- any discount -->
+                           <div class="mb-3">
+                             <label for="discount" class="form-label">Any Discount?</label>
+                             <input type="number" class="form-control" id="discount" name="discountedPrice">
+                           </div>
+                         </div>
+                         <div class="form-sidebar mt-4">
+                        
+                        
+                           <!-- add Image -->
+                           <div class="mb-3">
+                             <label for="file" class="form-label">Upload Image</label>
+                             <img width="300" id="image" src="" alt="">
+                             <input class="" type="file" id="file" name="file">
+                             <!-- <div id="fileLabel"></div> -->
+         
+                           </div>
+         
+                         </div>
+                       </div>
+                     </div>
+         
+                     <div class="form-submit">
+                       <button type="submit" class="btn btn-primary ms-auto">Save </button>
+                     </div>
+         
+                   </form>
+                 </div>
+               </div>
+         
+               <!-- Modal Footer -->
+               <!-- <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-primary">Save changes</button>
+               </div> -->
+         
+             </div>
+           </div>
+         </div>
+         
+
+          <!-- add course  modal -->
+          <div class="modal" id="addCourse">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Add Course</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+          
+                <!-- Modal Body -->
+                <div  class="modal-body">
+                  <div class="col-12">
+                    <form id="addCourseForm1" class="custom-form">
+                      <!-- form main area -->
+                      <div class="row">
+                        <div class="col-md-8">
+                          <div class="form-main">
+                            <!-- course title  -->
+                            <!-- <div class="mb-3">
+                              <label for="name" class="form-label">Add Course Title</label>
+                              <input type="text" class="form-control" id="name" name="name" required>
+                            </div> -->
+                            <div class="mb-3">
+                              <label for="title1" class="form-label">Course Title</label>
+                              <input type="text" name="title" class="form-control" id="title1" required>
+                            </div>
+  
+                            <!-- course description -->
+                            <div class="mb-3">
+                              <label for="message" class="form-label">Course Content</label>
+                              <!-- <textarea class="form-control" id="message" name="message" rows="40"></textarea> -->
+                           
+                           
+                           <!-- content -->
+                           <div id="summernote1" class="w-100"></div>
+                            </div>
+  
+                             
+                          </div>
+                        </div>
+                        <!-- course title -->
+  
+                        <!-- form side bar area -->
+                        <div class="col-md-4">
+                          <div class="form-sidebar">
+  
+                            <!-- select mode -->
+                            <div class="mb-3">
+                              <label class="form-label">Select Mode</label>
+                              <div class="d-flex">
+                                <div class="form-check">
+                                  <input class="form-check-input" name="studyMode" type="radio" id="onlineMode1" value="Online"
+                                    checked>
+                                  <label class="form-check-label" for="onlineMode1">
+                                    Online
+                                  </label>
+                                </div>
+                                <div class="form-check ms-3">
+                                  <input class="form-check-input" name="studyMode" type="radio" id="offlineMode1"
+                                    value="Offline">
+                                  <label class="form-check-label" for="offlineMode1">
+                                    Offline
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+  
+                            <!-- course duration -->
+                            <div class="mb-3">
+                              <label for="course-duration1" class="form-label">Course Duration *</label>
+                              <input type="text" class="form-control" id="course-duration1" name="duration"
+                                required>
+                            </div>
+  
+                            <!-- no of lecture Include -->
+                            <div class="mb-3">
+                              <label for="lecture-count1" class="form-label">Lecture Count *</label>
+                              <input type="number" class="form-control" id="lecture-count1" name="lectureCount" required>
+                            </div>
+                            <!-- price included -->
+                            <div class="mb-3">
+                              <label for="regular-price" class="form-label">Regular Price *</label>
+                              <input type="number" class="form-control" id="regular-price1" name="regularPrice" required>
+                            </div>
+                            <!-- any discount -->
+                            <div class="mb-3">
+                              <label for="discount1" class="form-label">Any Discount?</label>
+                              <input type="number" class="form-control" id="discount1" name="discountedPrice">
+                            </div>
+
+                            <!-- batches -->
+                            <div class="mb-3">
+                            <label for="multipleBatches" class="form-label">Batches</label>
+
+                            <select id="multipleBatches" multiple="multiple" name="batches" style="width: 200px;">
+                             
+                            </select>
+                          </div>
+
+                          <!-- faculty -->
+                          <div class="mb-3">
+                            <label for="multipleBatches1" class="form-label">Faculties</label>
+
+                            <select id="multipleBatches1" multiple="multiple" name="faculties" style="width: 200px;">
+                             
+                            </select>
+                          </div>
+                          </div>
+                          <div class="form-sidebar mt-4">
+
+                           
+                            <!-- select batches -->
+                            <!-- <div class="mb-3 custom-checkbox">
+                              <label for="batches" class="form-label">Select Batches</label>
+                              <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown"
+                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                  Select Batches
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
+                                  <li>
+                                    <input class="form-check-input" type="checkbox" value="Morning Batch"
+                                      id="morningBatch" name="batches[]">
+                                    <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to
+                                      12:00)</label>
+                                  </li>
+                                  <li>
+                                    <input class="form-check-input" type="checkbox" value="Afternoon Batch"
+                                      id="afternoonBatch" name="batches[]">
+                                    <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to
+                                      3:00PM)</label>
+                                  </li>
+                                  <li>
+                                    <input class="form-check-input" type="checkbox" value="Evening Batch"
+                                      id="eveningBatch" name="batches[]">
+                                    <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to
+                                      7:00PM)</label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div> -->
+  
+                            <!-- select faculty -->
+                            <!-- <div class="mb-3 custom-checkbox">
+                              <label for="batches" class="form-label">Select Faculty</label>
+                              <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown"
+                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                  Select Faculty
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
+                                  <li>
+                                    <input class="form-check-input" type="checkbox" value="Morning Batch"
+                                      id="morningBatch" name="batches[]">
+                                    <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to
+                                      12:00)</label>
+                                  </li>
+                                  <li>
+                                    <input class="form-check-input" type="checkbox" value="Afternoon Batch"
+                                      id="afternoonBatch" name="batches[]">
+                                    <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to
+                                      3:00PM)</label>
+                                  </li>
+                                  <li>
+                                    <input class="form-check-input" type="checkbox" value="Evening Batch"
+                                      id="eveningBatch" name="batches[]">
+                                    <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to
+                                      7:00PM)</label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div> -->
+  
+                            <!-- select faqs -->
+                            <!-- <div class="mb-3 custom-checkbox">
+                              <label for="batches" class="form-label">Select Faq</label>
+                              <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="batchesDropdown"
+                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                  Select FAQ
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="batchesDropdown">
+                                  <li>
+                                    <input class="form-check-input" type="checkbox" value="Morning Batch"
+                                      id="morningBatch" name="batches[]">
+                                    <label class="form-check-label" for="morningBatch">Morning Batch (9:00AM to
+                                      12:00)</label>
+                                  </li>
+                                  <li>
+                                    <input class="form-check-input" type="checkbox" value="Afternoon Batch"
+                                      id="afternoonBatch" name="batches[]">
+                                    <label class="form-check-label" for="afternoonBatch">Afternoon Batch (12:00 to
+                                      3:00PM)</label>
+                                  </li>
+                                  <li>
+                                    <input class="form-check-input" type="checkbox" value="Evening Batch"
+                                      id="eveningBatch" name="batches[]">
+                                    <label class="form-check-label" for="eveningBatch">Evening Batch (4:00PM to
+                                      7:00PM)</label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div> -->
+  
+                            <!-- add Image -->
+                            <div class="mb-3">
+                              <label for="file" class="form-label">Upload Image</label>
+                              <input class="" type="file" id="file1" name="file">
+                            </div>
+  
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- faq -->
+                      <div class="row">
+                        <div class="col">
+                           
+                        </div>
+                        <div class="col-12" id="dynamicContainer">
+                        </div>
+                        <div class="col">
+                          <button type="button" onclick="createDynamicElement()">Add FAQ +</button>
+                        </div>
+
+                      </div>
+                      <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">Add Course</button>
+                      </div>
+  
+                    </form>
+                  </div>
+                  </div>
+                </div>
+          
+                <!-- Modal Footer -->
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+          
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      
+      </section>
+       
+      
+     
+    </div>
+  </div>
+  </main>
+
+
+
+ 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Include DataTables -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" integrity="sha512-hUhvpC5f8cgc04OZb55j0KNGh4eh7dLxd/dPSJ5VyzqDWxsayYbojWyl5Tkcgrmb/RVKCRJI1jNlRbVP4WWC4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js" integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+ 
+
+   
+  <script>
+
+//  create new elemetn faq
+    // Counter to keep track of the FAQ number
+    var faqCounter = 1;
+
+    function createDynamicElement() {
+      // Create the outer 'div' element with class 'col'
+      var outerDiv = document.createElement('div');
+      outerDiv.className = 'col';
+
+      // Create the inner 'div' element with class 'mb-3' for the question
+      var questionDiv = document.createElement('div');
+      questionDiv.className = 'mb-3';
+
+      // Create the 'label' element for the question
+      var questionLabel = document.createElement('label');
+      questionLabel.htmlFor = 'faq';
+      questionLabel.className = 'form-label';
+      questionLabel.innerText = 'FAQ - ' + faqCounter;
+
+      // Create the 'input' element for the question
+      var questionInput = document.createElement('input');
+      questionInput.type = 'text';
+      questionInput.name = 'faq';
+      questionInput.className = 'form-control';
+      questionInput.id = 'faq';
+
+      // Append the label and input for the question to the question div
+      questionDiv.appendChild(questionLabel);
+      questionDiv.appendChild(questionInput);
+
+      // Create the inner 'div' element with class 'mb-3' for the answer
+      var answerDiv = document.createElement('div');
+      answerDiv.className = 'mb-3';
+
+      // Create the 'label' element for the answer
+      var answerLabel = document.createElement('label');
+      answerLabel.htmlFor = 'Answer';
+      answerLabel.className = 'form-label';
+      answerLabel.innerText = 'Answer';
+
+      // Create the 'input' element for the answer
+      var answerInput = document.createElement('input');
+      answerInput.type = 'text';
+      answerInput.name = 'Answer';
+      answerInput.className = 'form-control';
+      answerInput.id = 'Answer';
+
+      // Append the label and input for the answer to the answer div
+      answerDiv.appendChild(answerLabel);
+      answerDiv.appendChild(answerInput);
+
+      // Append the question div and answer div to the outer div
+      outerDiv.appendChild(questionDiv);
+      outerDiv.appendChild(answerDiv);
+
+      // Increment the FAQ counter for the next entry
+      faqCounter++;
+
+      // Append the outer div to the dynamic container
+      var dynamicContainer = document.getElementById('dynamicContainer');
+      dynamicContainer.appendChild(outerDiv);
+    }
+
+ // delte course table  
+async function deleteCourse(id) {
+    const confirmed = await Swal.fire({
+        title: 'Are you sure?',
+        text: 'You will not be able to recover this course!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, delete it!'
+    });
+
+    if (confirmed.isConfirmed) {
+        try {
+            const response = await $.ajax({
+                url: `/admin/course_delete/${id}`,
+                type: 'DELETE'
+            });
+
+            // console.log('Course Data:', response);
+
+            await Swal.fire({
+                title: 'Deleted!',
+                text: 'The course has been deleted.',
+                icon: 'success'
+            });
+
+            // Reload the page after a successful request
+            window.location.reload();
+        } catch (error) {
+            console.error('Error:', error);
+
+            await Swal.fire({
+                title: 'Error!',
+                text: 'An error occurred while deleting the course.',
+                icon: 'error'
+            });
+        }
+    }
+}
+
+
+//  edit course table
+    function createModal(id) {
+    // Ajax request to fetch course data
+    $.ajax({
+      url: `/admin/course/${id}`, // Assuming this route exists on your server
+      type: "GET",
+      success: function (data, status) {
+        // console.log("Course Data:", data);
+
+   
+         $('#summernote').summernote('code', data.content);
+
+        $('[name="title"]').val(data.title);
+  
+        //  $('[name="studyMode"]').val(data.studyMode);
+        //  $('[name="studyMode"]').prop('checked', false); // Uncheck all radio buttons
+
+          if (data.studyMode === 'Online') {
+              $('#onlineMode').prop('checked', true);
+          } else if (data.studyMode === 'Offline') {
+              
+              $("#offlineMode").prop("checked", true);
+
+          }
+          // Assuming 'duration' is a text field
+        $('[name="id"]').val(data.courseId);
+
+        // Assuming 'duration' is a text field
+        $('[name="duration"]').val(data.duration);
+
+        // Assuming 'lectureCount' is a number field
+        $('[name="lectureCount"]').val(data.lecturesCount);
+
+        // Assuming 'regularPrice' is a number field
+        $('[name="regularPrice"]').val(data.regularPrice);
+
+        // Assuming 'discountedPrice' is a number field
+        $('[name="discountedPrice"]').val(data.discountedPrice);
+       
+          console.log(data.imageSrc)
+          $("#image").attr("src", data.imageSrc);
+
+         $('#fileLabel').text(data.imageSrc); // Display existing file name
+
+
+        const myModal = new bootstrap.Modal(document.getElementById('myModal'));
+        myModal.show();
+
+          },
+          error : function(error){
+            console.log(error)
+          }
+         })
+  
+    }
+
+
+</script>
+
+
+  <script type="text/javascript">
+$(document).ready(function() {
+    let courses = <%-JSON.stringify(courses)%> 
+     // If there is no data, show table header and "Data not found" message
+   // If there is no data, show table header and "Data not found" message
+
+    
+ 
+    //  select2 for batches
+   $('#multipleBatches').select2({
+    placeholder: 'Select Batches',
+    ajax: {
+      url: '/admin/all_batches',  // Replace with the actual API endpoint
+      dataType: 'json',
+      delay: 250,
+      processResults: function (data) {
+        // Format the data into Select2-compatible format
+        // console.log("data" , data)
+        return {
+          results: $.map(data, function (batch) {
+            // console.log("dataa" , batch.title)
+            return {
+              id: batch.id,
+              text: batch.title // Adjust based on your batch object structure
+            };
+          })
+        };
+      },
+      cache: true
+    }
+  });
+    
+      //  select2 for faculty
+
+  $('#multipleBatches1').select2({
+    placeholder: 'Select Batches',
+    ajax: {
+      url: '/admin/all_faculties',  // Replace with the actual API endpoint
+      dataType: 'json',
+      delay: 250,
+      processResults: function (data) {
+        // Format the data into Select2-compatible format
+        // console.log("data" , data)
+        return {
+          results: $.map(data, function (faculty) {
+            // console.log("dataa" , faculty.title)
+            return {
+              id: faculty.facultyId,
+              text: faculty.name // Adjust based on your faculty object structure
+            };
+          })
+        };
+      },
+      cache: true
+    }
+  });
+    
+  
+  
+  if(courses.length === 0) {
+        $('#myTable').append('<caption>Data not found</caption>');
+    }
+
+
+    // console.log(courses)
+    $('#myTable').DataTable( {
+        data: courses,
+        columns: [
+            { data: 'courseId', title: 'Course ID' },
+            { data: 'title', title: 'Title' },
+            { data: 'duration', title: 'Duration' },
+            { data: 'regularPrice', title: 'Regular Price' },
+            { data: 'studyMode', title: 'Study Mode' },
+            { 
+                data: null,
+                title: 'Actions',
+                render: function(data, type, row) {
+                     // Customize this part to add edit and delete buttons
+                    return '<button onclick="createModal(\'' + data.courseId + '\')"   class="btn btn-primary">Edit</button> <button onclick="deleteCourse(\'' + data.courseId + '\')" class="btn btn-danger delete-btn">Delete</button>';
+                    // return `<button onclick="createModal('${encodeURIComponent(JSON.stringify(data))}')" class="btn btn-primary">Edit</button> <button class="btn btn-danger delete-btn">Delete</button>`;
+                    // return '<button onclick="createModal(' + JSON.stringify(data) + ')" class="btn btn-primary">Edit</button> <button class="btn btn-danger delete-btn">Delete</button>';
+
+                  }
+            }
+        ],
+        
+    });
+
+
+    // edit course
+    $('#summernote').summernote({
+        tabsize: 2,
+        height: 400,
+        fontNames: ['Arial', 'Arial Black', 'Courier New', 'Times New Roman', 'Verdana'],
+
+        toolbar: [
+          // Font Style
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+
+          // Font
+          ['font', ['strikethrough', 'superscript', 'subscript', 'fontsize', 'color']],
+
+          // Lists
+          ['para', ['ul', 'ol', 'paragraph']],
+
+          // Insert
+          ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+
+          // Formatting
+          ['format', ['normal', 'blockquote', 'code']],
+
+          // Font Family (custom option)
+          ['fontfamily', ['fontname']],
+
+          // Misc
+          ['height', ['height']],
+
+          // Special Characters
+          ['insert', ['symbol', 'emoji']],
+
+          // View
+          ['view', ['fullscreen', 'codeview', 'help']],
+        ],
+
+      });
+
+      // =================================== update
+      $("#addCourseForm").validate({
+  submitHandler: async function (form, event) {
+    event.preventDefault();
+
+    let id = $('[name="id"]').val();
+    let formData = new FormData();
+    let form_data = $("#addCourseForm").serializeArray();
+
+    let content = $('#summernote').summernote('code');
+    let studyMode = $('[name="studyMode"]:checked').val();
+    formData.append("content", content);
+    formData.append("studyMode", studyMode);
+
+    $.each(form_data, function (key, input) {
+      if (input.name !== 'studyMode') {
+        formData.append(input.name, input.value);
+      }
+    });
+
+    let files = $("#file")[0].files;
+
+    if (files.length > 0) {
+      for (let i = 0; i < files.length; i++) {
+        formData.append('file', files[i]);
+      }
+    }
+
+    try {
+      const response = await $.ajax({
+        url: `/admin/course_update/${id}`,
+        type: 'put',
+        data: formData,
+        contentType: false,
+        processData: false
+      });
+
+      // Course found and updated successfully
+      Swal.fire({
+        title: 'Success',
+        text: 'Course updated successfully!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      }).then(() => {
+        window.location.reload();
+      });
+    } catch (error) {
+      console.error('Error:', error);
+
+      // Handle different error scenarios
+      if (error.responseJSON && error.responseJSON.error === 'Course not found.') {
+        // Course not found
+        Swal.fire({
+          title: 'Error',
+          text: 'Course not found.',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
+      } else {
+        // Other unexpected errors
+        Swal.fire({
+          title: 'Error',
+          text: 'An error occurred while updating the course.',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
+      }
+    }
+  }
+});
+      // old
+      // $("#addCourseForm").validate({
+      //   submitHandler: function (form, event) {
+      //     event.preventDefault();
+      //     alert("hi");
+        
+      //     event.preventDefault();
+      //     alert("hi");
+      //     let id = $('[name="id"]').val();
+      //     let formData = new FormData();
+      //     let form_data = $("form").serializeArray();
+
+      //     let content = $('#summernote').summernote('code');
+      //     let studyMode = $('[name="studyMode"]:checked').val();
+      //     console.log(studyMode)
+      //     formData.append("content", content);
+      //     formData.append("studyMode", studyMode);
+ 
+         
+
+          
+      //     $.each(form_data, function (key, input) {
+      //         // Exclude the field with the name 'studyMode'
+      //         if (input.name !== 'studyMode') {
+      //             formData.append(input.name, input.value);
+      //         }
+      //     });
+
+      //     console.log($("#file")[0])
+      //     let files = $("#file")[0].files;  // Use [0] to get the DOM element from jQuery object
+
+      //     if (files.length > 0) {
+      //       for (let i = 0; i < files.length; i++) {
+
+
+      //         formData.append('file', files[i]);
+      //       }
+      //     }
+
+      //     // The rest of your code for AJAX submission
+      //     console.log("file ", file);
+      //     console.log("foromdata", form_data);
+      //     console.log("data", formData);
+      //     // The rest of your code for AJAX submission
+
+         
+      //     $.ajax({
+      //       url: `/admin/course_update/${id}`,
+      //       type: 'put',
+      //       data: formData,
+      //       contentType: false,   // Don't set contentType
+      //       processData: false,  // Don't process the data
+      //       success: function (response) {
+      //         console.log('Success:', response);
+      //          // Reload the page after a successful request
+      //          window.location.reload();
+
+      //       },
+      //       error: function (error) {
+      //         console.error('Error:', error);
+      //       }
+      //     });
+
+      //   }
+      // });
+
+ 
+
+
+      // add course =========================================
+      $('#summernote1').summernote({
+        tabsize: 2,
+        height: 400,
+        fontNames: ['Arial', 'Arial Black', 'Courier New', 'Times New Roman', 'Verdana'],
+
+        toolbar: [
+          // Font Style
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+
+          // Font
+          ['font', ['strikethrough', 'superscript', 'subscript', 'fontsize', 'color']],
+
+          // Lists
+          ['para', ['ul', 'ol', 'paragraph']],
+
+          // Insert
+          ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+
+          // Formatting
+          ['format', ['normal', 'blockquote', 'code']],
+
+          // Font Family (custom option)
+          ['fontfamily', ['fontname']],
+
+          // Misc
+          ['height', ['height']],
+
+          // Special Characters
+          ['insert', ['symbol', 'emoji']],
+
+          // View
+          ['view', ['fullscreen', 'codeview', 'help']],
+        ],
+
+      });
+
+
+      $("#addCourseForm1").validate({
+        submitHandler: async function (form, event) {
+          event.preventDefault();
+
+          let formData = new FormData();
+          let form_data = $("#addCourseForm1").serializeArray();
+
+          let content = $('#summernote1').summernote('code');
+
+          formData.append("content", content);
+
+          $.each(form_data, function (key, input) {
+            formData.append(input.name, input.value);
+          });
+
+          let files = $("#file1")[0].files;
+
+          if (files.length > 0) {
+            for (let i = 0; i < files.length; i++) {
+              formData.append('file', files[i]);
+            }
+          }
+
+          try {
+            const response = await $.ajax({
+              url: '/admin/course',
+              type: 'POST',
+              data: formData,
+              contentType: false,
+              processData: false,
+            });
+
+            // If the request is successful, show a success message
+            await Swal.fire({
+              title: 'Success',
+              text: 'Course added successfully!',
+              icon: 'success',
+            });
+
+            // You can perform additional actions here if needed
+            window.location.reload();
+            console.log('Success:', response);
+          } catch (error) {
+            // If the request fails, show an error message
+            await Swal.fire({
+              title: 'Error',
+              text: 'An error occurred while adding the course.',
+              icon: 'error',
+            });
+
+            console.error('Error:', error);
+          }
+        }
+      });
+
+
+});
+
+  
+    
+  </script>
+  
+  
+</body>
+
+</html>

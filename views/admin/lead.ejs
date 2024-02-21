@@ -1,34 +1,301 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <link rel="stylesheet" href="/css/style.css">
-   <!-- Option 1: Include in HTML -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  </head>
 
-  <body>
-<main class="container-xxl admin-area">
-  <div class="row g-0">
-        
-    <%- include('partials/sidebar.ejs')%>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
 
- <div class="col">
-   <%- include('partials/nav.ejs')%>
-     
-    
-      
-     
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css">
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.4/css/select.dataTables.min.css">
+
+  <link rel="stylesheet" href="/css/style.css"><!-- <link rel="stylesheet" href="/css/style.css"> -->
+
+ 
+  <style>
+    .select2-container {
+  z-index: 11111;
+}
+    /* Add your custom styles here */
+    #myTable {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+  
+    #myTable th,
+    #myTable td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+  
+    #myTable th {
+      background-color: #f2f2f2;
+    }
+  
+    .select-checkbox {
+      width: 20px;
+    }
+  
+    .filters input {
+      width: 100%;
+      padding: 6px;
+      box-sizing: border-box;
+    }
+  
+    .dt-buttons {
+      margin-bottom: 20px;
+    }
+  
+    .buttons-copy,
+    .buttons-csv,
+    .buttons-excel,
+    .buttons-pdf,
+    .buttons-print {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="admin-area">
+    <div class="row g-0">
+      <div class="col-2">
+      <%- include('partials/sidebar.ejs')%>
     </div>
-  </div>
-  </main>
+   <div class="col-10">
+     <%- include('partials/nav.ejs')%>
 
+     <!--  Lead detail area start -->
+        <section class="form-area">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-header">
+                    <div class="form-title">
+                      <h2>Lead Detail</h2>
+                      <!-- <p>Make Sure cross check all Details carefully Before Press Add Button</p> -->
+                    </div>
+                    
+                  </div>
+
+                </div>
+                <div class="col-12">
+
+                  <!-- Add a loader element -->
+                  <div id="loader" class="loader">Loading...</div>
+
+                  <!-- Add a table container with an ID -->
+                  <table id="myTable" class="table table-striped table-hover "></table>
+
+
+                  <!-- Add a message container -->
+                  <div id="noDataMessage" class="no-data-message">No Data Found</div>
+
+                  <!-- add course  modal -->
+                
+                </div>
+              </div>
+
+          </section>
+        </div>
+   </main>
+      
+
+
+   
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Include DataTables -->
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"
+    integrity="sha512-hUhvpC5f8cgc04OZb55j0KNGh4eh7dLxd/dPSJ5VyzqDWxsayYbojWyl5Tkcgrmb/RVKCRJI1jNlRbVP4WWC4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js"
+    integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
+
+   
+
+
+  <script>
+    $(document).ready(function () {
+      // table
+      $.ajax({
+        url: '/getStudentsTableData',
+        method: 'GET',
+        beforeSend: function () {
+          // Show loader before making the AJAX request
+          $('#loader').show();
+          // Hide the message container
+          $('#noDataMessage').hide();
+        },
+        success: function (data) {
+          // Hide loader after successful data retrieval
+          $('#loader').hide();
+  
+          if (data.length > 0) {
+            // Show the DataTable only if there is data
+            let columns = Object.keys(data[0]).map(function (key) {
+              let columnName;
+              switch (key) {
+                case "mobileNum":
+                  columnName = "CONTACT";
+                  break;
+                case "createdAt":
+                  columnName = "DATE";
+                  break;
+                default:
+                  columnName = key;
+              }
+              return {
+                data: key,
+                title: columnName.toUpperCase(),
+                render: function (data, type, row) {
+                  // Check if 'experience' is null or undefined, display 'N/A' in such cases
+                  return data ? data : 'N/A';
+                }
+              };
+            });
+  
+            // Add a checkbox column
+            columns.unshift({
+              data: null,
+              className: 'select-checkbox',
+              targets: 0,
+              render: function () {
+                return ''; // Placeholder for the checkbox
+              }
+            });
+  
+            const table = $('#myTable').DataTable({
+              data: data,
+              pageLength: 20,
+              scrollY: 500,
+             
+              select: {
+                style: 'os',
+              selector: 'td:first-child',
+              style: 'multi'
+              },
+              dom: 'Bfrtip',
+              columns: columns,
+              columnDefs: [
+                {
+                    targets: 8, // Assuming 'createdAt' is the 10th column (indexing is 0-based)
+                    render: function(data, type, row) {
+                        // Format the date using moment.js or other date formatting libraries
+                        // var columnName = table.column(9).header().innerText; // Get the column name
+                        return   moment(data).format('YYYY-MM-DD HH:mm:ss');
+                    }
+                }
+                // Add more columnDefs as needed
+            ],
+              buttons: [
+                 {
+                  extend: 'copy',
+                  title: 'Registered Students List',
+                  exportOptions: {
+                    columns: ':visible'
+                  }
+                },
+                {
+                  extend: 'csv',
+                  title: 'Registered Students List',
+                  exportOptions: {
+                    columns: ':visible'
+                  }
+                },
+                {
+                  extend: 'excel',
+                  title: 'Registered Students List',
+                  exportOptions: {
+                    columns: ':visible'
+                  }
+                },
+                {
+                  extend: 'pdf',
+                  title: 'Registered Students List',
+                  exportOptions: {
+                    columns: ':visible'
+                  }
+                },
+                {
+                  extend: 'print',
+                  title: 'Registered Students List',
+                  exportOptions: {
+                    columns: ':visible'
+                  }
+                }
+              ],
+              
+            
+            });
+  
+            // Hide specific columns by default
+            table.column(1).visible(false);
+            table.column(8).visible(false);
+            table.column(7).visible(false);
+  
+            // Handle checkbox selection change event
+            table.on('select', function (e, dt, type, indexes) {
+              // Implement your logic here when checkboxes are selected
+            });
+  
+            // Handle checkbox deselection change event
+            table.on('deselect', function (e, dt, type, indexes) {
+              // Implement your logic here when checkboxes are deselected
+            });
+  
+          } else {
+            // If no data is found, display the message container
+            $('#noDataMessage').show();
+          }
+        },
+        error: function () {
+          // Hide loader and display an error message if the request fails
+          $('#loader').hide();
+          $('#noDataMessage').text('Error fetching data. Please try again later.').show();
+        }
+      });
+    });
+  </script>
   
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+
+
+</body>
+
 </html>
-    

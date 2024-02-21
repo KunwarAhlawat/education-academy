@@ -32,7 +32,7 @@ const courseModel = sequelize.define('Course', {
     studyMode: {
         type: DataTypes.STRING
     },
-    imgSrc: {
+    imageSrc: {
         type: DataTypes.STRING
     }
 } 

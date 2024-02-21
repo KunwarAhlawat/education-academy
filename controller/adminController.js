@@ -1,4 +1,6 @@
 const studentModel = require("../modal/RegisterStudent")
+const counsellingModal = require("../modal/CounsellingModal")
+const purchaseModal = require("../modal/PurchaseModal")
   
 function registerStudents(req, res) {
   const data = req.body;
@@ -63,6 +65,7 @@ function getStudents(req, res ){
       res.render("admin", {
          studentData: data,
       });
+      
     })
     .catch((err) => console.log(err));
   } else {
@@ -81,4 +84,30 @@ function getStudentsTableData(req, res ){
   })
   .catch((err) => console.log(err));
 }
-module.exports = { registerStudents  , getStudents ,getStudentsTableData};
+
+
+function getCounsellingData(req, res ){
+  
+  counsellingModal.findAll()
+  .then((data) => {
+    // console.log("data1" , data);
+    res.status(200).json(data);
+  })
+  .catch((err) => console.log(err));
+}
+
+
+// purchase api 
+function getPurchaseData( req , res){
+  purchaseModal.findAll()
+  .then((data) => {
+    // console.log("data1" , data);
+    res.status(200).json(data);
+  })
+  .catch((err) => console.log(err));
+}
+
+
+module.exports = { registerStudents  ,getPurchaseData, getCounsellingData , getStudents ,getStudentsTableData};
+
+ 

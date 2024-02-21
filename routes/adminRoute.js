@@ -15,6 +15,8 @@ router.get('/admin', adminContl.getStudents);
 
 router.get('/getStudentsTableData', adminContl.getStudentsTableData);
 
+//  get courselling data
+router.get('/get_couselling_data', adminContl.getCounsellingData);
 
 
 // ============================== counselling form ============================

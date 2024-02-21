@@ -1,11 +1,15 @@
 const express = require("express")
 const setCommonData = require("./middlewares/dataMiddleware")
+const courseModel = require("./modal/CourseModal");
+
 const session = require('express-session');
 const ejs = require("ejs")
 const path = require("path")
+const cors = require('cors');
 
 const app = express()
 
+app.use(cors());
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended : false}))
 app.use(express.json())
@@ -23,6 +27,27 @@ app.use(session({
       maxAge: 3600000, // 1 hour in milliseconds
     },
   }));
+  
+
+  app.get('*', async (req, res, next) => {
+    try {
+       const courses = await courseModel.findAll();
+   
+      if (courses) {
+        res.locals.courses = courses;
+         
+       } else {
+        res.locals.courses = [];
+      }
+  
+      // Call the next middleware or proceed with the response
+      next();
+    } catch (error) {
+      console.error('Error fetching courses:', error);
+      // Handle the error, for example, send a 500 Internal Server Error response
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
   
 
 // routes 
@@ -48,6 +73,8 @@ const leadAdminRoute = require('./routes/admin/lead');
 const purchaseAdminRoute = require('./routes/admin/purchase');
 const studentAdminRoute = require('./routes/admin/student');
 const batchAdminRoute = require('./routes/admin/batch');
+const thanksAdminRoute = require('./routes/admin/thanks');
+const orderAdminRoute = require('./routes/admin/createOrder');
  const notFoundRoute = require("./routes/notFoundRoute")
 
 
@@ -70,10 +97,12 @@ app.use('/admin', leadAdminRoute);
 app.use('/admin', purchaseAdminRoute);
 app.use('/admin', studentAdminRoute);
 app.use('/admin', batchAdminRoute);
+app.use('/admin', thanksAdminRoute);
+app.use('/admin', orderAdminRoute);
 
 app.use('/', contactRoute);
 
-app.use("/" , notFoundRoute)
+app.use("*" , notFoundRoute)
 
 const port = 3000
 
