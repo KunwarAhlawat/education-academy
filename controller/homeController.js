@@ -5,7 +5,26 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 
 // get all courses
- 
+const homePage = async (req, res) => {
+    try {
+         
+
+        return res.render("home");
+
+    //   return res.render("home" , { courses: res.locals.courses })
+        // return res.json({ "courses": courses });
+    } catch (error) {
+        console.error("Error fetching courses:", error);
+  
+        // Check if the error is a Sequelize validation error
+        if (error.name === 'SequelizeValidationError') {
+            return res.status(400).json({ "error": "Validation error", "details": error.errors });
+        }
+  
+         // Handle other types of errors
+        return res.status(500).json({ "error": "Internal server error" });
+    }
+  };
 
       // get all courses with separate pagination for online and offline
 const getAllCourses = async (req, res) => {
@@ -56,24 +75,55 @@ const getAllCourses = async (req, res) => {
         // You can include pagination information in the response if needed
         const totalOfflineCount = await courseModel.count({ where: { studyMode: "Offline" } });
         const totalOnlineCount = await courseModel.count({ where: { studyMode: "Online" } });
-
-        return res.render("home", {
-            courses,
-            onlineCourses,
-            offlineCourses,
-            offlinePagination: {
-                totalItems: totalOfflineCount,
-                totalPages: Math.ceil(totalOfflineCount / offlinePageSize),
-                currentPage: offlinePage,
-                pageSize: offlinePageSize,
+     
+        return res.json({
+            allCourses: {
+                courses,
+                pagination: {
+                    totalItems: courses.length,  // Assuming you want to include total items for all courses
+                    totalPages: Math.ceil(courses.length / pageSize),  // Adjust as needed
+                    currentPage: page,
+                    pageSize,
+                },
             },
-            onlinePagination: {
-                totalItems: totalOnlineCount,
-                totalPages: Math.ceil(totalOnlineCount / onlinePageSize),
-                currentPage: onlinePage,
-                pageSize: onlinePageSize,
+            onlineCourses: {
+                courses: onlineCourses,
+                pagination: {
+                    totalItems: totalOnlineCount,
+                    totalPages: Math.ceil(totalOnlineCount / onlinePageSize),
+                    currentPage: onlinePage,
+                    pageSize: onlinePageSize,
+                },
+            },
+            offlineCourses: {
+                courses: offlineCourses,
+                pagination: {
+                    totalItems: totalOfflineCount,
+                    totalPages: Math.ceil(totalOfflineCount / offlinePageSize),
+                    currentPage: offlinePage,
+                    pageSize: offlinePageSize,
+                },
             },
         });
+        
+
+        // return res.render("home", {
+        //     courses,
+        //     onlineCourses,
+        //     offlineCourses,
+        //     offlinePagination: {
+        //         totalItems: totalOfflineCount,
+        //         totalPages: Math.ceil(totalOfflineCount / offlinePageSize),
+        //         currentPage: offlinePage,
+        //         pageSize: offlinePageSize,
+        //     },
+        //     onlinePagination: {
+        //         totalItems: totalOnlineCount,
+        //         totalPages: Math.ceil(totalOnlineCount / onlinePageSize),
+        //         currentPage: onlinePage,
+        //         pageSize: onlinePageSize,
+        //     },
+        // });
 
     //   return res.render("home" , { courses: res.locals.courses })
         // return res.json({ "courses": courses });
@@ -120,4 +170,4 @@ const getAllCourses = async (req, res) => {
 //         return res.status(500).json({ "error": "Internal server error" });
 //     }
 //   };
-module.exports = {  getAllCourses};
+module.exports = {  getAllCourses ,homePage};

@@ -10,5 +10,7 @@ const homeCtrl = require("../controller/homeController")
 // })
 
 
-router.get("/" ,  homeCtrl.getAllCourses )
+router.get("/" ,  homeCtrl.homePage )
+
+router.get("/course_data" ,  homeCtrl.getAllCourses )
 module.exports = router 
