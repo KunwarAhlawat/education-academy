@@ -131,12 +131,10 @@
                                 </p>
                                 <div class="included-text mt-3 ">
                                     <ul class="left-text">
-                                   
-
                                             <li><i class="bi bi-check-square"></i><span><strong>Duration :</strong>
                                                     <%= course.duration %> 
                                                 </span> </li>
-                                                <li><i class="bi bi-check-square"></i><span><strong>Study Mode :</strong>
+                                                <li><i class="bi bi-check-square"></i><span><strong>Mode :</strong>
                                                     <%= course.studyMode %> 
                                                 </span> </li>
                                             
@@ -146,13 +144,7 @@
                                             <li><i class="bi bi-check-square"></i><span><strong>Lectures :</strong>
                                                 <%= course.lecturesCount %>
                                                 </span></li>
-
-                                       
-
-               
                                     </ul>
-
-
                                 </div>
                              
                             </div>
@@ -168,10 +160,7 @@
                                                 </li>
                                         <% } else { %>
                                             <div></div>
-                                        <% } %>
-                                  
-                                    
-                                    
+                                        <% } %>      
                                 </ul>
                             </div>
                             <hr>
@@ -180,7 +169,6 @@
                                     class="exploreNow">Explore</button></a>
                                 <a href="/order/<%= course.courseId %>"> <button class="buyNow">Buy
                                         Now</button></a>
-
                             </div>
 
                         </div>
@@ -264,7 +252,7 @@
                                             <li><i class="bi bi-check-square"></i><span><strong>Duration :</strong>
                                                     <%= course.duration %> 
                                                 </span> </li>
-                                                <li><i class="bi bi-check-square"></i><span><strong>Study Mode :</strong>
+                                                <li><i class="bi bi-check-square"></i><span><strong>Study :</strong>
                                                     <%= course.studyMode %> 
                                                 </span> </li>
                                             
