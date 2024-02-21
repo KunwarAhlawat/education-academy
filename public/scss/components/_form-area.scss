@@ -1,4 +1,5 @@
 .form-area{
+
     padding: 20px;
     .form-header{
         display: flex;
@@ -11,7 +12,7 @@
         }
     }
     .form-body{
-        background-color: green;
+ 
         .form-main{
            
         }
@@ -29,6 +30,7 @@
 .dataTables_wrapper{
     overflow-x: auto;
     overflow-y: hidden;
+    width: 100%;
   margin-top:20px;
   padding-bottom: 40px;
    
@@ -39,6 +41,7 @@
          font-weight: $bold;
     }
     }
+
 
   .dataTables_filter{
 display: inline-block;
@@ -51,11 +54,30 @@ label{
    }
 }
     }
+    .dt-buttons{
+        display: inline-block;
+      
+ 
+        gap: 10px;
+        padding: 10px;
+        button{
+            background-color: $accent-color;
+            color: $light;
+            border: 0;
+            padding: 5px 10px;
 
-    table.dataTable {
-overflow-x: auto;
-background-color: gold;
+        }
     }
+       
+td:last-child{
+    height: 100%;
+display: flex;
+    button{
+        margin: 4px;
+    }
+       }
+    
+
 
     .dataTables_info{
         margin-top: 20px;
@@ -84,7 +106,6 @@ text-align: center;
 }
 
 
-
-}  
+}
 
 
