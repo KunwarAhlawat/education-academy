@@ -18,7 +18,11 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Education Academy</title>
 </head>
-
+<style>
+    .pagination {
+        justify-content: center;
+    }
+</style>
 <body>
 
     <%- include('partials/header.ejs' )%>
@@ -100,26 +104,67 @@
         <!-- stat section end -->
 
         <!-- course area start(online) -->
-        <div class="row " id="online_courses_container">
-            <!-- Rendered online courses will be dynamically added here -->
-        </div>
+        <section class="home-course-area online section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-title">
+                            <h2 class="mb-2">ONLINE COURSES</h2>
+                            <p class="section-subtitle">Education Academy is preparing students for their dream job.
+                                Scroll down to discover the specific preparation you need</p>
 
-        <nav aria-label="Page navigation example">
-            <ul class="pagination" id="pagination-container">
-                <!-- Pagination buttons will be added here -->
-            </ul>
-        </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rendered online courses will be dynamically here -->
+                <div class="row" id="online_courses_container">
+                </div>
 
-        <!-- course area start(online) -->
-        <div class="row " id="offline_courses_container">
-            <!-- Rendered online courses will be dynamically added here -->
-        </div>
+                <div class="row text-center">
+                    <div class="col ">
+                        <nav aria-label="Page navigation example ">
+                            <ul class="pagination" id="pagination-container">
+                                <!-- Pagination buttons will be added here -->
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
 
-        <nav aria-label="Page navigation example">
-            <ul class="pagination" id="pagination-container-offline">
-                <!-- Pagination buttons will be added here -->
-            </ul>
-        </nav>
+             <!-- course area start(offline) -->
+             <section class="home-course-area online section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="section-title">
+                                <h2 class="mb-2">OFFLINE COURSES</h2>
+                                <p class="section-subtitle">Education Academy: Crafting your journey to your dream career. Explore our customized offline courses below.</p>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Rendered online courses will be dynamically here -->
+                    <div class="row" id="offline_courses_container">
+                    </div>
+    
+                    <div class="row text-center">
+                        <div class="col ">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination" id="pagination-container-offline">
+                                    <!-- Pagination buttons will be added here -->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+
+
+    
 
 
         <!-- number stat area start -->
@@ -263,7 +308,7 @@
                     // course html 
                     function courseHtmlFun(course) {
                         return `<div class="col-md-4">
-                                                                <div class="course-item">
+                                                                   <div class="course-item">
                                                                     <div class="course-item-img">
                                                                         <img src="${course.imageSrc}" alt="" class="img-fluid">
                                                                     </div>
@@ -275,7 +320,7 @@
                                                                         <div class="included-text mt-3 ">
                                                                             <ul class="left-text">
                                                                                 <li><i class="bi bi-check-square"></i><span><strong>Duration :</strong>${course.duration}</span></li>
-                                                                                <li><i class="bi bi-check-square"></i><span><strong>Study Mode :</strong>${course.studyMode}</span></li>
+                                                                                <li><i class="bi bi-check-square"></i><span><strong>Mode :</strong>${course.studyMode}</span></li>
                                                                             </ul>
                                                                             <ul class="right-text">
                                                                                 <li><i class="bi bi-check-square"></i><span><strong>Lectures :</strong>${course.lecturesCount}</span></li>
@@ -298,7 +343,8 @@
                                                                         <a href="/order/${course.courseId}"> <button class="buyNow">Buy Now</button></a>
                                                                     </div>
                                                                 </div>
-                                                            </div>`;
+                                                            </div>
+                                                            `;
 
                     }
 
@@ -412,7 +458,7 @@
                                                                         <div class="included-text mt-3 ">
                                                                             <ul class="left-text">
                                                                                 <li><i class="bi bi-check-square"></i><span><strong>Duration :</strong>${course.duration}</span></li>
-                                                                                <li><i class="bi bi-check-square"></i><span><strong>Study Mode :</strong>${course.studyMode}</span></li>
+                                                                                <li><i class="bi bi-check-square"></i><span><strong>Mode :</strong>${course.studyMode}</span></li>
                                                                             </ul>
                                                                             <ul class="right-text">
                                                                                 <li><i class="bi bi-check-square"></i><span><strong>Lectures :</strong>${course.lecturesCount}</span></li>
