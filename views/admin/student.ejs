@@ -16,7 +16,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.4/css/select.dataTables.min.css">
-
+  <link href="/assets/admin-panel/css/app.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css"><!-- <link rel="stylesheet" href="/css/style.css"> -->
 
  
@@ -31,13 +31,13 @@
 </head>
 
 <body>
-  <main class="admin-area">
-    <div class="row g-0">
-      <div class="col-2">
-      <%- include('partials/sidebar.ejs')%>
-    </div>
-   <div class="col-10">
-     <%- include('partials/nav.ejs')%>
+  <div class="wrapper">
+		<%- include('partials/sidebar.ejs')%>
+
+		<div class="main">
+			<%- include('partials/nav.ejs')%>
+    
+      <main class="content">
 
      <!--  Students detail area start -->
         <section class="form-area">
@@ -70,8 +70,10 @@
               </div>
 
           </section>
+        </main>
+      </div>  
+       
     </div>
-   </main>
       
 
 
